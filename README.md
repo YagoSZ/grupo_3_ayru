@@ -27,4 +27,5 @@ Nos basamos en estas paginas para realizar nuestro wireframe:
 - https://consumer.huawei.com/ar/
 - https://www.samsung.com/ar/
 
-Nuestro primer boceto de wireframe es el siguiente: https://wireframe.cc/pro/pp/900fac424604805
+Nuestro primer boceto de wireframe es el siguiente: https://wireframe.cc/pro/pp/900fac424604805.
+La version de escritorio de nuestro wireframe es la siguiente: https://www.figma.com/file/Xvr5pn9wg2FS9AxCh2ZcyB/Untitled?node-id=0%3A1&t=bJv0psJHFiTS17dr-1
