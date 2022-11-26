@@ -18,7 +18,7 @@ Ramon
 
 -
 
-Nuestra primer idea es poder realizar una página web del tipo "marketplace" para vender productos tecnológicos como celulares y otros dispositivos. Nos interesa apuntar a un público mayormente de jovenes y adultos, amantes de la teconología.
+Nuestra primer idea es poder realizar una página web del tipo "Marketplace" para vender productos tecnológicos como celulares y otros dispositivos. Nos interesa apuntar a un público mayormente de jovenes y adultos.
 
 Nos basamos en estas paginas para realizar nuestro wireframe: 
 - https://www.hihonor.com/global/
