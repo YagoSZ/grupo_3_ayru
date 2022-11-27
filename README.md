@@ -2,7 +2,7 @@
 
 Descripcion de los miembros del grupo 
 
-Yago 
+Yago Sosa
 
 - Tengo 22 años, actualmente vivo en Rosario, estudio Psicologia y estoy haciendo un curso de Bartender. Soy hincha de Newells y me gusta mucho el futbol, es mi principal hobby
 
@@ -18,7 +18,7 @@ Ramon
 
 -
 
-Nuestra primer idea es poder realizar una página web del tipo "Marketplace" para vender productos tecnológicos como celulares y otros dispositivos. Nos interesa apuntar a un público mayormente de jovenes y adultos.
+Nuestra primer idea es poder realizar una página web del tipo "eCommerce" para vender productos tecnológicos como celulares y otros dispositivos. Nos interesa apuntar a un público mayormente de jovenes y adultos.
 
 Nos basamos en estas páginas para realizar nuestro wireframe: 
 - https://www.hihonor.com/global/
