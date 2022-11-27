@@ -27,7 +27,7 @@ Nos basamos en estas páginas para realizar nuestro wireframe:
 - https://consumer.huawei.com/ar/
 - https://www.samsung.com/ar/
 
-Elegimos estas páginas ya que las cinco tienen una estética parecida, un minimalismo que nos gustó, y buscamos que al final de nuestro proyecto, nuestra página web también se vea minimalista y llame la atención, como las páginas que elegimos. 
+Elegimos estas páginas ya que las cinco tienen una estética minimalista que nos gustó, y buscamos que al final de nuestro proyecto, nuestra página web también se vea minimalista y llame la atención, como las páginas que elegimos. Ademas estan relacionadas con el tipo de productos que vamos a incluir en el catalogo final de nuestra pagina, asi que fueron de mucha utilidad para poder hacernos una idea de nuestro boceto final. 
 
 Nuestro primer boceto de wireframe es el siguiente: https://wireframe.cc/pro/pp/900fac424604805.
 
