@@ -12,7 +12,7 @@ Ariadna Mazzocchi
 
 Uriel
 
-- 
+- Tengo 19 años, actualmente vivo en Rosario, estudio ingenieria en sistemas, soy hincha de Newells y fan de messi, en mis tiempos libres suelo dedicarme a videojuegos y a los estudios.
 
 Ramon
 
