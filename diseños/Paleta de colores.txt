@@ -1,0 +1,13 @@
+Nuestros colores seran variaciones del color azul y blanco, mas especificamente los siguientes
+
+HEX
+ #161989
+
+HEX
+ #1E53A5
+
+HEX
+ #269AC6 
+
+HEX
+ #FFFFFF
