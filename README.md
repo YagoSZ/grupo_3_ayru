@@ -14,9 +14,9 @@ Uriel
 
 - Tengo 19 años, actualmente vivo en Rosario, estudio ingenieria en sistemas, soy hincha de Newells y fan de messi, en mis tiempos libres suelo dedicarme a videojuegos y a los estudios.
 
-Ramon
+Ramon Marino
 
--
+- Tengo 22 años, actualmente vivo en Buenos Aires, estudio psicologia pero me gustaria dedicarme a la programacion. En mi tiempo libre me gusta leer y escuchar musica.
 
 Nuestra primer idea es poder realizar una página web del tipo "eCommerce" para vender productos tecnológicos como celulares y otros dispositivos. Nos interesa apuntar a un público mayormente de jovenes y adultos.
 
