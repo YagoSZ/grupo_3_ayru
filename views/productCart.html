@@ -63,9 +63,16 @@
                                     <div>
                                         <p>$Precio x</p>
                                     </div>
-                                    <div class="div-cantidad">
+                                    <select name="cantidad-producto" id="cantProd">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                    <!-- <div class="div-cantidad">
                                         <p><i class="fa-solid fa-angle-down"></i>Cantidad</p>
-                                    </div>
+                                    </div> -->
                                     <div>
                                         <p>= $Total</p>
                                     </div>
@@ -85,9 +92,16 @@
                                     <div>
                                         <p>$Precio x</p>
                                     </div>
-                                    <div class="div-cantidad">
+                                    <select name="cantidad-producto" id="cantProd">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                    <!-- <div class="div-cantidad">
                                         <p><i class="fa-solid fa-angle-down"></i>Cantidad</p>
-                                    </div>
+                                    </div> -->
                                     <div>
                                         <p>= $Total</p>
                                     </div>
@@ -104,32 +118,62 @@
                                 <div><p>ENVIO</p></div>
                                 <div class="opcion-envio">
                                     <div>
-                                        <p>Pais</p>
+                                        <p>
+                                            <label name="pais">Pais</label>
+                                        </p>
                                     </div>
-                                    <div class="barra-blanca">
-                                        <p><i class="fa-solid fa-angle-down"></i></p>
-                                    </div>
+                                    <!-- <div class="barra-blanca"> -->
+                                        <select for="pais" id="pais">
+                                            <option value="" selected></option>
+                                            <option value="arg">Argentina</option>
+                                            <option value="bra">Brasil</option>
+                                            <option value="par">Paraguay</option>
+                                            <option value="per">Peru</option>
+                                            <option value="chi">Chile</option>
+                                        </select>
+                                        <!-- <p><i class="fa-solid fa-angle-down"></i></p> -->
+                                    <!-- </div> -->
                                 </div>
                                 <div class="opcion-envio">
                                     <div>
-                                        <p>Provincia</p>
+                                        <p>
+                                            <label for="provincia">Provincia</label>
+                                        </p>
                                     </div>
-                                    <div class="barra-blanca">
+                                    <select name="provincia" id="provincia">
+                                        <option value="" selected></option>
+                                        <option value="BsAs">Buenos Aires</option>
+                                        <option value="Mis">Misiones</option>
+                                        <option value="Cor">Cordoba</option>
+                                        <option value="Chu">Chubut</option>
+                                        <option value="LaPa">La Pampa</option>
+                                    </select>
+                                    <!-- <div class="barra-blanca">
                                         <p><i class="fa-solid fa-angle-down"></i></p>
-                                    </div>
+                                    </div> -->
                                 </div>
                                 <div class="opcion-envio">
                                     <div>
-                                        <p>Codigo Postal</p>
+                                        <p>
+                                            <label for="codigo">Codigo Postal</label>
+                                        </p>
                                     </div>
-                                    <div class="barra-blanca">
+                                    <select name="codigo" id="codigo">
+                                        <option value="" selected></option>
+                                        <option value="1607">1607</option>
+                                        <option value="1709">1709</option>
+                                        <option value="1514">1514</option>
+                                        <option value="1424">1424</option>
+                                        <option value="8267">8267</option>
+                                    </select>
+                                    <!-- <div class="barra-blanca">
                                         <p><i class="fa-solid fa-angle-down"></i></p>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                             <div class="contenedor-boton-cotizacion">
                                 <div class="boton-cotizacion">
-                                    <p class="p-cotizacion"><strong>Obtener Cotizacion</strong></p>
+                                    <button class="p-cotizacion"><strong>Obtener Cotizacion</strong></button>
                                 </div>
                             </div>
                         </div>
@@ -154,10 +198,10 @@
                             </div>
                             <div class="contenedor-boton-cotizacion">
                                 <div class="boton-cotizacion">
-                                    <p class="p-cotizacion"><strong>Actualizar Carrito</strong></p>
+                                    <button class="p-cotizacion"><strong>Actualizar Carrito</strong></button>
                                 </div>
                                 <div class="boton-cotizacion">
-                                    <p class="p-cotizacion"><strong>Finalizar Compra</strong></p>
+                                    <button class="p-cotizacion"><strong>Finalizar Compra</strong></button>
                                 </div>
                             </div>
                         </div>

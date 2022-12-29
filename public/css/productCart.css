@@ -127,10 +127,11 @@ main{
     margin: 0 3px;
 }
 
-.div-cantidad{
-    background-color: #ffffff;
-    border-radius: 5px;
+.etiqueta-precio select{
+    width: 17%;
     border: solid 1px black;
+    border-radius: 5px;
+    text-align: center;
 }
 
 .contenedor-envio{
@@ -223,6 +224,10 @@ main{
 
 .descripcion-footer{
     display: none;
+}
+
+.opcion-envio select{
+    width: 25%;
 }
 
 @media(min-width: 768px){
