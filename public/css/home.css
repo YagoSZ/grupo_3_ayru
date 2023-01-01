@@ -27,7 +27,11 @@ font-family: 'Oswald', sans-serif;
     float: right;
 }
 
-.slider {
+
+/* CSS SLIDER ARI */
+
+
+/* .slider {
 	width: 70%;
 	margin: auto;
 	overflow: hidden;
@@ -50,7 +54,78 @@ font-family: 'Oswald', sans-serif;
 .slider img {
 	width: 100%;
     object-fit: cover;
+} */
+
+/* FIN CSS SLIDER ARI */
+
+
+/* NUEVO CSS */
+.slider {
+	width: 60%;
+	margin: auto;
+	overflow: hidden;
 }
+
+.slider ul {
+	display: flex;
+	padding: 0;
+	width: 400%;
+	
+	animation: cambio 20s infinite alternate linear;
+}
+
+.slider li {
+	width: 25%;
+	list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slider img {
+	width: 100%;
+    object-fit: cover;
+    margin: 10px 0px 30px 0px;
+}
+
+.contenedor-descripcion-foto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.p-encabezado-foto{
+    font-size: 20px;
+    font-family: sans-serif;
+    margin: 5px;
+}
+
+.boton-comprar{
+    border-radius: 25px;
+	background-color: rgb(115 84 243);
+    color: azure;
+    display: flex;
+    align-items: center;
+    margin: 20px 5px;
+    padding: 8px 18px;
+	box-shadow: -2px 0px 22px 6px rgba(0,0,0,0.74) inset;
+    -webkit-box-shadow: -2px 0px 22px 6px rgba(0,0,0,0.74) inset;
+    -moz-box-shadow: -2px 0px 22px 6px rgba(0,0,0,0.74) inset;
+}
+
+.boton-comprar p{
+    margin: 5px 10px;
+}
+
+.contenedor-descripcion-foto a{
+    color: black;
+}
+
+.main-main{
+    border-bottom: solid 0.2px grey;
+}
+
 
 @keyframes cambio {
 	0% {margin-left: 0;}
@@ -66,7 +141,10 @@ font-family: 'Oswald', sans-serif;
 	100% {margin-left: -300%;}
 }
 
-.celular{
+/* FIN CSS CARRUSEL */
+
+
+/* .celular{
 	object-fit: cover;
 	margin: auto;
 	display: block;
@@ -114,7 +192,116 @@ article{
 	padding:5px 24px;
 	text-decoration:none;
 	text-shadow:0px -6px 0px #e1e2ed;
+} */
+
+
+
+/* CSS PRODUCTOS DESTACADOS */
+
+.contenedor-descripcion-foto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+.p-encabezado-foto{
+    font-size: 20px;
+    font-family: sans-serif;
+    margin: 5px;
+}
+
+.contenedor-descripcion-foto a{
+    color: black;
+}
+
+.main-main{
+    border-bottom: solid 0.2px grey;
+}
+
+.destacados{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+	background-color: #0f3c602b;
+}
+
+.encabezado-secundario{
+    font-size: 25px;
+    font-family: 'Prosto One', cursive;
+    text-align: center;
+    margin: 30px 0px 50px;
+}
+
+.contenedor-imagen{
+    padding: 15px;
+    background-color: white;
+    border-radius: 10px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.imagen-destacada{
+    margin: 0px 0px 40px 0px;
+}
+
+.descripcion-destacado{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6px;
+    border-top: solid 5px #ebebeb;
+}
+
+.descripcion-destacado h3{
+    margin: 5px;
+    margin-left: 0px;
+}
+
+.descripcion-destacado p{
+    margin: 5px;
+    margin-left: 0px;
+}
+
+.boton {
+    box-shadow: 3px 1px 0px 0px #899599;
+	background:linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
+	background-color:#ededed;
+	border-radius:15px;
+	border:1px solid #d6bcd6;
+	display:inline-block;
+	cursor:pointer;
+	color:#07637a;
+	font-family:Arial;
+	font-size:12px;
+	font-weight:bold;
+	padding:5px 24px;
+	text-decoration:none;
+	text-shadow:0px -6px 0px #e1e2ed;
+}
+
+footer{
+    background-color: var(--Blanco);
+    padding: 5px;
+    box-sizing: border-box;
+    border-style: solid;
+}
+
+article{
+	display: block;
+    width: 100%;
+    margin: auto;
+    margin-bottom: 25px;
+}
+
+.icono{
+    position:relative;
+   text-align: right;
+   float: right;
+    top: -40px;
+}
+/* FIN NUEVO CSS */
 
 @media screen and (min-width: 460px){
 	.encabezado{
