@@ -65,10 +65,11 @@ font-family: 'Oswald', sans-serif;
 	100% {margin-left: -300%;}
 }
 
-.celular1{
+.celular{
 	object-fit: cover;
 	margin: auto;
 	display: block;
+	padding: 10%;
 }
 
 .descripcion{
