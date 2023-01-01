@@ -14,7 +14,7 @@ font-family: 'Oswald', sans-serif;
     width: 100%;
     background-color: var(--Azul);
     box-sizing: border-box;
-    height: 65px;
+    /* height: 65px; */
     border-style: solid;
 }
 
@@ -115,13 +115,17 @@ article{
 }
 
 /* @media (min-width: 460px){
-
-
-}
+	.slider{
+		width: 40%;
+	}
+} */
 
 @media (min-width: 768px){
-.tamaño{
-	width: 7%;
-}
+    .tamaño{
+    	width: 7%;
+    }
+
+	.slider{
+		width: 40%;
+	}
 } 
-*/
