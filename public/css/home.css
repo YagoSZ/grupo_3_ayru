@@ -34,8 +34,10 @@ a{
 }
 
 .logo{
-    width: 11%;
-    padding: 1%;
+    width: 50%;
+    padding-bottom: 0.1%;
+	margin-bottom: 0.1%;
+	
 
 }
 
@@ -494,6 +496,10 @@ article{
 
 	.contenedor-logo-iconos{
 		align-items: flex-end;
+	}
+
+	.logo {
+		max-width: 200px;
 	}
 
 	.iconos{
