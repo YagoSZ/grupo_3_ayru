@@ -13,6 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="/css/home.css">
 
@@ -21,10 +22,48 @@
 
 <body>
     <header class="encabezado">
-        <img class="tamaño" src="/img/Free_Sample_By_Wix.jpg" alt=""> 
-        <nav class="iconos">
-            <button><i class="fa-solid fa-magnifying-glass"></i></button>
-        <button><i class="fas fa-bars"></i></button>
+        <div class="contenedor-logo-iconos">
+
+            <img class="logo" src="/img/Free_Sample_By_Wix.jpg" alt=""> 
+
+            <nav class="iconos">
+
+                <div class="frase-header">
+                    <h2>
+                        Disfruta los mejores precios del mercado
+                    </h2>
+                </div>
+
+                <label for="buscador" class="label-buscador">
+                    <input type="text" id="buscador" class="buscador"placeholder="Buscar productos y mas...">
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                </label>
+                
+                <button class="buscador-mobile"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="menu-hamburguesa"><i class="fas fa-bars"></i></button>
+
+            </nav>
+        </div>
+
+        <!-- LISTA NAVEGACION - NO APARECE EN MOBILE -->
+        <nav class="listas">
+            <ul class="left-navbar"> 
+                <li><a href="#">Ofertas</a></li>
+                <li><a href="#">Tiendas Oficiales</a></li>
+                <li><a href="#">Vender</a></li>
+                <li><a href="#">Ayuda</a></li>
+            </ul>
+            <ul class="right-navbar">
+                <li><a href="register">Creá tu cuenta</a>
+                    <i class="fas fa-id-card"></i>
+                </li>
+                <li><a href="login">Ingresá</a>
+                    <i class="fas fa-sign-in-alt"></i>
+                </li>
+                <li><a href="productCart">Mis compras</a>
+                    <i class="fas fa-shopping-basket"></i>
+                </li>
+            </ul>
         </nav>
 </header>
 
@@ -105,6 +144,9 @@
         </section>
     </div>
 
+
+
+
     <!-- FIN NUEVA VERSION POSIBLE -->
     
 
@@ -134,36 +176,116 @@
 
     <!-- POSIBLE NUEVA VERSION -->
 
-    <div class="destacados">
+    <div class="contenedor-destacados">
 
-        <h1 class="encabezado-secundario">Destacados del mes</h1>
-        <div class="contenedor-imagen">
-            <img src="/img/celular.png" alt="Samsung S21" class="imagen-destacada">
-            <div class="descripcion-destacado">
-                <h3>Samsung S21 FE</h3>
-                <p>$60.000</p>
-                <button class="boton" type="submit">Conoce más</button>
+            <h1 class="encabezado-secundario">Destacados del mes</h1>
+    
+        <div class="destacados">
+    
+            
+            <div class="contenedor-imagen">
+                <img src="/img/celular.png" alt="Samsung S21" class="imagen-destacada">
+                <div class="descripcion-destacado">
+                    <h3>Samsung S21 FE</h3>
+                    <p>$60.000</p>
+                    <button class="boton" type="submit">Conoce más</button>
+                </div>
             </div>
-        </div>
-
-        <div class="contenedor-imagen">
-            <img src="/img/celular2.png" alt="Samsung A52s" class="imagen-destacada">
-            <div class="descripcion-destacado">
-                <h3>Samsung A52s LTE 5G</h3>
-                <p>$100.000</p>
-                <button class="boton" type="submit">Conoce más</button>
+    
+            <div class="contenedor-imagen">
+                <img src="/img/celular2.png" alt="Samsung A52s" class="imagen-destacada">
+                <div class="descripcion-destacado">
+                    <h3>Samsung A52s LTE 5G</h3>
+                    <p>$100.000</p>
+                    <button class="boton" type="submit">Conoce más</button>
+                </div>
             </div>
+    
         </div>
-
     </div>
 </main>
 
 <footer>
-    <p class="secciones">Productos</p><button class="icono"><i class="fa-solid fa-chevron-down"></i></button>
-    <p class="secciones">Soporte</p><button class="icono"><i class="fa-solid fa-chevron-down"></i></button>
-    <p class="secciones">Acerca de nosotros</p><button class="icono"><i class="fa-solid fa-chevron-down"></i></button>
-    <p class="secciones"><a href="/login">Login</a></p><button class="icono"><i class="fa-solid fa-chevron-down"></i></button>
-    <p class="secciones">¡Crea tu cuenta!</p><button class="icono"><i class="fa-solid fa-chevron-down"></i></button>
+    <article class="footer-mobile">
+        <p class="secciones">Productos</p><button class="icono"><i class="fa-solid fa-chevron-down"></i></button>
+        <p class="secciones">Soporte</p><button class="icono"><i class="fa-solid fa-chevron-down"></i></button>
+        <p class="secciones">Acerca de nosotros</p><button class="icono"><i class="fa-solid fa-chevron-down"></i></button>
+        <p class="secciones"><a href="/login">Login</a></p><button class="icono"><i class="fa-solid fa-chevron-down"></i></button>
+        <p class="secciones">¡Crea tu cuenta!</p><button class="icono"><i class="fa-solid fa-chevron-down"></i></button>
+    </article>
+
+    <article class="contenedor-footer">
+        <div class="barra-footer">
+            <p>Productos</p>
+            <div class="barra-blanca-footer">
+                <p><i class="fa-solid fa-angle-down"></i></p>
+            </div>
+                <div class="descripcion-footer">
+                    <ul>
+                        <li><a href="#">PC</a></li>
+                        <li><a href="#">Tabletas</a></li>
+                        <li><a href="#">Wearables</a></li>
+                        <li><a href="#">Audio</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="barra-footer">
+                <p>Soporte</p>
+                <div class="barra-blanca-footer">
+                    <p><i class="fa-solid fa-angle-down"></i></p>
+                </div>
+                <div class="descripcion-footer">
+                    <ul>
+                        <li><a href="#">Ubicacion de Centros de Servicios</a></li>
+                        <li><a href="#">Periodo de Garantia</a></li>
+                        <li><a href="#">Politica de Garantia</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="barra-footer">
+                <p>Acerca De Nosotros</p>
+                <div class="barra-blanca-footer">
+                    <p><i class="fa-solid fa-angle-down"></i></p>
+                </div>
+                <div class="descripcion-footer">
+                    <ul>
+                        <li><a href="#">Lorem ipsum dolor sit </a></li>
+                        <li><a href="#">amet consectetur adipisicing</a></li>
+                        <li><a href="#">At eum totam assumenda</a></li>
+                        <li><a href="#">cum dignissimos sed </a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="barra-footer">
+                <p>Login</p>
+                <div class="barra-blanca-footer">
+                    <p><i class="fa-solid fa-angle-down"></i></p>
+                </div>
+                <div class="descripcion-footer">
+                    <ul>
+                        <li><a href="#">Lorem ipsum dolor sit </a></li>
+                        <li><a href="#">amet consectetur adipisicing</a></li>
+                        <li><a href="#">At eum totam assumenda</a></li>
+                        <li><a href="#">cum dignissimos sed </a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="barra-footer">
+                <p>¡Crea Tu Cuenta!</p>
+                <div class="barra-blanca-footer">
+                    <p><i class="fa-solid fa-angle-down"></i></p>
+                </div>
+                <div class="descripcion-footer">
+                    <ul>
+                        <li><a href="#">Lorem ipsum dolor sit </a></li>
+                        <li><a href="#">amet consectetur adipisicing</a></li>
+                        <li><a href="#">At eum totam assumenda</a></li>
+                        <li><a href="#">cum dignissimos sed </a></li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+    </footer>
 </footer>
     <script src="https://kit.fontawesome.com/6cd48854d2.js" crossorigin="anonymous"></script>
 </body>

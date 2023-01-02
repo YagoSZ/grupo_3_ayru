@@ -8,24 +8,80 @@
 body {
 background-color: var(--Blanco);
 font-family: 'Oswald', sans-serif;
+margin: 0px;
 }
 
+.footer-mobile{
+	display: none;
+}
+
+a{
+    text-decoration: none; 
+    color: #222222;
+}
+
+
+/* CSS HEADER VERSION MOBILE */
 .encabezado{
-    width: 100%;
-    background-color: var(--Azul);
+    background-color: #7eabb6;
     box-sizing: border-box;
-    /* height: 65px; */
-    border-style: solid;
 }
 
-.tamaño{
+.contenedor-logo-iconos{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo{
     width: 11%;
     padding: 1%;
+
 }
 
 .iconos{
-    float: right;
+	margin-right: 10px;
 }
+
+.frase-header{
+	font-family: 'Caveat', cursive;
+	display: none;
+}
+
+.label-buscador{
+	display: none;
+}
+
+/* FIN CSS HEADER */
+
+
+
+
+/* CSS NAVBAR - VERSION TABLET/ESCRITORIO */
+.listas{
+	display: none;
+}
+
+.listas ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.listas li{
+    margin: 0 10px;
+}
+
+.listas a{
+    text-decoration: none;
+    color: #0d0d0d;
+    display: inline-block;
+    padding: 5px 0;
+    font-size: 17px;
+}
+/* FIN CSS NAVBAR */
+
+
 
 
 /* CSS SLIDER ARI */
@@ -59,7 +115,7 @@ font-family: 'Oswald', sans-serif;
 /* FIN CSS SLIDER ARI */
 
 
-/* NUEVO CSS */
+/* NUEVO CSS SLIDER */
 .slider {
 	width: 60%;
 	margin: auto;
@@ -140,8 +196,8 @@ font-family: 'Oswald', sans-serif;
 	75% {margin-left: -300%;}
 	100% {margin-left: -300%;}
 }
-
 /* FIN CSS CARRUSEL */
+
 
 
 /* .celular{
@@ -196,8 +252,8 @@ article{
 
 
 
-/* CSS PRODUCTOS DESTACADOS */
 
+/* CSS PRODUCTOS DESTACADOS */
 .contenedor-descripcion-foto{
     display: flex;
     flex-direction: column;
@@ -219,9 +275,17 @@ article{
 }
 
 .destacados{
-    display: flex;
+	display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.contenedor-destacados{
+	background-color: #075f8126;
+    padding-top: 30px;
+}
+
+.contenedor-encabezado{
 	background-color: #0f3c602b;
 }
 
@@ -229,17 +293,20 @@ article{
     font-size: 25px;
     font-family: 'Prosto One', cursive;
     text-align: center;
-    margin: 30px 0px 50px;
+    margin-bottom: 50px;
 }
 
 .contenedor-imagen{
     padding: 15px;
     background-color: white;
     border-radius: 10px;
-    width: 80%;
+    width: 60%;
     display: flex;
     flex-direction: column;
     margin-bottom: 40px;
+	box-shadow: -1px 1px 6px 3px rgba(0,0,0,0.75);
+	-webkit-box-shadow: -1px 1px 6px 3px rgba(0,0,0,0.75);
+	-moz-box-shadow: -1px 1px 6px 3px rgba(0,0,0,0.75);
 }
 
 .imagen-destacada{
@@ -265,7 +332,6 @@ article{
 }
 
 .boton {
-    box-shadow: 3px 1px 0px 0px #899599;
 	background:linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
 	background-color:#ededed;
 	border-radius:15px;
@@ -280,13 +346,17 @@ article{
 	text-decoration:none;
 	text-shadow:0px -6px 0px #e1e2ed;
 }
+/* FIN CSS DESTACADOS */
 
-footer{
+
+
+
+/* footer{
     background-color: var(--Blanco);
     padding: 5px;
     box-sizing: border-box;
     border-style: solid;
-}
+} */
 
 article{
 	display: block;
@@ -303,59 +373,201 @@ article{
 }
 /* FIN NUEVO CSS */
 
+
+/* CSS FOOTER */
+.contenedor-footer{
+    background-color: #7eabb6;
+    display: flex;
+    flex-direction: column;
+    border-top: solid 1px #0c0c5f;
+    padding: 0px 10px;
+	width: auto;
+}
+
+.barra-footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0px;
+    border-bottom: solid 1px #bcecf1;
+}
+
+.barra-blanca-footer{
+    background-color: #eef1f4f1;
+    display: flex;
+    align-items: center;
+    height: fit-content;
+    border-radius: 5px;
+}
+
+.barra-footer p{
+    margin: 5px;
+}
+
+.barra-footer ul{
+    list-style: none;
+    padding-left: 2px;
+}
+
+.barra-footer li{
+    margin: 5px;
+}
+
+.descripcion-footer{
+    display: none;
+}
+/* FIN CSS FOOTER */
+
+
+/* MEDIA QUERYS */
 @media screen and (min-width: 460px){
-	.encabezado{
-		width: 100%;
-		background-color: var(--Azul);
-		box-sizing: border-box;
-		border-style: solid;
+
+	.menu-hamburguesa{
+		display: none;
 	}
-	.tamaño {
+
+	.buscador-mobile{
+		display: none;
+	}
+
+	.label-buscador{
+		width: 100%;
+        display: flex;
+        justify-content: flex-end;
+	}
+
+	.iconos{
+		margin-right: 15px;
+		width: 40%;
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	.label-buscador {
+		width: 90%;
+	}
+
+	.buscador {
+		width: 80%;
+		height: 30px;
+	}
+
+	.listas{
+        display: flex;
+        justify-content: space-between;
+    }
+
+	.left-navbar{
+		display: none;
+	}
+
+    .right-navbar{
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+    }
+
+	.contenedor-imagen{
+		width: 45%;
+	}
+
+	/* .tamaño {
 		width: 11%;
 		padding: 1%;
-	}
-	.slider {
-		width: 60%;
-		margin: auto;
-		overflow: hidden;
-		border-bottom: ridge;
-	}
-	.descripcion{
+	} */
+	/* .descripcion{
 		padding: 6px;
 		border: solid 1px #ebebeb;
 		text-align: center;
-	}
-	.celular{
+	} */
+	/* .celular{
 		object-fit: cover;
 		margin: auto;
 		display: block;
 		padding: 10%;
 		width: 45%;
-	}
-}
+	}*/
+} 
 
 
 @media screen and (min-width: 768px){
-	.encabezado{
-		width: 100%;
-		background-color: var(--Azul);
-		box-sizing: border-box;
-		height: 65px;
-		border-style: solid;
+
+	.contenedor-logo-iconos{
+		align-items: flex-end;
 	}
+
+	.iconos{
+		margin-bottom: 10px;
+		flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+	}
+
+	.frase-header{
+		display: contents;
+	}
+
+	.contenedor-imagen{
+		width: 20%;
+	}
+
+	.listas{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .left-navbar{
+        display: flex;
+		width: 35%;
+        justify-content: space-between;
+    } 
+
+    .right-navbar{
+        display: flex;
+		width: 35%;
+    }
+
+	.destacados{
+       flex-direction: row;
+       justify-content: space-evenly;
+	}
+
 	.tamaño {
 		width: 6%;
 		padding: 1%;
 	}
 	.slider {
-		width: 40%;
+		width: 20%;
 		margin: auto;
 		overflow: hidden;
 		border-bottom: ridge;
 	}
-	.descripcion{
+
+	.contenedor-footer{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .barra-footer{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        border-bottom: none;
+    }
+
+    .barra-blanca-footer{
+        display: none;
+    }
+
+    .descripcion-footer{
+        display: contents;
+    }
+
+	
+
+	/* .descripcion{
 		padding: 6px;
 		border: solid 1px #ebebeb;
 		text-align: center;
-	}
+	} */
 } 
