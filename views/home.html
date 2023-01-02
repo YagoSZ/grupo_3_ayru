@@ -13,6 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="/css/home.css">
 
@@ -21,10 +22,48 @@
 
 <body>
     <header class="encabezado">
-        <img class="tamaño" src="/img/Free_Sample_By_Wix.jpg" alt=""> 
-        <nav class="iconos">
-            <button><i class="fa-solid fa-magnifying-glass"></i></button>
-        <button><i class="fas fa-bars"></i></button>
+        <div class="contenedor-logo-iconos">
+
+            <img class="logo" src="/img/Free_Sample_By_Wix.jpg" alt=""> 
+
+            <nav class="iconos">
+
+                <div class="frase-header">
+                    <h2>
+                        Disfruta los mejores precios del mercado
+                    </h2>
+                </div>
+
+                <label for="buscador" class="label-buscador">
+                    <input type="text" id="buscador" class="buscador"placeholder="Buscar productos y mas...">
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                </label>
+                
+                <button class="buscador-mobile"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="menu-hamburguesa"><i class="fas fa-bars"></i></button>
+
+            </nav>
+        </div>
+
+        <!-- LISTA NAVEGACION - NO APARECE EN MOBILE -->
+        <nav class="listas">
+            <ul class="left-navbar"> 
+                <li><a href="#">Ofertas</a></li>
+                <li><a href="#">Tiendas Oficiales</a></li>
+                <li><a href="#">Vender</a></li>
+                <li><a href="#">Ayuda</a></li>
+            </ul>
+            <ul class="right-navbar">
+                <li><a href="register">Creá tu cuenta</a>
+                    <i class="fas fa-id-card"></i>
+                </li>
+                <li><a href="login">Ingresá</a>
+                    <i class="fas fa-sign-in-alt"></i>
+                </li>
+                <li><a href="productCart">Mis compras</a>
+                    <i class="fas fa-shopping-basket"></i>
+                </li>
+            </ul>
         </nav>
 </header>
 
@@ -134,27 +173,32 @@
 
     <!-- POSIBLE NUEVA VERSION -->
 
-    <div class="destacados">
+    <div class="contenedor-destacados">
 
-        <h1 class="encabezado-secundario">Destacados del mes</h1>
-        <div class="contenedor-imagen">
-            <img src="/img/celular.png" alt="Samsung S21" class="imagen-destacada">
-            <div class="descripcion-destacado">
-                <h3>Samsung S21 FE</h3>
-                <p>$60.000</p>
-                <button class="boton" type="submit">Conoce más</button>
+            <h1 class="encabezado-secundario">Destacados del mes</h1>
+    
+        <div class="destacados">
+    
+            
+            <div class="contenedor-imagen">
+                <img src="/img/celular.png" alt="Samsung S21" class="imagen-destacada">
+                <div class="descripcion-destacado">
+                    <h3>Samsung S21 FE</h3>
+                    <p>$60.000</p>
+                    <button class="boton" type="submit">Conoce más</button>
+                </div>
             </div>
-        </div>
-
-        <div class="contenedor-imagen">
-            <img src="/img/celular2.png" alt="Samsung A52s" class="imagen-destacada">
-            <div class="descripcion-destacado">
-                <h3>Samsung A52s LTE 5G</h3>
-                <p>$100.000</p>
-                <button class="boton" type="submit">Conoce más</button>
+    
+            <div class="contenedor-imagen">
+                <img src="/img/celular2.png" alt="Samsung A52s" class="imagen-destacada">
+                <div class="descripcion-destacado">
+                    <h3>Samsung A52s LTE 5G</h3>
+                    <p>$100.000</p>
+                    <button class="boton" type="submit">Conoce más</button>
+                </div>
             </div>
+    
         </div>
-
     </div>
 </main>
 
