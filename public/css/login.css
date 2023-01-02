@@ -32,6 +32,11 @@ body {
     height: 100%;
 }
 
+.r-p {
+    font-family: Raleway;
+    
+}
+
 .s-b {
     position: absolute;
     top: 0;
