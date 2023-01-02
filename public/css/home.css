@@ -29,6 +29,7 @@ a{
 
 .contenedor-logo-iconos{
 	display: flex;
+	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
 }
@@ -42,7 +43,7 @@ a{
 }
 
 .iconos{
-	margin-right: 10px;
+	margin-bottom: 10px;
 }
 
 .frase-header{
@@ -454,6 +455,10 @@ article{
 		height: 30px;
 	}
 
+	.disfruta{
+		width: 80%;
+	}
+
 	.listas{
         display: flex;
         justify-content: space-between;
@@ -495,7 +500,8 @@ article{
 @media screen and (min-width: 768px){
 
 	.contenedor-logo-iconos{
-		align-items: flex-end;
+		align-items: center;
+		flex-direction: row;
 	}
 
 	.logo {

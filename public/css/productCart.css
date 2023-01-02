@@ -241,12 +241,23 @@ main{
         justify-content: space-between;
     }
 
+    .label-buscador{
+		width: 100%;
+        display: flex;
+        justify-content: flex-end;
+	}
+
+    .buscador {
+		width: 80%;
+		height: 30px;
+	}
+
     .menu-hamburguesa{
         display: none;
     }
 
     .logo{
-        width: 300px;
+        width: 10%;
     }
 
     .destacado{
