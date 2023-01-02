@@ -35,3 +35,7 @@ app.get('/iphone13', (req, res) => {
 app.get('/s22ultra', (req, res) => {
     res.sendFile(path.resolve(__dirname, './/views/s22ultra.html'))
 });
+
+app.get('/s21fe', (req, res) => {
+    res.sendFile(path.resolve(__dirname, './/views/s21fe.html'))
+});
