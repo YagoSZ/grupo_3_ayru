@@ -27,3 +27,11 @@ app.get('/productDetail', (req, res) => {
 app.get('/productCart', (req, res) => {
     res.sendFile(path.resolve(__dirname, './/views/productCart.html'))
 });
+
+app.get('/iphone13', (req, res) => {
+    res.sendFile(path.resolve(__dirname, './/views/iphone13.html'))
+});
+
+app.get('/s22ultra', (req, res) => {
+    res.sendFile(path.resolve(__dirname, './/views/s22ultra.html'))
+});
