@@ -4,7 +4,7 @@ Descripcion de los miembros del grupo
 
 Yago Sosa
 
-- Tengo 22 años, actualmente vivo en Rosario, estudio Psicologia y estoy haciendo un curso de Bartender. Soy hincha de Newells y me gusta mucho el futbol, es mi principal hobby
+- Tengo 22 años, actualmente vivo en Rosario, soy Bartender y estudio Psicologia. Soy hincha de Newells y me gusta mucho el futbol, es mi principal hobby
 
 Ariadna Mazzocchi
 
