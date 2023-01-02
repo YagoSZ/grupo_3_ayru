@@ -1,15 +1,79 @@
-:root{
-    --Azul: #161989;
-    --Azulclaro: #1E53A5;
-    --Celeste:#269AC6;
-    --Blanco: #FFFFFF;
-}
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,700");
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Raleway, sans-serif;
+}
 body{
-    background-color: var(--Blanco);
-    font-family: 'Oswald', sans-serif;
+    background-color: #1E53A5 ;
 }
 
+.contenedor{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    }
+    .boton {
+        box-shadow: 3px 1px 0px 0px #899599;
+        background:linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
+        background-color:#ededed;
+        border-radius:15px;
+        border:1px solid #d6bcd6;
+        display:inline-block;
+        cursor:pointer;
+        color:#07637a;
+        font-family:Arial;
+        font-size:12px;
+        font-weight:bold;
+        padding:5px 24px;
+        text-decoration:none;
+        text-shadow:0px -6px 0px #e1e2ed;
+        margin-top: 15px;
+    }
+    .formulario{
+        background: #269AC6;
+        position: relative;
+        height: 600px;
+        width: 360px;
+        box-shadow: 0px 0px 24px #161989;
+        }
+        .formulario-box{
+            background: #269AC6;
+            position: relative;
+            text-align: center;
+            padding: 10%;
+        }
+        .clase{
+            text-align: center;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 5px;
+            -webkit-text-stroke: medium;
+            }
+            
+            .sub-formulario{
+            width: 100%;
+            padding: 5px;
+            border-radius: 4px;
+            margin-bottom: 50px;
+            } 
+
+            h1{
+            padding: 24%;
+            }
+
+            .logo{
+                display: flex;
+                justify-items: center;
+                align-items: center;
+                padding: 0;
+                margin: auto;
+            }
+            
+/*
 .encabezado{
     width: 100%;
     background-color: var(--Azul);
@@ -17,7 +81,7 @@ body{
     height: 80px;
     border-style: solid;
     box-sizing: border-box;
-}
+} 
 
 .tamaño{
     width: 60px;
@@ -26,50 +90,7 @@ body{
 
 .iconos{
     text-align: right;
-}
-
-.formulario{
-background-color: var(--Celeste);
-text-align: center;
-padding: 80px;
-border-style: solid;
-box-sizing: border-box;
-}
-
-.clase{
-text-align: center;
-width: 100%;
-padding: 10px;
-margin-bottom: 5px;
-top: 0%;
-box-sizing: border-box;
-}
-
-.sub-formulario{
-width: 100%;
-padding: 5px;
-border-radius: 4px;
-margin-bottom: 20px;
-box-sizing: border-box;
-}
-
-.boton {
-    box-shadow: 3px 1px 0px 0px #899599;
-	background:linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
-	background-color:#ededed;
-	border-radius:15px;
-	border:1px solid #d6bcd6;
-	display:inline-block;
-	cursor:pointer;
-	color:#07637a;
-	font-family:Arial;
-	font-size:12px;
-	font-weight:bold;
-	padding:5px 24px;
-	text-decoration:none;
-	text-shadow:0px -6px 0px #e1e2ed;
-    margin-top: 15px;
-}
+} 
 
 footer{
     background-color: var(--Blanco);
@@ -86,9 +107,6 @@ footer{
 }
 
 
-
-
-/*
 @media (min-width: 768px) {
     .sub-formulario{
         margin-bottom: auto;
@@ -97,4 +115,3 @@ footer{
         box-sizing: border-box;
     }
 } */
-
