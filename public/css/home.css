@@ -11,6 +11,15 @@ font-family: 'Oswald', sans-serif;
 margin: 0px;
 }
 
+.footer-mobile{
+	display: none;
+}
+
+a{
+    text-decoration: none; 
+    color: #222222;
+}
+
 
 /* CSS HEADER VERSION MOBILE */
 .encabezado{
@@ -342,12 +351,12 @@ article{
 
 
 
-footer{
+/* footer{
     background-color: var(--Blanco);
     padding: 5px;
     box-sizing: border-box;
     border-style: solid;
-}
+} */
 
 article{
 	display: block;
@@ -365,6 +374,49 @@ article{
 /* FIN NUEVO CSS */
 
 
+/* CSS FOOTER */
+.contenedor-footer{
+    background-color: #7eabb6;
+    display: flex;
+    flex-direction: column;
+    border-top: solid 1px #0c0c5f;
+    padding: 0px 10px;
+	width: auto;
+}
+
+.barra-footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0px;
+    border-bottom: solid 1px #bcecf1;
+}
+
+.barra-blanca-footer{
+    background-color: #eef1f4f1;
+    display: flex;
+    align-items: center;
+    height: fit-content;
+    border-radius: 5px;
+}
+
+.barra-footer p{
+    margin: 5px;
+}
+
+.barra-footer ul{
+    list-style: none;
+    padding-left: 2px;
+}
+
+.barra-footer li{
+    margin: 5px;
+}
+
+.descripcion-footer{
+    display: none;
+}
+/* FIN CSS FOOTER */
 
 
 /* MEDIA QUERYS */
@@ -490,6 +542,29 @@ article{
 		overflow: hidden;
 		border-bottom: ridge;
 	}
+
+	.contenedor-footer{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .barra-footer{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        border-bottom: none;
+    }
+
+    .barra-blanca-footer{
+        display: none;
+    }
+
+    .descripcion-footer{
+        display: contents;
+    }
+
+	
+
 	/* .descripcion{
 		padding: 6px;
 		border: solid 1px #ebebeb;
