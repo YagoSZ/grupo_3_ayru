@@ -9,7 +9,7 @@ console.log('Servidor funcionando')
 )
 
 app.get('/', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './/views/home.html'))
+    res.sendFile(path.resolve(__dirname, './/views/otroPosibleHome.html'))
 });
 
 app.get('/register', (req, res) => {
