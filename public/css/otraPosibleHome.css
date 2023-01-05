@@ -3,6 +3,7 @@
     --Azulclaro: #1E53A5;
     --Celeste:#269AC6;
     --Blanco: #FFFFFF;
+	--Turquesa: #04FEE8;
 }
 
 ::placeholder{
@@ -10,7 +11,11 @@
 }
 
 body {
-background-color: var(--Blanco);
+background-image: url(/img/fondo2.png);
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+color: black;
 font-family: 'Oswald', sans-serif;
 margin: 0px;
 }
@@ -218,6 +223,8 @@ a{
 .boton-comprar p{
     margin: 5px 10px;
 }
+
+
 
 .contenedor-descripcion-foto a{
     color: black;
@@ -594,6 +601,14 @@ footer a{
 		flex-direction: row;
 	}
 
+	.boton:focus,
+	.boton:hover {
+		border-color: #269AC6;
+		outline: none;
+	}
+
+	
+
 	.logo {
 
 		display: none;
@@ -613,6 +628,7 @@ footer a{
         margin-bottom: 0.1%;
 		margin-right: 0.5%;
 	}
+
 
 	.iconos{
 		margin-bottom: 10px;

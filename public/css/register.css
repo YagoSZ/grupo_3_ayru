@@ -7,7 +7,10 @@
     font-family: Raleway, sans-serif;
 }
 body{
-    background-color: #1E53A5 ;
+    background-image: url(/img/fondo3.png);
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover; ;
 }
 
 .contenedor{
