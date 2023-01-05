@@ -164,8 +164,166 @@ a{
 /* FIN CSS SLIDER ARI */
 
 
+.main-main{
+    border-bottom: solid 0.2px grey;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+
+/* //////////////////////////////////////////////////// */
+/* ///CSS CARRUSEL/// */
+/* Slideshow container */
+.slideshow-container {
+	max-width: 1000px;
+	position: relative;
+	margin: 100px auto 0px;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+	display: none;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	margin-top: -22px;
+	padding: 16px;
+	color: rgb(12, 11, 11);
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+  }
+
+  .prev{
+	left: -80px;
+	top: 112.5px;
+  }
+
+  /* Position the "next button" to the right */
+  .next{
+	right: -80px;
+	top: 112.5px;
+  }
+  
+
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+	background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* Caption text */
+  .text {
+	color: #090808;
+    font-size: 20px;
+    padding: 8px 12px;
+    position: absolute;
+    top: -80px;
+    width: 100%;
+    text-align: center;
+    font-family: 'Secular One', sans-serif;
+  }
+
+  .text1 {
+	color: #090808;
+    font-size: 20px;
+    padding: 8px 12px;
+    position: absolute;
+    top: -45px;
+    width: 100%;
+    text-align: center;
+    font-family: 'Secular One', sans-serif;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+	color: #0f0e0e;
+	font-size: 12px;
+	padding: 8px 12px;
+	position: absolute;
+	top: -72.5px;
+    left: -40px;
+  }
+  
+  .dots{
+	text-align: center;
+	margin-bottom: 15px;
+  }
+
+  /* The dots/bullets/indicators */
+  .dot {
+	cursor: pointer;
+	height: 15px;
+	width: 15px;
+	margin: 0 2px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+	background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+	animation-name: fade;
+	animation-duration: 1.5s;
+	margin-bottom: 30px;
+  }
+
+  .contenedor-descripcion-foto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.boton-comprar{
+    border-radius: 25px;
+	background-color: rgb(10 2 44 / 86%);
+    color: azure;
+    display: flex;
+    align-items: center;
+    margin: 20px 5px;
+    padding: 8px 18px;
+	box-shadow: -2px 0px 22px 6px rgba(0,0,0,0.74) inset;
+    -webkit-box-shadow: -2px 0px 22px 6px rgba(0,0,0,0.74) inset;
+    -moz-box-shadow: -2px 0px 22px 6px rgba(0,0,0,0.74) inset;
+}
+
+.boton-comprar p{
+    margin: 5px 10px;
+}
+
+
+
+.contenedor-descripcion-foto a{
+    color: black;
+} 
+  
+  @keyframes fade {
+	from {opacity: .4}
+	to {opacity: 1}
+  }
+
+/* ///FIN CSS CARRUSEL/// */
+/* ///////////////////////////////////////////// */
+
+
+
 /* NUEVO CSS SLIDER */
-.slider {
+/* .slider {
 	width: 60%;
 	margin: auto;
 	overflow: hidden;
@@ -228,11 +386,9 @@ a{
 
 .contenedor-descripcion-foto a{
     color: black;
-}
+} */
 
-.main-main{
-    border-bottom: solid 0.2px grey;
-}
+
 
 
 @keyframes cambio {
