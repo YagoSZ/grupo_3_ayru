@@ -6,7 +6,7 @@ const router = require('./routes/mainRouter');
 const mainRouter = require ("./routes/mainRouter");
 const publicPath = path.resolve(__dirname, './public')
 
-app.use(express.static("publicPath"))
+app.use(express.static("public"))
 
 app.set('view engine', 'ejs');
 app.set('views', './views');

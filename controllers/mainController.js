@@ -22,14 +22,14 @@ module.exports = {
     },
     
     iphoneTrece: (req, res) => {
-        res.render('iphoneTrece');
+        res.render('iphone13');
     },
     
     sUltra: (req, res) => {
-        res.render('sUltra');
+        res.render('s22Ultra');
     },
     
     sFe: (req, res) => {
-       res.render('sFe');
+       res.render('s21Fe');
     },
     }
