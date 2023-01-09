@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<%- include('./partials/head.ejs'); %>
+
+
+</head>
+
+<body>
+    <header class="encabezado">
+        <div class="contenedor-logo-iconos">
+
+            <img class="logo" src="/img/logoayru.png" alt=""> 
+
+            <nav class="iconos">
+
+                <div class="frase-header">
+                    <h2 class="disfruta">
+                        Disfruta los mejores precios del mercado
+                    </h2>
+                </div>
+
+                <label for="buscador" class="label-buscador">
+                    <input type="text" id="buscador" class="buscador"placeholder="Buscar productos y mas...">
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                </label>
+                
+                <button class="buscador-mobile"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="menu-hamburguesa"><i class="fas fa-bars"></i></button>
+
+            </nav>
+        </div>
+
+        <!-- LISTA NAVEGACION - NO APARECE EN MOBILE -->
+        <nav class="listas">
+            <ul class="left-navbar"> 
+                <li><a href="#">Ofertas</a></li>
+                <li><a href="#">Tiendas Oficiales</a></li>
+                <li><a href="#">Vender</a></li>
+                <li><a href="#">Ayuda</a></li>
+            </ul>
+            <ul class="right-navbar">
+                <li><a href="register">Creá tu cuenta</a>
+                    <i class="fas fa-id-card"></i>
+                </li>
+                <li><a href="login">Ingresá</a>
+                    <i class="fas fa-sign-in-alt"></i>
+                </li>
+                <li><a href="productCart">Mis compras</a>
+                    <i class="fas fa-shopping-basket"></i>
+                </li>
+            </ul>
+        </nav>
+</header>
+
+<!-- VERSION ARI CARRUSEL-->
+
+<!-- <section class="slider">
+    <ul>
+        <li>
+            <img src="/img/celular.jpg" alt="">
+        </li>
+        <li>
+            <img src="/img/celular1.jpg" alt="">
+        </li>
+        <li>
+            <img src="/img/celular2.jpg" alt="">
+        </li>
+        <li>
+            <img src="/img/celular3.jpg" alt="">
+        </li>
+    </ul>
+</section> -->
+
+<!-- FIN VERSION ARI -->
+
+
+
+<!-- NUEVA VERSION POSIBLE CARRUSEL -->
+
+<main>
+    <div class="main-main">
+        <section class="slider">
+            <ul>
+                <li>
+                    <div class="contenedor-descripcion-foto">
+                        <p class="p-encabezado-foto"><strong>Samsung Galaxy</strong></p>
+                        <p class="p-encabezado-foto"><strong>S21 FE 5G</strong></p>
+                    </div>
+                    <img src="/img/celular.png" alt="">
+                    <div class="contenedor-descripcion-foto">
+                        <button class="boton-comprar"><p>Comprar</p><i class="fa-solid fa-square-arrow-up-right"></i></button>
+                        <a href="/s21fe">Mas informacion</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="contenedor-descripcion-foto">
+                        <p class="p-encabezado-foto"><strong>Iphone 13g</strong></p>
+                        <p class="p-encabezado-foto"><strong>Pro Max</strong></p>
+                    </div>
+                    <img src="/img/iphone13pro-azul.jpg" alt="">
+                    <div class="contenedor-descripcion-foto">
+                        <div class="boton-comprar"><p>Comprar</p><i class="fa-solid fa-square-arrow-up-right"></i></div>
+                        <a href="/iphone13">Mas informacion</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="contenedor-descripcion-foto">
+                        <p class="p-encabezado-foto"><strong>Samsung Galaxy</strong></p>
+                        <p class="p-encabezado-foto"><strong>S22 Ultra</strong></p>
+                    </div>
+                    <img src="/img/s22blanco.png" alt="">
+                    <div class="contenedor-descripcion-foto">
+                        <div class="boton-comprar"><p>Comprar</p><i class="fa-solid fa-square-arrow-up-right"></i></div>
+                        <a href="/s22ultra">Mas informacion</a>
+                    </div>
+                </li>
+                <li>
+                    <div class="contenedor-descripcion-foto">
+                        <p class="p-encabezado-foto"><strong>Motorola</strong></p>
+                        <p class="p-encabezado-foto"><strong>Moto E20</strong></p>
+                    </div>
+                    <img src="/img/celular3.png" alt="">
+                    <div class="contenedor-descripcion-foto">
+                        <div class="boton-comprar"><p>Comprar</p><i class="fa-solid fa-square-arrow-up-right"></i></div>
+                        <a href="#">Mas informacion</a>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </div>
+
+
+
+
+    <!-- FIN NUEVA VERSION POSIBLE -->
+    
+
+
+    <!-- VERSION ARI PRODUCTOS -->
+
+    <!-- <article>
+        <div>
+    <img class="celular" src="/img/celular.jpg" alt="">
+    </div>
+    <div class="descripcion">
+    <h3>Samsung S21 FE</h3>
+    <p>$60.000</p>
+    <button class="boton" type="submit">Conoce más</button>
+    </div>
+    <img class="celular" src="/img/celular1.jpg" alt="">
+    </div>
+    <div class="descripcion">
+    <h3>Samsung A13</h3>
+    <p>$45.000</p>
+    <button class="boton" type="submit">Conoce más</button>
+    </div>
+    </article> -->
+
+    <!-- FIN VERSION ARI PRODUCTOS -->
+
+
+    <!-- POSIBLE NUEVA VERSION -->
+
+    <div class="contenedor-destacados">
+
+            <h1 class="encabezado-secundario">Destacados del mes</h1>
+    
+        <div class="destacados">
+    
+            
+            <div class="contenedor-imagen">
+                <img src="/img/celular.png" alt="Samsung S21" class="imagen-destacada">
+                <div class="descripcion-destacado">
+                    <h3>Samsung S21 FE</h3>
+                    <p>$60.000</p>
+                    <button class="boton" type="submit" >Conoce más</button>
+                </div>
+            </div>
+    
+            <div class="contenedor-imagen">
+                <img src="/img/celular2.png" alt="Samsung A52s" class="imagen-destacada">
+                <div class="descripcion-destacado">
+                    <h3>Samsung A52s LTE 5G</h3>
+                    <p>$100.000</p>
+                    <button class="boton" type="submit">Conoce más</button>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+</main>
+
+<footer>
+    <article class="footer-mobile">
+        <p class="secciones">Productos</p><button class="icono"><i class="fa-solid fa-chevron-down"></i></button>
+        <p class="secciones">Soporte</p><button class="icono"><i class="fa-solid fa-chevron-down"></i></button>
+        <p class="secciones">Acerca de nosotros</p><button class="icono"><i class="fa-solid fa-chevron-down"></i></button>
+        <p class="secciones"><a href="/login">Login</a></p><button class="icono"><i class="fa-solid fa-chevron-down"></i></button>
+        <p class="secciones">¡Crea tu cuenta!</p><button class="icono"><i class="fa-solid fa-chevron-down"></i></button>
+    </article>
+
+    <article class="contenedor-footer">
+        <div class="barra-footer">
+            <p>Productos</p>
+            <div class="barra-blanca-footer">
+                <p><i class="fa-solid fa-angle-down"></i></p>
+            </div>
+                <div class="descripcion-footer">
+                    <ul>
+                        <li><a href="#">Celulares</a></li>
+                        <li><a href="#">Tabletas</a></li>
+                        <li><a href="#">Computadoras</a></li>
+                        <li><a href="#">Audio</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="barra-footer">
+                <p>Soporte</p>
+                <div class="barra-blanca-footer">
+                    <p><i class="fa-solid fa-angle-down"></i></p>
+                </div>
+                <div class="descripcion-footer">
+                    <ul>
+                        <li><a href="#">Ubicacion de Centros de Servicios</a></li>
+                        <li><a href="#">Periodo de Garantia</a></li>
+                        <li><a href="#">Politica de Garantia</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="barra-footer">
+                <p>Acerca De Nosotros</p>
+                <div class="barra-blanca-footer">
+                    <p><i class="fa-solid fa-angle-down"></i></p>
+                </div>
+                <div class="descripcion-footer">
+                    <ul>
+                        <li><a href="#">El grupo AYRU es un grupo de cuatro </a></li>
+                        <li><a href="#">programadores enfocados en construir  </a></li>
+                        <li><a href="#">una pagina web de elementos electronicos  </a></li>
+                        <li><a href="#"> de la mejor manera posible</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="barra-footer">
+                <p>Login</p>
+                <div class="barra-blanca-footer">
+                    <p><i class="fa-solid fa-angle-down"></i></p>
+                </div>
+                <div class="descripcion-footer">
+                    <ul>
+                        <li><a href="#">Ingresa a tu usuario </a></li>
+                        <li><a href="#">para mantenerte al margen</a></li>
+                        <li><a href="#">de tus compras y tambien</a></li>
+                        <li><a href="#">para no perderte ninguna novedad </a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="barra-footer">
+                <p>¡Crea Tu Cuenta!</p>
+                <div class="barra-blanca-footer">
+                    <p><i class="fa-solid fa-angle-down"></i></p>
+                </div>
+                <div class="descripcion-footer">
+                    <ul>
+                        <li><a href="#">Registrese para obtener </a></li>
+                        <li><a href="#"> descuentos exclusivos</a></li>
+                        <li><a href="#"> de usuario y sume puntos</a></li>
+                        <li><a href="#">para conseguir su producto al mejor precio</a></li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+    </footer>
+</footer>
+    <script src="https://kit.fontawesome.com/6cd48854d2.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
