@@ -19,4 +19,6 @@ router.get('/s22ultra', mainController.sUltra);
 
 router.get('/s21fe', mainController.sFe);
 
+router.get('/creacionEdicionProd', mainController.ediCreaProd);
+
 module.exports = router
