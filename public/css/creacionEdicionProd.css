@@ -1,0 +1,56 @@
+:root{
+    --Azul: #161989;
+    --Azulclaro: #1E53A5;
+    --Celeste:#269AC6;
+    --Blanco: #FFFFFF;
+	--Turquesa: #04FEE8;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(/img/fondo2.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: black;
+    font-family: 'Oswald', sans-serif;
+    margin: 0px;
+    }
+
+    .encabezado {
+        background-color: #1E53A5;;
+        box-sizing: border-box;
+    }
+    
+    .contenedor-logo-iconos{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .logo2{
+        width: 7%;
+        height: 30%;
+        padding-bottom: 0.1%;
+        margin-bottom: 0.1%;
+    }
+
+    .formu{
+        height: 600px;
+        width: 360px;
+        }
+
+        .contenedor-formu {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 100vh;
+        }
+
+        .description {
+            width: 78%;
+        }
