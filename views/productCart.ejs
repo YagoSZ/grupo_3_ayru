@@ -1,53 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/productCart.css">
-    <script src="https://kit.fontawesome.com/13031a384f.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+<%- include('./partials/head.ejs'); %>
 
-    
-</head>
 <body>
-    <header class="main-header">
-        <div class="logo-copy">
-            <img src="/img/logoayru.png" class="logo">
-            <div>
-                <label for="buscador" class="label-buscador">
-                    <input type="text" id="buscador" class="buscador"placeholder="Buscar productos y mas...">
-                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
-                </label>
-            </div>
-        </div>
-        <a href="#" class="menu-hamburguesa">
-        <i class="fa-solid fa-bars"></i>
-        </a>
-        <nav class="listas">
-            <ul class="left-navbar"> 
-                <li><a href="#">Ofertas</a></li>
-                <li><a href="#">Tiendas Oficiales</a></li>
-                <li><a href="#">Vender</a></li>
-                <li><a href="#">Ayuda</a></li>
-            </ul>
-            <ul class="right-navbar">
-                <li><a href=#>Creá tu cuenta</a>
-                    <i class="fas fa-id-card"></i>
-                </li>
-                <li><a href=#>Ingresá</a>
-                    <i class="fas fa-sign-in-alt"></i>
-                </li>
-                <li><a href="#">Mis compras</a>
-                    <i class="fas fa-shopping-basket"></i>
-                </li>
-            </ul>
-        </nav>
-    </header>
+    <%- include('./partials/header.ejs'); %>
     <main>
         <div>
             <p class="titular"><i class="fa-solid fa-cart-shopping"></i><strong>CARRITO DE COMPRA</strong></p>
@@ -76,9 +32,6 @@
                                         <option value="4">4</option>
                                         <option value="5">5</option>
                                     </select>
-                                    <!-- <div class="div-cantidad">
-                                        <p><i class="fa-solid fa-angle-down"></i>Cantidad</p>
-                                    </div> -->
                                     <div>
                                         <p>= $Total</p>
                                     </div>
@@ -105,9 +58,6 @@
                                         <option value="4">4</option>
                                         <option value="5">5</option>
                                     </select>
-                                    <!-- <div class="div-cantidad">
-                                        <p><i class="fa-solid fa-angle-down"></i>Cantidad</p>
-                                    </div> -->
                                     <div>
                                         <p>= $Total</p>
                                     </div>
@@ -128,7 +78,6 @@
                                             <label name="pais">Pais</label>
                                         </p>
                                     </div>
-                                    <!-- <div class="barra-blanca"> -->
                                         <select for="pais" id="pais">
                                             <option value="" selected></option>
                                             <option value="arg">Argentina</option>
@@ -137,8 +86,6 @@
                                             <option value="per">Peru</option>
                                             <option value="chi">Chile</option>
                                         </select>
-                                        <!-- <p><i class="fa-solid fa-angle-down"></i></p> -->
-                                    <!-- </div> -->
                                 </div>
                                 <div class="opcion-envio">
                                     <div>
@@ -154,9 +101,6 @@
                                         <option value="Chu">Chubut</option>
                                         <option value="LaPa">La Pampa</option>
                                     </select>
-                                    <!-- <div class="barra-blanca">
-                                        <p><i class="fa-solid fa-angle-down"></i></p>
-                                    </div> -->
                                 </div>
                                 <div class="opcion-envio">
                                     <div>
@@ -172,9 +116,6 @@
                                         <option value="1424">1424</option>
                                         <option value="8267">8267</option>
                                     </select>
-                                    <!-- <div class="barra-blanca">
-                                        <p><i class="fa-solid fa-angle-down"></i></p>
-                                    </div> -->
                                 </div>
                             </div>
                             <div class="contenedor-boton-cotizacion">
@@ -216,79 +157,8 @@
             </div>
         </div>
     </main>
-    <footer>
-        <article class="contenedor-footer">
-            <div class="barra-footer">
-                <p>Productos</p>
-                <div class="barra-blanca-footer">
-                    <p><i class="fa-solid fa-angle-down"></i></p>
-                </div>
-                <div class="descripcion-footer">
-                    <ul>
-                        <li><a href="#">PC</a></li>
-                        <li><a href="#">Tabletas</a></li>
-                        <li><a href="#">Wearables</a></li>
-                        <li><a href="#">Audio</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="barra-footer">
-                <p>Soporte</p>
-                <div class="barra-blanca-footer">
-                    <p><i class="fa-solid fa-angle-down"></i></p>
-                </div>
-                <div class="descripcion-footer">
-                    <ul>
-                        <li><a href="#">Ubicacion de Centros de Servicios</a></li>
-                        <li><a href="#">Periodo de Garantia</a></li>
-                        <li><a href="#">Politica de Garantia</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="barra-footer">
-                <p>Acerca De Nosotros</p>
-                <div class="barra-blanca-footer">
-                    <p><i class="fa-solid fa-angle-down"></i></p>
-                </div>
-                <div class="descripcion-footer">
-                    <ul>
-                        <li><a href="#">Lorem ipsum dolor sit </a></li>
-                        <li><a href="#">amet consectetur adipisicing</a></li>
-                        <li><a href="#">At eum totam assumenda</a></li>
-                        <li><a href="#">cum dignissimos sed </a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="barra-footer">
-                <p>Login</p>
-                <div class="barra-blanca-footer">
-                    <p><i class="fa-solid fa-angle-down"></i></p>
-                </div>
-                <div class="descripcion-footer">
-                    <ul>
-                        <li><a href="#">Lorem ipsum dolor sit </a></li>
-                        <li><a href="#">amet consectetur adipisicing</a></li>
-                        <li><a href="#">At eum totam assumenda</a></li>
-                        <li><a href="#">cum dignissimos sed </a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="barra-footer">
-                <p>¡Crea Tu Cuenta!</p>
-                <div class="barra-blanca-footer">
-                    <p><i class="fa-solid fa-angle-down"></i></p>
-                </div>
-                <div class="descripcion-footer">
-                    <ul>
-                        <li><a href="#">Lorem ipsum dolor sit </a></li>
-                        <li><a href="#">amet consectetur adipisicing</a></li>
-                        <li><a href="#">At eum totam assumenda</a></li>
-                        <li><a href="#">cum dignissimos sed </a></li>
-                    </ul>
-                </div>
-            </div>
-        </article>
-    </footer>
+
+    <%- include('./partials/footer.ejs'); %>
 
 </body>
 </html>

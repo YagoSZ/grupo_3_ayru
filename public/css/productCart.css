@@ -9,65 +9,12 @@ background-attachment: fixed;
 background-size: cover;
 }
 
-.main-header{
-    background-color: #1E53A5; /*#04A68F; */
-    padding: 20px;
-}
-
-.logo-copy{
-    margin-bottom: 10px;
-    align-items: center;
-    display: flex;
-    flex-direction: column
-}
-
-.logo{
-    width: 250px;
-}
-
-/* .imagen-logo{
-    height: ;
-} */
 
 .destacado{
     font-weight: 400;
     text-align: center;
 }
 
-
-.menu-hamburguesa{
-    background-color: #03264C;
-    color: #ffffff;
-    display: block;
-    max-width: 50px;
-    padding: 15px 0px;
-    border-radius: 8px;
-    text-align: center;
-    font-size: 18px;
-    margin: auto;
-}
-
-.listas{
-    display: none;
-}
-
-.listas ul{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.listas li{
-    margin: 0 10px;
-}
-
-.listas a{
-    text-decoration: none;
-    color: #222222;
-    display: inline-block;
-    padding: 5px 0;
-    font-size: 17px;
-}
 
 a{
     text-decoration: none; 
@@ -114,7 +61,6 @@ main{
     font-weight: 100;
     font-size: 20px;
     margin-left: 3px;
-    /* system-ui */
 }
 
 .subtitulo-tarjeta{
@@ -192,76 +138,11 @@ main{
     display: none;
 }
 
-.contenedor-footer{
-    background-color: #1E53A5;
-    display: flex;
-    flex-direction: column;
-    border-top: solid 1px #0c0c5f;
-    padding: 0px 10px;
-}
-
-.barra-footer{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 5px 0px;
-    border-bottom: solid 1px #bcecf1;
-}
-
-.barra-blanca-footer{
-    background-color: #eef1f4f1;
-    display: flex;
-    align-items: center;
-    height: fit-content;
-    border-radius: 5px;
-}
-
-.barra-footer p{
-    margin: 5px;
-}
-
-.barra-footer ul{
-    list-style: none;
-    padding-left: 2px;
-}
-
-.barra-footer li{
-    margin: 5px;
-}
-
-.descripcion-footer{
-    display: none;
-}
-
 .opcion-envio select{
     width: 25%;
 }
 
 @media(min-width: 768px){
-
-    .logo-copy{
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .label-buscador{
-		width: 100%;
-        display: flex;
-        justify-content: flex-end;
-	}
-
-    .buscador {
-		width: 80%;
-		height: 30px;
-	}
-
-    .menu-hamburguesa{
-        display: none;
-    }
-
-    .logo{
-        width: 10%;
-    }
 
     .destacado{
         max-width: 300px;
@@ -270,14 +151,6 @@ main{
     .listas{
         display: flex;
         justify-content: space-between;
-    }
-
-    .left-navbar{
-        display: flex;
-    } 
-
-    .right-navbar{
-        display: flex;
     }
 
     .contenedor-main{
@@ -328,26 +201,6 @@ main{
     .main-main{
             display: flex;
             justify-content: center;
-    }
-
-    .contenedor-footer{
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .barra-footer{
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        border-bottom: none;
-    }
-
-    .barra-blanca-footer{
-        display: none;
-    }
-
-    .descripcion-footer{
-        display: contents;
     }
 
 }
