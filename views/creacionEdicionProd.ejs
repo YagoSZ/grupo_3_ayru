@@ -1,0 +1,37 @@
+><!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head') %> 
+<body>
+    <%- include('./partials/header') %> 
+    
+    <div class="contenedor-formu">
+    <form class="formu"action="/creacionEdicionProd" method="POST">
+        <p>
+
+                Nombre del producto: <input type="text" name="producto">
+              </p>
+
+              <p>
+                Descripcion: 
+                <textarea class="description" name="texto" rows="4" cols="20"></textarea>
+                </p>
+            
+              Color: <select name="menu">
+                <option value="0">...</option>
+                <option value="1">Lila</option>
+                <option value="2">Dorado</option>
+                <option value="3">Verde</option>
+              </select>
+
+              <p>
+            Precio: 
+            <input type="number" name="numero" step="any">
+                </p>
+            </form>
+          
+        </div>
+        </form>
+
+   
+</body>
+</html>

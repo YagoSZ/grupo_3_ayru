@@ -48,4 +48,8 @@ module.exports = {
     sFe: (req, res) => {
        res.render('s21Fe');
     },
+    
+       ediCreaProd: (req, res) => {
+        res.render('creacionEdicionProd');
+    }
     }
