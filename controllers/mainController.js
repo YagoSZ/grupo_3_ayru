@@ -1,3 +1,19 @@
+products = [
+    {
+        id: 1,
+        descripcion: 'Samsung S21 FE',
+        precio: 60.000,
+        imagen: "/img/celular.png"
+    },
+
+    {
+        id: 2,
+        descripcion: 'Samsung A52s LTE 5G',
+        precio: 100.000,
+        imagen: "/img/celular2.png"
+    }
+]
+
 
 module.exports = {
     
