@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
 const path = require('path');
+const multer = require('multer')
+const uploadFile = multer({storage})
 const mainController = require('./controllers/mainController');
 const router = require('./routes/mainRouter');
 const mainRouter = require ("./routes/mainRouter");
