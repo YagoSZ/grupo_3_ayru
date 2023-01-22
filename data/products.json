@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "Iphone 13",
+        "description": "dui vel nisl duis ac nibh fusce lacus purus aliquet at feugiat non pretium quis lectus suspendisse potenti in eleifend quam a odio in hac habitasse platea dictumst maecenas ut massa quis augue luctus tincidunt nulla mollis molestie lorem quisque ut erat curabitur gravida nisi at nibh in hac habitasse platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget rutrum at lorem integer tincidunt ante vel ipsum praesent blandit lacinia erat vestibulum sed magna at nunc commodo placerat praesent blandit nam nulla integer pede justo lacinia eget tincidunt eget tempus vel",
+        "image": null,
+        "color": "Negro",
+        "price": 56500000
+    },
+    {
+        "id": 2,
+        "name": "S21 FE",
+        "description": "integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci mauris lacinia sapien quis libero nullam sit amet turpis elementum ligula vehicula consequat morbi a ipsum integer a nibh in quis justo maecenas rhoncus aliquam lacus morbi quis tortor id nulla ultrices aliquet maecenas leo odio condimentum id luctus nec molestie sed justo pellentesque viverra pede ac",
+        "image": null,
+        "color": "Dorado",
+        "price": 12500000
+    },
+    {
+        "id": 3,
+        "name": "S22 Ultra",
+        "description": "non mattis pulvinar nulla pede ullamcorper augue a suscipit nulla elit ac nulla sed vel enim sit amet",
+        "image": null,
+        "color": "Gris",
+        "price": 32500000
+    }
+]
