@@ -87,7 +87,22 @@ module.exports = {
         res.render('details', {product});
     },
     
-        ediCreaProd: (req, res) => {
+    ediCreaProd: (req, res) => {
         res.render('creacionEdicionProd');
     },
-    }
+
+    //create: (req, res) => {
+
+      //  res.render('creacionEdicionProd');
+    // },
+
+    productsEdit: (req, res) => {
+
+        let id = req.params.id;
+
+        let product = products.find(product => product.id == id)
+
+        res.render('creacionEdicionProd', {product});
+    },
+}
+
