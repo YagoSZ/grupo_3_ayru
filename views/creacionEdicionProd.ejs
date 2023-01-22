@@ -5,10 +5,13 @@
     <%- include('./partials/header') %> 
     
     <div class="contenedor-formu">
-    <form class="formu"action="/creacionEdicionProd" method="POST">
-        <p>
+    <form class="formu" action="/creacionEdicionProd" method="POST">
 
-                Nombre del producto: <input type="text" name="producto">
+      <h1>Estas editando/creando:</h1>
+       <h2 class = "product-title"><%= product.descripcion %> </h2>
+
+      <p>
+                Nombre del producto: <input type="text" name="producto" value="<%= product.descripcion %>">
               </p>
 
               <p>
@@ -22,17 +25,28 @@
                 <option value="2">Dorado</option>
                 <option value="3">Verde</option>
               </select>
-
+<p>
+              Disponibilidad: <select name="menu">
+               <% if (product.disponibilidad == "en stock") { %>
+                <option value="1">en stock</option>
+                <option value="2">sin stock</option>
+               <% } else { %>
+                <option value="2">sin stock</option>
+                <option value="1">en stock</option>
+              <% } %>
+              </select>
+</p>
               <p>
             Precio: 
-            <input type="number" name="numero" step="any">
+            <input type="number" name="numero" value="<%= product.precio %>" step="any">
                 </p>
-                  <br>
-                <button>Guardar archivo</button>
+                <br>
+                <button>Guardar producto</button>
                 <br>
             </form>
           
         </div>
+
         </form>
 
    
