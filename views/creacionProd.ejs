@@ -1,0 +1,54 @@
+><!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head') %> 
+<body>
+    <%- include('./partials/header') %> 
+    
+    <div class="contenedor-formu">
+    <form class="formu" action="creacionProd.ejs" method="POST">
+
+      <h1>Estas creando:</h1>
+       <h2 class= "product-title"><%= product.descripcion %></h2>
+
+      <p>
+                Nombre del producto: <input type="text" name="producto" value="<%= product.descripcion %>">
+              </p>
+
+              <p>
+                Descripcion: 
+                <textarea class="description" name="texto" rows="4" cols="20"></textarea>
+                </p>
+            
+              Color: <select name="menu">
+                <option value="0">...</option>
+                <option value="1">Lila</option>
+                <option value="2">Dorado</option>
+                <option value="3">Verde</option>
+              </select>
+<p>
+              Disponibilidad: <select name="segundoMenu">
+               <% if (product.disponibilidad == "en stock") { %>
+                <option value="1">en stock</option>
+                <option value="2">sin stock</option>
+               <% } else { %>
+                <option value="2">sin stock</option>
+                <option value="1">en stock</option>
+              <% } %>
+              </select>
+</p>
+              <p>
+            Precio: 
+            <input type="number" name="numero" value="<%= product.precio %>" step="any">
+                </p>
+                <br>
+                <button>Guardar producto</button>
+                <br>
+            </form>
+          
+        </div>
+
+        </form>
+
+   
+</body>
+</html>
