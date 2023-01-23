@@ -21,19 +21,18 @@ router.get('/s21fe', mainController.sFe);
 
 router.get('/detalle/:id/', mainController.detail)
 
-router.get('/creacionEdicionProd', mainController.ediCreaProd);
+router.get('/edicionProd', mainController.ediProd);
 
 // router.get('/products', mainController.products);
 
-// router.get('/products/create', mainController.create);
+ //router.get('/products/create', mainController.create);
 
 // router.get('/products/:id', mainController.product);
 
 // router.post('/products', mainController.products)
 
 router.get('/products/:id/edit', mainController.productsEdit);
-
-// router.put('/products/:id/', mainController.update);
+router.put('/products/:id/edit', mainController.update);
 
 
 
