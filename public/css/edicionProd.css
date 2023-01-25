@@ -18,7 +18,7 @@ body {
     color: black;
     font-family: 'Oswald', sans-serif;
     margin: 0px;
-    }
+}
 
     .encabezado {
         background-color: #1E53A5;;
@@ -32,12 +32,12 @@ body {
         align-items: center;
     }
     
-    .logo2{
+    /* .logo2{
         width: 7%;
         height: 30%;
         padding-bottom: 0.1%;
         margin-bottom: 0.1%;
-    }
+    } */
 
     .formu{
         height: 600px;

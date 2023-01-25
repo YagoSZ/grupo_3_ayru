@@ -47,9 +47,9 @@ module.exports = {
         res.render('details', {product});
     }, 
 
-    ediProd: (req, res) => {
-        res.render('edicionProd');
-    },
+    // ediProd: (req, res) => {
+    //     res.render('edicionProd', {});
+    // },
 
     productsEdit: (req, res) => {
 
@@ -68,11 +68,10 @@ module.exports = {
 
         productToEdit = { 
         id: productToEdit.id,
-        descripcion: req.body.producto,
-        detalle: req.body.texto,
-        colores: req.body.menu,
-        disponibilidad: req.body.segundoMenu,
-        price: req.body.numero,
+        ...req.body,
+        imagenPrincipal: productToEdit.imagenPrincipal,
+        imagenShowcase2: productToEdit.imagenShowcase2,
+        imagenShowcase3: productToEdit.imagenShowcase3,
         }
 
         let newProduct = products.map(product => {

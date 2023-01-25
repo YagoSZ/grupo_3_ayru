@@ -21,7 +21,7 @@ router.get('/s21fe', mainController.sFe);
 
 router.get('/detalle/:id/', mainController.detail)
 
-router.get('/edicionProd', mainController.ediProd);
+// router.get('/edicionProd/:id/', mainController.ediProd);
 
 // router.get('/products', mainController.products);
 

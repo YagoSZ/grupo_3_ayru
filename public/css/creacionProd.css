@@ -10,7 +10,7 @@
     box-sizing: border-box;
 }
 
-body {
+/* body {
     background-image: url(/img/fondo2.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -18,14 +18,14 @@ body {
     color: black;
     font-family: 'Oswald', sans-serif;
     margin: 0px;
-    }
+    } */
 
-    .encabezado {
+    /* .encabezado {
         background-color: #1E53A5;;
         box-sizing: border-box;
-    }
+    } */
     
-    .contenedor-logo-iconos{
+    /* .contenedor-logo-iconos{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -37,7 +37,7 @@ body {
         height: 30%;
         padding-bottom: 0.1%;
         margin-bottom: 0.1%;
-    }
+    } */
 
     .formu{
         height: 600px;
