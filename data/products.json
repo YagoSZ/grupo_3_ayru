@@ -1,1 +1,111 @@
-[{"id":1,"nombre":"Samsung S21 FE","precio":60000,"imagenPrincipal":"/img/celular.png","imagenShowcase2":"/img/s21fe-dorado.jpg","imagenShowcase3":"/img/s21fe-lila.jpg","descripcion":"el diseño del Samsung Galaxy S21 FE tenemos sensaciones encontradas. Lo positivo gusta mucho, aunque lo negativo tiene más peso de lo que nos gustaría. El S21 FE mantiene la línea de diseño de su hermano, el Galaxy S21. Es un diseño industrial no muy llamativo, pero con una parte trasera atractiva y un frontal bien aprovechado. Bajo el punto de vista de un servidor, es elegante, más aún en esta unidad de color negro que repele bastante bien las huellas. Detalles del producto: Triple Cámara trasera de 12 MP + 12 MP + 8 MP Cámara Frontal de 32 MP. Infinity-O Display de 6.4 FHD+ Dynamic AMOLED 2X HID 120Hz. Procesador Exynos 2100 | Octa-Core 2.9GHz,2.8GHz,2.2GHz. 4.500 mAh para mayor duración de la batería y 25W Super Fast charging","colores":"lila / dorado / verde","disponibilidad":"en stock","categoria":"Celulares","ubicacionesDisponible":"todo el pais"},{"id":2,"nombre":"Samsung S22 ULTRA","precio":100000,"imagenPrincipal":"/img/s21fe-dorado.jpg","imagenShowcase2":"/img/s22gris.jpg","imagenShowcase3":"/img/s22naranja.jpg","descripcion":"Con un diseño de vanguardia, el celular Samsung Galaxy S22 Ultra es un teléfono único que ofrece una pantalla Dynamic AMOLED 2x con una resolución Quad HD+ sin Notch ni distracciones. Además, tiene 12GB de RAM y 256GB de almacenamiento. Desempeño: Su procesador Octa-Core y la memoria RAM de 12 GB te permitirán ejecutar aplicaciones y realizar múltiples tareas al mismo tiempo. Además, su sistema operativo Android es eficiente y fácil de usar.","colores":"Gris / Blanco / verde / Naranja","disponibiliad":"en stock","categoria":"Celulares","ubicacionesDisponible":"todo el pais"},{"id":3,"nombre":"Iphone 13 Pro","precio":100000,"imagenPrincipal":"/img/iphone13pro-azul.jpg","imagenShowcase2":"/img/iphone13pro-blanco.jpg","imagenShowcase3":"/img/iphone13pro-negro.jpg","descripcion":"Pantalla: Si la pantalla de los iPhone era buena, ahora, desde esta generación es mucho mejor. Contábamos con un panel OLED, pues en este modelo podremos disfrutar de una pantalla Super Retina XDR de 6,1 pulgadas. Y, no solo esto, sino que la tasa de refresco tiene una importante novedad, pues este smartphone de Apple llega con hasta 120 Hz con ProMotion. Dejará de contar con una tasa básica de 60 Hz, por lo que a partir de ahora se adaptará según las exigencias y lo que considere el propio sistema operativo. Además de que el brillo también se ha potenciado en esta generación. En cualquiera caso, estamos ante un iPhone 13 Pro que no solo será una gran opción para ver todo tipo de contenidos, ya sean en streaming o no, sino que será el modelo idóneo para jugar a todo tipo de videojuegos en alta resolución.","colores":"Blanco / azul / negro","disponibilidad":"en stock","categoria":"Celulares","ubicacionesDisponible":"todo el pais"}]
+[
+    {
+        "id": 1,
+        "nombre": "Samsung S21 FE",
+        "precio": 60000,
+        "imagenPrincipal": "/img/celular.png",
+        "imagenShowcase2": "/img/s21fe-dorado.jpg",
+        "imagenShowcase3": "/img/s21fe-lila.jpg",
+        "descripcion": "el diseño del Samsung Galaxy S21 FE tenemos sensaciones encontradas. Lo positivo gusta mucho, aunque lo negativo tiene más peso de lo que nos gustaría. El S21 FE mantiene la línea de diseño de su hermano, el Galaxy S21. Es un diseño industrial no muy llamativo, pero con una parte trasera atractiva y un frontal bien aprovechado. Bajo el punto de vista de un servidor, es elegante, más aún en esta unidad de color negro que repele bastante bien las huellas. Detalles del producto: Triple Cámara trasera de 12 MP + 12 MP + 8 MP Cámara Frontal de 32 MP. Infinity-O Display de 6.4 FHD+ Dynamic AMOLED 2X HID 120Hz. Procesador Exynos 2100 | Octa-Core 2.9GHz,2.8GHz,2.2GHz. 4.500 mAh para mayor duración de la batería y 25W Super Fast charging",
+        "colores": "lila / dorado / verde",
+        "disponibilidad": "en stock",
+        "categoria": "Celulares",
+        "ubicacionesDisponible": "todo el pais"
+    },
+    {
+        "id": 2,
+        "nombre": "Samsung S22 ULTRA",
+        "precio": 100000,
+        "imagenPrincipal": "/img/s21fe-dorado.jpg",
+        "imagenShowcase2": "/img/s22gris.jpg",
+        "imagenShowcase3": "/img/s22naranja.jpg",
+        "descripcion": "Con un diseño de vanguardia, el celular Samsung Galaxy S22 Ultra es un teléfono único que ofrece una pantalla Dynamic AMOLED 2x con una resolución Quad HD+ sin Notch ni distracciones. Además, tiene 12GB de RAM y 256GB de almacenamiento. Desempeño: Su procesador Octa-Core y la memoria RAM de 12 GB te permitirán ejecutar aplicaciones y realizar múltiples tareas al mismo tiempo. Además, su sistema operativo Android es eficiente y fácil de usar.",
+        "colores": "Gris / Blanco / verde / Naranja",
+        "disponibiliad": "en stock",
+        "categoria": "Celulares",
+        "ubicacionesDisponible": "todo el pais"
+    },
+    {
+        "id": 3,
+        "nombre": "Iphone 13 Pro",
+        "precio": 100000,
+        "imagenPrincipal": "/img/iphone13pro-azul.jpg",
+        "imagenShowcase2": "/img/iphone13pro-blanco.jpg",
+        "imagenShowcase3": "/img/iphone13pro-negro.jpg",
+        "descripcion": "Pantalla: Si la pantalla de los iPhone era buena, ahora, desde esta generación es mucho mejor. Contábamos con un panel OLED, pues en este modelo podremos disfrutar de una pantalla Super Retina XDR de 6,1 pulgadas. Y, no solo esto, sino que la tasa de refresco tiene una importante novedad, pues este smartphone de Apple llega con hasta 120 Hz con ProMotion. Dejará de contar con una tasa básica de 60 Hz, por lo que a partir de ahora se adaptará según las exigencias y lo que considere el propio sistema operativo. Además de que el brillo también se ha potenciado en esta generación. En cualquiera caso, estamos ante un iPhone 13 Pro que no solo será una gran opción para ver todo tipo de contenidos, ya sean en streaming o no, sino que será el modelo idóneo para jugar a todo tipo de videojuegos en alta resolución.",
+        "colores": "Blanco / azul / negro",
+        "disponibilidad": "en stock",
+        "categoria": "Celulares",
+        "ubicacionesDisponible": "todo el pais"
+    },
+    {
+        "id": 4,
+        "nombre": "Notebook Bhangho Max L5",
+        "precio": 180000,
+        "imagenPrincipal": "/img/notebookBhanghoMaxL5.jpg",
+        "descripcion": "Notebook Banghó Max L5 i5 , la mejor relación entre productividad y presupuesto gracias al Procesador Intel Core i5 de 10ma generación y 8GB de RAM. Podrás trabajar en tu casa, estudio u oficina con una notebook de máxima potencia.",
+        "disponibilidad": "en stock",
+        "categoria": "Notebooks",
+        "ubicacionesDisponible": "todo el pais"
+    },
+    {
+        "id": 5,
+        "nombre": "Notebook HP OMEN",
+        "precio": 200000,
+        "imagenPrincipal": "/img/notebookHPomen.jpg",
+        "descripcion": "Con la pantalla WLED Full HD vas a poder disfrutar de 15,6 con una resolución de 1920 x 1080 píxeles podrás disfrutar de películas, videos y juegos o navegar en internet.",
+        "disponibilidad": "en stock",
+        "categoria": "Notebooks",
+        "ubicacionesDisponible": "todo el pais"
+    },
+    {
+    "id": 6,
+    "nombre": "Notebook HP Pavilion",
+    "precio": 250000,
+    "imagenPrincipal": "/img/notebookHPpavilion.jpg",
+    "descripcion": "La notebook HP Pavilion 15-EH0009LA es la fusión perfecta entre el máximo desempeño y el mejor diseño para tus días más productivos. Con una pantalla de 15,6 pulgadas con micro bordes y resolución FHD (1920 x 1080 p) tendrás mayor visualización, con amplios ángulos de visión de 178°, y una excelente calidad para disfrutar de todo tu contenido. Además, cuenta con lector de huellas digitales para que puedas iniciar sesión en tu dispositivo solo con el toque de tu dedo.",
+    "disponibilidad": "en stock",
+    "categoria": "Notebooks",
+    "ubicacionesDisponible": "todo el pais"
+    },
+    {
+        "id": 7,
+        "nombre": "Notebook Lenovo",
+        "precio": 170000,
+        "imagenPrincipal": "/img/notebookLenovo.jpg",
+        "descripcion": "La notebook Lenovo IP1-81VU006Q cuenta con un diseño compacto y funcional. Llevala con vos a donde quieras gracias a su liviano peso 1.4 Kg de y sus cómodas medidas de: 32.7 cm de ancho x 23.5 cm de profundidad x 1.7 cm de alto.",
+        "disponibilidad": "en stock",
+        "categoria": "Notebooks",
+        "ubicacionesDisponible": "todo el pais"  
+    },
+    {
+        "id": 8,
+        "nombre": "Smart TV Full HD",
+        "precio": 70000,
+        "imagenPrincipal": "/img/SmartTvFullHD.jpg",
+        "descripcion": "El Smart TV TCL L40S66E-F de 40 pulgadas cuenta con una pantalla formato widescreen (16:9) con una resolución de 1920 x 1080 píxeles. A diferencia del estándar HD, su alto nivel de detalle brinda colores más puros y nítidos.",
+        "disponibilidad": "en stock",
+        "categoria": "Televisores",
+        "ubicacionesDisponible": "todo el pais"  
+    },
+    {
+        "id": 9,
+        "nombre": "Smart TV QLED ",
+        "precio": 240000,
+        "imagenPrincipal": "/img/SmartTvQLED.jpg",
+        "descripcion": "Posee un diseño elegante y ultra delgado. Con su pantalla de 55 pulgadas y resolución 4K QLED lograrás tener imágenes claras y nítidas, para disfrutar de todo tu contenido favorito sin perderte ningún detalle. Además, podrás tener una experiencia gamer diferente y mejorada, ya que las pantallas de 21:9 y 32:9 te brindarán visibilidad adicional y, con el modo Auto Low Latency (ALLM), disfrutarás tus partidas con más fluidez y enfoque. ",
+        "disponibilidad": "en stock",
+        "categoria": "Televisores",
+        "ubicacionesDisponible": "todo el pais"  
+    },
+    {
+        "id": 10,
+        "nombre": "Smart TV UHD ",
+        "precio": 135000,
+        "imagenPrincipal": "/img/SmartTvUHD.jpg",
+        "descripcion": "Tiene una resolución cuatro veces superior a la de una TV Full HD (3840 x 2160 píxeles) y cuenta con Crystal Processor 4K que garantiza una expresión de colores optimizada para que puedas ver cada detalle. Su panel LED ofrece además la característica de alto rango dinámico (HDR), que aumenta la expresión brillante del televisor para que puedas disfrutar de un inmenso espectro de colores y detalles visuales, incluso en las escenas más oscuras.",
+        "disponibilidad": "en stock",
+        "categoria": "Televisores",
+        "ubicacionesDisponible": "todo el pais"  
+    }
+]
