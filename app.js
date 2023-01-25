@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const multer = require('multer')
+const logMiddleware = require('./middlewares/logMiddleware')
 // const uploadFile = multer({storage})
 // const mainController = require('./controllers/mainController');
 const router = require('./routes/mainRouter');
@@ -13,8 +14,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false}))
 app.use(express.static("public"))
 app.use(methodOverride('_method'))
+app.use(logMiddleware);
 app.set('view engine', 'ejs');
 app.set('views', './views');
+
 
 
 app.use(mainRouter);
