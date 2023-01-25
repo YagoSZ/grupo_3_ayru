@@ -29,6 +29,8 @@ router.post('/products', mainController.products) //Guardar nuevo Producto
 router.get('/products/:id/edit', mainController.productsEdit); //Traer pagina edicion Productos
 router.put('/products/:id/edit', mainController.update);//Editar Productos
 
+router.delete('/products/:id', mainController.destroy)
+
 
 
 module.exports = router

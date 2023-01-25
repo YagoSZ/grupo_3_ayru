@@ -6,9 +6,11 @@
     <title>Iphone 13 PRO</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/css/iphone13pro.css">
+    <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
   </head>
   <body>
+    <%- include('./partials/header.ejs'); %>
     
     <div class = "card-wrapper">
       <div class = "card">
@@ -41,7 +43,9 @@
         </div>
         <!-- card right -->
         <div class = "product-content">
-          <h2 class = "product-title"><%= product.descripcion %> </h2>
+          
+            <p class = "product-title"><%= product.descripcion %> </p>
+          
           <a href = "/" class = "product-link">Volver a lista de productos</a>
           <div class = "product-rating">
             <i class = "fas fa-star"></i>
@@ -75,6 +79,22 @@
               Agregar al carrito <i class = "fas fa-shopping-cart"></i>
             </button>
           </div>
+
+          <div class = "edit-button">
+            <button type = "button" class = "button-edit">
+              <a href="/products/<%= product.id %>/edit ">
+                Editar Producto 
+              </a>
+            </button>
+            <form action="/products/<%= product.id %>?_method=DELETE" method="POST">
+              <button type = "submit" class = "button-delete">
+                Borrar Producto 
+              </button>
+            </form>
+          </div>
+
+
+
         </div>
       </div>
     </div>

@@ -110,5 +110,15 @@ module.exports = {
 
         res.redirect('/')
     },
+
+    destroy: (req, res) => {
+        let id = req.params.id;
+
+        let productToDelete = products.filter(product => product.id != id);
+
+        fs.writeFileSync(productsFilePath, JSON.stringify(productToDelete));
+
+        res.redirect('/products');
+    }
 }
 
