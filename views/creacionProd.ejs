@@ -1,54 +1,72 @@
-><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-    <%- include('./partials/head') %> 
+<%- include('./partials/head.ejs'); %>
 <body>
-    <%- include('./partials/header') %> 
-    
+    <%- include('./partials/header.ejs'); %>
+    <main>
     <div class="contenedor-formu">
-    <form class="formu" action="creacionProd.ejs" method="POST">
+        <form class="formu" action="/products" method="POST">
 
-      <h1>Estas creando:</h1>
-       <h2 class= "product-title"><%= product.descripcion %></h2>
+            <h1>Formulario Creacion de Productos</h1>
+            <!-- <h2 class ="product-title">=</h2> -->
 
-      <p>
-                Nombre del producto: <input type="text" name="producto" value="<%= product.descripcion %>">
-              </p>
+            <p>
+                Nombre del producto: <input type="text" name="nombre" placeholder="Ej: Samsung Galaxy">
+            </p>
 
-              <p>
+            <p>
                 Descripcion: 
-                <textarea class="description" name="texto" rows="4" cols="20"></textarea>
-                </p>
-            
-              Color: <select name="menu">
-                <option value="0">...</option>
-                <option value="1">Lila</option>
-                <option value="2">Dorado</option>
-                <option value="3">Verde</option>
+                <textarea class="description" name="descripcion" rows="4" cols="20"></textarea>
+            </p>
+            <p>
+                Color: 
+                <select name="colores">
+                    <option value="0">...</option>
+                    <option value="Lila">Lila</option>
+                    <option value="Dorado">Dorado</option>
+                    <option value="Verde">Verde</option>
+                </select>
+            </p>
+            <p>
+                Disponibilidad: 
+                <select name="disponibilidad">
+                    <option value="0" selected>Elegi</option>
+                    <option value="en stock">en stock</option>
+                    <option value="sin stock">sin stock</option>
               </select>
-<p>
-              Disponibilidad: <select name="segundoMenu">
-               <% if (product.disponibilidad == "en stock") { %>
-                <option value="1">en stock</option>
-                <option value="2">sin stock</option>
-               <% } else { %>
-                <option value="2">sin stock</option>
-                <option value="1">en stock</option>
-              <% } %>
+            </p>
+            <p>
+                Precio: 
+                <input type="number" name="precio" placeholder="Ej: 5678" step="any">
+            </p>
+            <p>
+                Categoria: 
+                <select name="categoria">
+                    <option value="0" selected>Elegi</option>
+                    <option value="Celulares">Celulares</option>
+                    <option value="Televisores">Televisores</option>
+                </select>
+            </p>
+            <p>
+              UbicacionesDisponibles: 
+              <select name="ubicacionesDisponible">
+                      <option value="todo el pais" selected>Todo el pais</option>
+                      <option value="Buenos Aires">Buenos Aires</option>
+                      <option value="Entre Rios">Entre Rios</option>
               </select>
-</p>
-              <p>
-            Precio: 
-            <input type="number" name="numero" value="<%= product.precio %>" step="any">
-                </p>
-                <br>
-                <button>Guardar producto</button>
-                <br>
-            </form>
+            </p>
+
+            <br>
+            <button type="submit">Guardar producto</button>
+            <br>
+        </form>
+
           
         </div>
 
         </form>
 
-   
+      </main>
+      <%- include('./partials/footer.ejs'); %>
 </body>
 </html>

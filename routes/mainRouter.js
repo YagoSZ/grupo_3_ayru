@@ -25,11 +25,13 @@ router.get('/detalle/:id/', mainController.detail)
 
 // router.get('/products', mainController.products);
 
- //router.get('/products/create', mainController.create);
+router.get('/products', mainController.listado);
+router.get('/products/create', mainController.create);
+router.post('/products', mainController.products)
 
 // router.get('/products/:id', mainController.product);
 
-// router.post('/products', mainController.products)
+
 
 router.get('/products/:id/edit', mainController.productsEdit);
 router.put('/products/:id/edit', mainController.update);

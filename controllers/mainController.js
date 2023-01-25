@@ -47,6 +47,30 @@ module.exports = {
         res.render('details', {product});
     }, 
 
+    listado: (req, res) => {
+        res.render('listado', {productos: products})
+    },
+
+    create: (req, res) => {
+
+        res.render('creacionProd');
+
+    },
+
+    products: (req, res) => {
+        productToCreate = {
+            id: products[products.length - 1].id + 1,
+            ...req.body,
+        }
+
+        products.push(productToCreate);
+
+        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ''));
+
+        res.redirect('/')
+
+    },
+
     // ediProd: (req, res) => {
     //     res.render('edicionProd', {});
     // },

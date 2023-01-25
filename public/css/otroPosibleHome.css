@@ -35,6 +35,13 @@ a{
     flex-direction: column;
 }
 
+/* CSS PARTIALS.CARD */
+.div-listado{
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0px;
+}
+
 
 
 
