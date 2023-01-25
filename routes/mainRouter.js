@@ -21,20 +21,13 @@ router.get('/s21fe', mainController.sFe);
 
 router.get('/detalle/:id/', mainController.detail)
 
-// router.get('/edicionProd/:id/', mainController.ediProd);
-
-// router.get('/products', mainController.products);
-
-router.get('/products', mainController.listado);
-router.get('/products/create', mainController.create);
-router.post('/products', mainController.products)
-
-// router.get('/products/:id', mainController.product);
+router.get('/products', mainController.listado); // Traer listado productos
+router.get('/products/create', mainController.create); //Traer Pagina creacion productos
+router.post('/products', mainController.products) //Guardar nuevo Producto
 
 
-
-router.get('/products/:id/edit', mainController.productsEdit);
-router.put('/products/:id/edit', mainController.update);
+router.get('/products/:id/edit', mainController.productsEdit); //Traer pagina edicion Productos
+router.put('/products/:id/edit', mainController.update);//Editar Productos
 
 
 
