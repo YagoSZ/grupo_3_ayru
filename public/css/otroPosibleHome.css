@@ -300,6 +300,14 @@ a{
 	text-decoration:none;
 	text-shadow:0px -6px 0px #e1e2ed;
 }
+
+.mas-productos{
+  font-size: 30px;
+  font-family: 'Prosto One', cursive;
+  display: flex;
+  justify-content: center;
+  text-decoration: underline;
+}
 /* FIN CSS DESTACADOS */
 
 
