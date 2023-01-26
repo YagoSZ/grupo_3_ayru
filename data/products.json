@@ -37,5 +37,75 @@
         "disponibilidad": "en stock",
         "categoria": "Celulares",
         "ubicacionesDisponible": "todo el pais"
+    },
+    {
+        "id": 4,
+        "nombre": "Notebook Bhangho Max L5",
+        "precio": 180000,
+        "imagenPrincipal": "/img/notebookBhanghoMaxL5.jpg",
+        "descripcion": "Notebook Banghó Max L5 i5 , la mejor relación entre productividad y presupuesto gracias al Procesador Intel Core i5 de 10ma generación y 8GB de RAM. Podrás trabajar en tu casa, estudio u oficina con una notebook de máxima potencia.",
+        "disponibilidad": "en stock",
+        "categoria": "Notebooks",
+        "ubicacionesDisponible": "todo el pais"
+    },
+    {
+        "id": 5,
+        "nombre": "Notebook HP OMEN",
+        "precio": 200000,
+        "imagenPrincipal": "/img/notebookHPomen.jpg",
+        "descripcion": "Con la pantalla WLED Full HD vas a poder disfrutar de 15,6 con una resolución de 1920 x 1080 píxeles podrás disfrutar de películas, videos y juegos o navegar en internet.",
+        "disponibilidad": "en stock",
+        "categoria": "Notebooks",
+        "ubicacionesDisponible": "todo el pais"
+    },
+    {
+    "id": 6,
+    "nombre": "Notebook HP Pavilion",
+    "precio": 250000,
+    "imagenPrincipal": "/img/notebookHPpavilion.jpg",
+    "descripcion": "La notebook HP Pavilion 15-EH0009LA es la fusión perfecta entre el máximo desempeño y el mejor diseño para tus días más productivos. Con una pantalla de 15,6 pulgadas con micro bordes y resolución FHD (1920 x 1080 p) tendrás mayor visualización, con amplios ángulos de visión de 178°, y una excelente calidad para disfrutar de todo tu contenido. Además, cuenta con lector de huellas digitales para que puedas iniciar sesión en tu dispositivo solo con el toque de tu dedo.",
+    "disponibilidad": "en stock",
+    "categoria": "Notebooks",
+    "ubicacionesDisponible": "todo el pais"
+    },
+    {
+        "id": 7,
+        "nombre": "Notebook Lenovo",
+        "precio": 170000,
+        "imagenPrincipal": "/img/notebookLenovo.jpg",
+        "descripcion": "La notebook Lenovo IP1-81VU006Q cuenta con un diseño compacto y funcional. Llevala con vos a donde quieras gracias a su liviano peso 1.4 Kg de y sus cómodas medidas de: 32.7 cm de ancho x 23.5 cm de profundidad x 1.7 cm de alto.",
+        "disponibilidad": "en stock",
+        "categoria": "Notebooks",
+        "ubicacionesDisponible": "todo el pais"  
+    },
+    {
+        "id": 8,
+        "nombre": "Smart TV Full HD",
+        "precio": 70000,
+        "imagenPrincipal": "/img/SmartTvFullHD.jpg",
+        "descripcion": "El Smart TV TCL L40S66E-F de 40 pulgadas cuenta con una pantalla formato widescreen (16:9) con una resolución de 1920 x 1080 píxeles. A diferencia del estándar HD, su alto nivel de detalle brinda colores más puros y nítidos.",
+        "disponibilidad": "en stock",
+        "categoria": "Televisores",
+        "ubicacionesDisponible": "todo el pais"  
+    },
+    {
+        "id": 9,
+        "nombre": "Smart TV QLED ",
+        "precio": 240000,
+        "imagenPrincipal": "/img/SmartTvQLED.jpg",
+        "descripcion": "Posee un diseño elegante y ultra delgado. Con su pantalla de 55 pulgadas y resolución 4K QLED lograrás tener imágenes claras y nítidas, para disfrutar de todo tu contenido favorito sin perderte ningún detalle. Además, podrás tener una experiencia gamer diferente y mejorada, ya que las pantallas de 21:9 y 32:9 te brindarán visibilidad adicional y, con el modo Auto Low Latency (ALLM), disfrutarás tus partidas con más fluidez y enfoque. ",
+        "disponibilidad": "en stock",
+        "categoria": "Televisores",
+        "ubicacionesDisponible": "todo el pais"  
+    },
+    {
+        "id": 10,
+        "nombre": "Smart TV UHD ",
+        "precio": 135000,
+        "imagenPrincipal": "/img/SmartTvUHD.jpg",
+        "descripcion": "Tiene una resolución cuatro veces superior a la de una TV Full HD (3840 x 2160 píxeles) y cuenta con Crystal Processor 4K que garantiza una expresión de colores optimizada para que puedas ver cada detalle. Su panel LED ofrece además la característica de alto rango dinámico (HDR), que aumenta la expresión brillante del televisor para que puedas disfrutar de un inmenso espectro de colores y detalles visuales, incluso en las escenas más oscuras.",
+        "disponibilidad": "en stock",
+        "categoria": "Televisores",
+        "ubicacionesDisponible": "todo el pais"  
     }
 ]
