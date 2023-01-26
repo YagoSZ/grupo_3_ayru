@@ -1,8 +1,5 @@
-<% let destacados = productos.filter(product =>  product.id < 4) %>
 
-
-
-<% destacados.forEach(producto => { %>
+<% productos.forEach(producto => { %>
 
     <div class="contenedor-imagen">
         <img src="<%= producto.imagenPrincipal %> " alt="Samsung S21" class="imagen-destacada">

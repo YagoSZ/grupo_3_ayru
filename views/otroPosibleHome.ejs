@@ -64,7 +64,22 @@
     
         <div class="destacados">
     
-            <%- include('./partials/card.ejs'); %>
+            <% let destacados = productos.filter(product =>  product.id < 4) %>
+
+
+
+            <% destacados.forEach(producto => { %>
+
+                <div class="contenedor-imagen">
+                    <img src="<%= producto.imagenPrincipal %> " alt="Samsung S21" class="imagen-destacada">
+                    <div class="descripcion-destacado">
+                        <h3><%= producto.nombre %> </h3>
+                        <p>$<%= producto.precio %> </p>
+                        <a href="/detalle/<%= producto.id %> "><button class="boton" type="submit">Conoce más</button></a>
+                    </div>
+                </div>
+    
+            <%  }); %> 
             <!-- <div class="contenedor-imagen">
                 <img src="/img/celular.png" alt="Samsung S21" class="imagen-destacada">
                 <div class="descripcion-destacado">
