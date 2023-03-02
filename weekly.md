@@ -20,3 +20,5 @@ Nos atrasamos con ciertas partes del trabajo pero nos pusimos de acuerdo para ha
 Tuvimos que resolver muchos inconvenientes y trabas que surgieron respecto a los ultimos dos sprint 
 
 Gracias al trabajo en equipo logramos resolver gran parte de las dudas que habian surgido 
+
+Ademas llegamos a un acuerdo en trabajar todos juntos desde un mismo codigo para ser mas efectivos a la hora de realizar los sprints del proyecto integrador
