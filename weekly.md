@@ -11,3 +11,12 @@ Nos queda todavia gran parte del sprint 4 y vamos a resolverlo en breve en reuni
 
 
 Fin del primer weekly standup 
+
+
+Segundo weekly standup: 
+
+Nos atrasamos con ciertas partes del trabajo pero nos pusimos de acuerdo para hacer mas de una reunion por semana para adelantar nuestro proyecto 
+
+Tuvimos que resolver muchos inconvenientes y trabas que surgieron respecto a los ultimos dos sprint 
+
+Gracias al trabajo en equipo logramos resolver gran parte de las dudas que habian surgido 
