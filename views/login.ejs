@@ -18,6 +18,9 @@
                 <div class="login-f"> 
                     <i class="login-i fas fa-user"></i>
                     <input type="text" class="login-i2" placeholder="Usuario / email">
+                      <% if (locals.errors && errors.email) { %>
+                      <%= errors.email.msg %>
+                    <% } %>
                 </div> 
                 <div class="login-f">
                 <i class="login-i fas fa-lock"></i>
