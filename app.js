@@ -24,7 +24,7 @@ app.use(session({
 app.set('view engine', 'ejs');
 app.set('views', './views');
 
-app.use(nonUserRouter)
+// app.use(nonUserRouter)
 app.use('/users', users)
 
 app.use(logMiddleware);

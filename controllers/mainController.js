@@ -21,9 +21,6 @@ module.exports = {
     crearUsuario:  (req, res) => {
 
         let errors = validationResult(req);
-        console.log(errors);
-        console.log(errors.mapped());
-        console.log(req.body);
         if(errors.isEmpty()){
 
             let img 
