@@ -13,7 +13,7 @@ let validationsRegister = [
     body('password').notEmpty().withMessage('la Contrasena es obligatoria')
 ]
 
-//router.get('/', mainController.home)
+router.get('/', mainController.home)
 router.get('/register', mainController.register);
 router.post('/register', upload.single('imagenUsuario'), validationsRegister, mainController.crearUsuario)
 
