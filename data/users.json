@@ -19,20 +19,20 @@
     },
     {
         "id": 3,
-        "firstName": "Ramon",
-        "lastName": "Marino",
-        "email": "ramon@hotmail.com",
-        "password": "12345",
-        "admin": true,
-        "image": ""
-    },
-    {
-        "id": 4,
         "firstName": "Ariadna",
         "lastName": "Mazzocchi",
         "email": "ariadna@gmail.com",
         "password": "123456",
         "admin": false,
         "image": ""
+    },
+    {
+        "id": 4,
+        "firstName": "Ramon",
+        "lastName": "Marino",
+        "email": "marinoramon@hotmail.com",
+        "password": "$2a$10$YD6BUO/DlWUrOvG/tDLP8eFOCx6CyNVNKB6S9HvDbhP9r6jESpIha",
+        "admin": false,
+        "image": "/img/default1.png"
     }
 ]

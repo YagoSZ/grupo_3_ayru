@@ -6,12 +6,14 @@ const usersFilePath = path.join(__dirname, '../data/users.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf8'));
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf8'));
 const {validationResult} = require('express-validator');
+const session = require('express-session')
 
 
 
 module.exports = {
     
     index:  (req, res) => {
+       
        res.render('otroPosibleHome', {productos: products});   
     }, 
     
@@ -20,14 +22,6 @@ module.exports = {
     },
 
     crearUsuario:  (req, res) => {
-
-        const user = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/users.json')))
-        const {email, password} = req.body
-
-        const userData = {
-
-            email,
-            password: bcrypt.hashSync(password, 10)  }
 
         let errors = validationResult(req);
         if(errors.isEmpty()){
@@ -46,7 +40,7 @@ module.exports = {
                 "firstName": req.body.nombre,
                 "lastName": req.body.apellido,
                 "email": req.body.email,
-                "password": req.body.password,
+                "password": bcrypt.hashSync(req.body.password, 10),
                 "admin": false,
                 "image": img
             }
@@ -65,9 +59,7 @@ module.exports = {
 
     },
 
-    home:  (req, res) => {
-        res.render('otroPosibleHome');
-    },
+
 
     
     login:  (req, res) => {
@@ -75,45 +67,26 @@ module.exports = {
     },
 
     ingresar:  (req, res) => {
+        console.log(req.body)
 
         const {email, password} = req.body
         const users = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/users.json')))
 
-        const loggedUser = users.find(user => user.email === email )
+        const loggedUser = users.find(user => user.email == email )
+        console.log(loggedUser)
 
         if (loggedUser){
-          let ec =  bcrypt.compareSync(password, loggedUser.password)
-
+          let validPassword =  bcrypt.compareSync(password, loggedUser.password)
+          console.log(validPassword)
+          if(validPassword){
+            req.session.usuario = loggedUser;
+            res.redirect('/')
+          }
+          else{
+            res.redirect('/login')
+          }
         } else {
-            res.redirect('./users/login')
-        }
-
-
-
-        console.log(req.body)
-        usuarioALogearse = req.body;
-        
-        validacionEmail = false;
-
-        users.forEach(usuario => {
-            if(usuario.email == usuarioALogearse.email){
-                usuarioBase = usuario;
-                validacionEmail = true;
-            }
-        });
-        // console.log(usuarioBase)
-        if (validacionEmail) {
-            if (usuarioBase.password == usuarioALogearse.password) {
-                
-                req.session.usuario = usuarioALogearse;
-                
-                res.redirect('/')
-            }
-            else {
-                res.render('login');
-            }
-        }else{
-            res.render('login');
+            res.redirect('/login')
         }
     },
     

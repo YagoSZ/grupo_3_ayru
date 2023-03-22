@@ -26,9 +26,8 @@ app.set('views', './views');
 
 app.use(nonUserRouter)
 
-
-app.use(logMiddleware);
 app.use(authMiddleware);
+app.use(logMiddleware);
 
 app.use(mainRouter);
 
