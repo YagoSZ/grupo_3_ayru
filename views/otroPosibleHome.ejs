@@ -5,7 +5,11 @@
     <%- include('./partials/head.ejs'); %>
 
 <body>
-    <%- include('./partials/headerUsuario.ejs'); %>
+    <% if (logged == undefined) { %>
+        <%- include('./partials/header.ejs'); %>
+    <% } else{%>
+        <%- include('./partials/headerUsuario.ejs'); %>
+    <% } %>
 <main>
     <div class="main-main">
         <div class="slideshow-container">
@@ -18,7 +22,7 @@
               <div class="text1">S22 Ultra</div>
               <div class="contenedor-descripcion-foto">
                 <button class="boton-comprar"><p>Comprar</p><i class="fa-solid fa-square-arrow-up-right"></i></button>
-                <a href="/s22ultra">Mas informacion</a>
+                <a href="/detalle/2">Mas informacion</a>
             </div>
             </div>
           
@@ -29,7 +33,7 @@
               <div class="text1">Pro Max</div>
               <div class="contenedor-descripcion-foto">
                 <button class="boton-comprar"><p>Comprar</p><i class="fa-solid fa-square-arrow-up-right"></i></button>
-                <a href="/iphone13">Mas informacion</a>
+                <a href="/detalle/3">Mas informacion</a>
             </div>
             </div>
           
@@ -40,7 +44,7 @@
               <div class="text1">S21 Dorado</div>
               <div class="contenedor-descripcion-foto">
                 <button class="boton-comprar"><p>Comprar</p><i class="fa-solid fa-square-arrow-up-right"></i></button>
-                <a href="/s21fe">Mas informacion</a>
+                <a href="/detalle/1">Mas informacion</a>
             </div>
             </div>
           

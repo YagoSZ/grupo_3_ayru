@@ -13,10 +13,22 @@ let validationsRegister = [
     body('password').notEmpty().withMessage('la Contrasena es obligatoria')
 ]
 
+router.get('/', mainController.index);
+
+router.get('/detalle/:id/', mainController.detail)
+
 router.get('/register', mainController.register);
 router.post('/register', upload.single('imagenUsuario'), validationsRegister, mainController.crearUsuario)
 
 router.get('/login', mainController.login);
 router.post('/login', mainController.ingresar);
+
+router.get('/iphone13', mainController.iphoneTrece);
+
+router.get('/s22ultra', mainController.sUltra);
+
+router.get('/s21fe', mainController.sFe);
+
+router.get('/products', mainController.listado); // Traer listado productos
 
 module.exports = router

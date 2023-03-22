@@ -148,10 +148,10 @@ main{
         max-width: 300px;
     }
 
-    .listas{
+    /* .listas{
         display: flex;
         justify-content: space-between;
-    }
+    } */
 
     .contenedor-main{
         display: flex;

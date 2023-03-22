@@ -4,7 +4,6 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: 'Open Sans', sans-serif;
 }
 body{
     line-height: 1.5;
@@ -176,13 +175,19 @@ img{
 .button-edit{
     height: 50px;
     width: 150px;
-    background-color: #0de30d;
+    background-color: #55e4bb;
     color: #000;
     font-size: 16px;
     font-weight: 700;
     margin: 10px 5px;
-    border-radius: 7px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 26px 3px rgba(0,0,0,0.75) inset;
+    -webkit-box-shadow: 0px 0px 26px 3px rgba(0,0,0,0.75) inset;
+    -moz-box-shadow: 0px 0px 26px 3px rgba(0,0,0,0.75) inset;
 }
+/* box-shadow: 0px 0px 43px 3px rgba(0,0,0,0.75) inset;
+-webkit-box-shadow: 0px 0px 43px 3px rgba(0,0,0,0.75) inset;
+-moz-box-shadow: 0px 0px 43px 3px rgba(0,0,0,0.75) inset; */
 
 .button-delete{
     height: 50px;
@@ -192,7 +197,10 @@ img{
     font-size: 16px;
     font-weight: 700;
     margin: 10px 5px;
-    border-radius: 7px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 26px 3px rgba(0,0,0,0.75) inset;
+    -webkit-box-shadow: 0px 0px 26px 3px rgba(0,0,0,0.75) inset;
+    -moz-box-shadow: 0px 0px 26px 3px rgba(0,0,0,0.75) inset;
 }
 
 .social-links{

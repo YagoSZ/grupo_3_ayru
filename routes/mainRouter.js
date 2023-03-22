@@ -7,21 +7,12 @@ const mainController = require('../controllers/mainController')
 const {body} = require('express-validator');
 
 
-router.get('/', mainController.index);
 
-router.get('/productDetail', mainController.productDetail);
 
 router.get('/productCart', mainController.productCart);
 
-router.get('/iphone13', mainController.iphoneTrece);
 
-router.get('/s22ultra', mainController.sUltra);
-
-router.get('/s21fe', mainController.sFe);
-
-router.get('/detalle/:id/', mainController.detail)
-
-router.get('/products', mainController.listado); // Traer listado productos
+//routes de ADMINS
 router.get('/products/create', mainController.create); //Traer Pagina creacion productos
 router.post('/products', mainController.products) //Guardar nuevo Producto
 

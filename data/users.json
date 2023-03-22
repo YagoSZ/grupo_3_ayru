@@ -32,7 +32,7 @@
         "lastName": "Marino",
         "email": "marinoramon@hotmail.com",
         "password": "$2a$10$YD6BUO/DlWUrOvG/tDLP8eFOCx6CyNVNKB6S9HvDbhP9r6jESpIha",
-        "admin": false,
+        "admin": true,
         "image": "/img/default1.png"
     }
 ]

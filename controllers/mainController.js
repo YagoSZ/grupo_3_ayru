@@ -13,8 +13,9 @@ const session = require('express-session')
 module.exports = {
     
     index:  (req, res) => {
-       
-       res.render('otroPosibleHome', {productos: products});   
+       let logged = req.session.usuario
+       console.log(logged)
+       res.render('otroPosibleHome', {productos: products, logged: logged});   
     }, 
     
     register:  (req, res) => {
@@ -90,9 +91,6 @@ module.exports = {
         }
     },
     
-    productDetail: (req, res) => {
-        res.render('productDetail');
-    },
     
     productCart: (req, res) => {
         res.render('productCart');
@@ -116,7 +114,7 @@ module.exports = {
 
         let product = products.find(product => product.id == id)
 
-        res.render('details', {product});
+        res.render('details', {product, logged: req.session.usuario});
     }, 
 
     listado: (req, res) => {
