@@ -1,6 +1,9 @@
+const session = require('express-session')
+
 function authMiddleware(req, res, next) {
-    if (!req.session.userLogged) {
-        return res.redirect('/views/login');
+    console.log(req.session.usuario)
+    if (req.session.usuario == undefined) {
+        return res.render('login');
     }
     next();
 }

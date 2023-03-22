@@ -71,7 +71,7 @@ background-size: cover; ;
             width: 100%;
             padding: 5px;
             border-radius: 4px;
-            margin-bottom: 50px;
+            /* margin-bottom: 50px; */
             } 
 
             h1{
@@ -89,6 +89,17 @@ background-size: cover; ;
              .fa-user-circle-o{
                 font-size: 60px;
             }
+
+.contenedor-registro{
+    margin-bottom: 50px
+}
+            
+.mensaje-error{
+    color: rgb(160 34 20);
+    font-weight: bold;
+}
+
+
 /*
 .encabezado{
     width: 100%;
