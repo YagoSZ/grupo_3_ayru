@@ -34,5 +34,14 @@
         "password": "123456",
         "admin": false,
         "image": ""
+    },
+    {
+        "id": 5,
+        "firstName": "juliana",
+        "lastName": "fghjk",
+        "email": "julianadamelio@hormail.com",
+        "password": "njnjnj",
+        "admin": false,
+        "image": "imagenUsuario-1679447299647-876587782"
     }
 ]

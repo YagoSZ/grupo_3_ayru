@@ -1,13 +1,12 @@
 const express = require('express');
 const app = express();
 const router = express.Router();
+const upload = require('../middlewares/multerMiddleware');
+const path = require("path")
 const mainController = require('../controllers/mainController')
+const {body} = require('express-validator');
 
 router.get('/', mainController.index);
-
-router.get('/register', mainController.register);
-
-router.get('/login', mainController.login);
 
 router.get('/productDetail', mainController.productDetail);
 
