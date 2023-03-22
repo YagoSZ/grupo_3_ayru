@@ -77,9 +77,3 @@ module.exports = {
           let ec =  bcrypt.compareSync(password, loggedUser.password)
           req.session.usuario = loggedUser;
           res.redirect('/')
-
-        } else {
-            res.redirect('./users/login')
-        }
-    }
-}

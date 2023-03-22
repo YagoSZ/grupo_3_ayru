@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const bcrypt = require('bcryptjs')
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const usersFilePath = path.join(__dirname, '../data/users.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf8'));
@@ -19,6 +20,14 @@ module.exports = {
     },
 
     crearUsuario:  (req, res) => {
+
+        const user = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/users.json')))
+        const {email, password} = req.body
+
+        const userData = {
+
+            email,
+            password: bcrypt.hashSync(password, 10)  }
 
         let errors = validationResult(req);
         if(errors.isEmpty()){
@@ -66,6 +75,21 @@ module.exports = {
     },
 
     ingresar:  (req, res) => {
+
+        const {email, password} = req.body
+        const users = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/users.json')))
+
+        const loggedUser = users.find(user => user.email === email )
+
+        if (loggedUser){
+          let ec =  bcrypt.compareSync(password, loggedUser.password)
+
+        } else {
+            res.redirect('./users/login')
+        }
+
+
+
         console.log(req.body)
         usuarioALogearse = req.body;
         
