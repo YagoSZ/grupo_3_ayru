@@ -6,6 +6,7 @@ const path = require("path")
 const mainController = require('../controllers/mainController')
 const {body} = require('express-validator');
 
+
 router.get('/', mainController.index);
 
 router.get('/productDetail', mainController.productDetail);

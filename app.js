@@ -11,6 +11,7 @@ const nonUserRouter = require ('./routes/nonUserRouter')
 const publicPath = path.resolve(__dirname, './public')
 const methodOverride = require('method-override')
 const session = require('express-session')
+const users = require('./routes/users.js')
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false}))
@@ -24,6 +25,7 @@ app.set('view engine', 'ejs');
 app.set('views', './views');
 
 app.use(nonUserRouter)
+app.use('/users', users)
 
 app.use(logMiddleware);
 app.use(authMiddleware);

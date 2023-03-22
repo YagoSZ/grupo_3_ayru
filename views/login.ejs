@@ -14,10 +14,15 @@
     <div class="container">
         <div class="s"> 
             <div class="s-c">
-            <form class="login" action="../login" method="POST">
+            <form class="login" action="../users/login" method="POST">
                 <div class="login-f"> 
                     <i class="login-i fas fa-user"></i>
                     <input type="text" name="email" class="login-i2" placeholder="Usuario / email">
+                    <% if (locals.errors && errors.email) { %>
+                        <div class="texto-error">
+                          <%= errors.email.msg %>
+                        </div>
+                        <% } %>
                 </div> 
                 <div class="login-f">
                 <i class="login-i fas fa-lock"></i>

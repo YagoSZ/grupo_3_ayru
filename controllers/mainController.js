@@ -58,6 +58,11 @@ module.exports = {
 
 
     },
+
+    home:  (req, res) => {
+        res.render('otroPosibleHome');
+    },
+
     
     login:  (req, res) => {
         res.render('login');
