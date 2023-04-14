@@ -81,13 +81,13 @@ module.exports = {
           console.log(validPassword)
           if(validPassword){
             req.session.usuario = loggedUser;
-            res.redirect('/')
+            return res.redirect('/')
           }
-          else{
-            res.redirect('/login')
+         else{
+            return res.redirect('/login')
           }
         } else {
-            res.redirect('/login')
+             return res.redirect('/login')
         }
     },
     
@@ -192,3 +192,9 @@ module.exports = {
     }
 }
 
+        // if(req.body.recordarme){
+            // res.cookie('email',loggedUser.email,{maxAge: 1000 * 60 * 60 * 24})
+        //   return res.redirect('/')}
+        //   else {
+            // res.redirect("/login")
+// }
