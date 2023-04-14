@@ -11,6 +11,7 @@ const nonUserRouter = require ('./routes/nonUserRouter')
 const publicPath = path.resolve(__dirname, './public')
 const methodOverride = require('method-override')
 const session = require('express-session')
+const cookieParser = require('cookie-parser');
 
 
 app.use(express.json());
@@ -18,8 +19,11 @@ app.use(express.urlencoded({ extended: false}))
 app.use(express.static("public"))
 app.use(methodOverride('_method'))
 app.use(session({
-    secret: 'Ramon_Marino12!!!'
+    secret: 'Ramon_Marino12!!!',
+    resave: true, 
+    saveUninitialized: true,
   }))
+  app.use(cookieParser());
 
 app.set('view engine', 'ejs');
 app.set('views', './views');
