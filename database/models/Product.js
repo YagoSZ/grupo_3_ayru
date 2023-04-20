@@ -3,39 +3,46 @@ module.exports = (sequelize, dataTypes) => {
     let cols = {
         id: {
             type: dataTypes.INTEGER,
+            primaryKey: true, 
+            autoIncrement: true,
             allowNull: false
         },
         name: {
-            type: dataTypes.INTEGER,
+            type: dataTypes.STRING,
             allowNull: false
         },
         price: {
-            type: dataTypes.INTEGER,
+            type: dataTypes.DECIMAL(10, 2),
             allowNull: false
         },
         image: {
-            type: dataTypes.INTEGER,
-            allowNull: false
+            type: dataTypes.STRING
         },
         description: {
-            type: dataTypes.INTEGER,
+            type: dataTypes.TEXT,
             allowNull: false
         },
         colors: {
-            type: dataTypes.INTEGER,
+            type: dataTypes.STRING,
             allowNull: false
         },
         disponibility_id: {
             type: dataTypes.INTEGER,
             allowNull: false
         },
-        category_id: {
+        categoryProducts_id: {
             type: dataTypes.INTEGER,
             allowNull: false
         },
-        available_locations: {
-            type: dataTypes.INTEGER,
+        availableLocations: {
+            type: dataTypes.TEXT,
             allowNull: false
         },
     }
+    let config = {
+        tableName: "products", 
+        timestamps: false, 
+        underscored: true
+    }
+    const Product = sequelize.define(alias, cols, config)
 }

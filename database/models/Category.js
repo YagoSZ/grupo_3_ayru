@@ -1,20 +1,21 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'Color';
+    let alias = 'Category';
     let cols = {
         id: {
             type: dataTypes.INTEGER,
-            primaryKey: true,
+            primaryKey: true, 
+            autoIncrement: true,
             allowNull: false
         },
-        color: {
+        name: {
             type: dataTypes.STRING,
             allowNull: false
         },
     }
     let config = {
-        tableName: "colors", 
+        tableName: "category", 
         timestamps: false
     }
-    const Color = sequelize.define(alias, cols, config)
+    const Category = sequelize.define(alias, cols, config)
 }
     
