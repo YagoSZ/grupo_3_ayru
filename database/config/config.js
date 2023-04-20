@@ -2,7 +2,7 @@ module.exports = {
   "development": {
     "username": "root",
     "password": null,
-    "database": "ayru",
+    "database": "bd_ayru",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
