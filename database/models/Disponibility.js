@@ -18,6 +18,14 @@ module.exports = (sequelize, dataTypes) => {
     }
     const Disponibility = sequelize.define(alias, cols, config)
 
+    Disponibility.associate = function(models){
+        Disponibility.hasMany(models.Product, {
+            as : "Product",
+            foreignKey : "disponibility_id"
+        })
+    }
+
+
     return Disponibility
 }
     
