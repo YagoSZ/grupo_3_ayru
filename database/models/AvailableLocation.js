@@ -17,6 +17,15 @@ module.exports = (sequelize, dataTypes) => {
     }
     const AvailableLocation = sequelize.define(alias, cols, config)
 
+    AvailableLocation.associate = function(models){
+        AvailableLocation.belongsToMany(models.Product, {
+            as : "Product",
+            through : "products_available_locations",
+            foreignKey : "id_availableLocations",
+            otherKey : "id_products"
+        })
+    }
+
     return AvailableLocation
 }
     
