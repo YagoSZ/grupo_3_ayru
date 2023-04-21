@@ -7,7 +7,11 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf8'));
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf8'));
 const {validationResult} = require('express-validator');
 const session = require('express-session')
+const { Op } = require('sequelize');
+const { Association } = require('sequelize');
 
+
+const db = require('../database/models');
 
 
 module.exports = {

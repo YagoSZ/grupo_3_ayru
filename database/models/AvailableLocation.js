@@ -16,5 +16,7 @@ module.exports = (sequelize, dataTypes) => {
         timestamps: false
     }
     const AvailableLocation = sequelize.define(alias, cols, config)
+
+    return AvailableLocation
 }
     

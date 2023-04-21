@@ -17,5 +17,7 @@ module.exports = (sequelize, dataTypes) => {
         timestamps: false
     }
     const Disponibility = sequelize.define(alias, cols, config)
+
+    return Disponibility
 }
     
