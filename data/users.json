@@ -1,38 +1,38 @@
 [
-    {
-        "id": 1,
-        "firstName": "Yago",
-        "lastName": "Sosa",
-        "email": "yago@hotmail.com",
-        "password": "123",
-        "admin": true,
-        "image": ""
-    },
-    {
-        "id": 2,
-        "firstName": "Uriel",
-        "lastName": "Sosa",
-        "email": "uriel@gmail.com",
-        "password": "1234",
-        "admin": false,
-        "image": ""
-    },
-    {
-        "id": 3,
-        "firstName": "Ariadna",
-        "lastName": "Mazzocchi",
-        "email": "ariadna@gmail.com",
-        "password": "123456",
-        "admin": false,
-        "image": ""
-    },
-    {
-        "id": 4,
-        "firstName": "Ramon",
-        "lastName": "Marino",
-        "email": "marinoramon@hotmail.com",
-        "password": "$2a$10$YD6BUO/DlWUrOvG/tDLP8eFOCx6CyNVNKB6S9HvDbhP9r6jESpIha",
-        "admin": true,
-        "image": "/img/default1.png"
-    }
+  {
+    "id": 1,
+    "firstName": "Yago",
+    "lastName": "Sosa",
+    "email": "yago@hotmail.com",
+    "password": "123",
+    "admin": true,
+    "image": ""
+  },
+  {
+    "id": 2,
+    "firstName": "Uriel",
+    "lastName": "Sosa",
+    "email": "uriel@gmail.com",
+    "password": "1234",
+    "admin": false,
+    "image": ""
+  },
+  {
+    "id": 4,
+    "firstName": "Ramon",
+    "lastName": "Marino",
+    "email": "marinoramon@hotmail.com",
+    "password": "$2a$10$YD6BUO/DlWUrOvG/tDLP8eFOCx6CyNVNKB6S9HvDbhP9r6jESpIha",
+    "admin": true,
+    "image": "/img/default1.png"
+  },
+  {
+    "id": 5,
+    "firstName": "ariadna",
+    "lastName": "mazzocchi",
+    "email": "ariadna@gmail.com",
+    "password": "$2a$10$RK4znIvk.05qGBvxTOPf.umyFrqjmtKROMMIoueqm0T5afmnBwrSW",
+    "admin": false,
+    "image": "/img/default1.png"
+  }
 ]

@@ -55,18 +55,18 @@ module.exports = (sequelize, dataTypes) => {
             as : "Disponibility",
             foreignKey : "disponibility_id"
         })
-        Product.belongsToMany(models.Color, {
-            as : "Color",
-            through : "products_colors",
-            foreignKey : "id_products",
-            otherKey : "id_colors"
-        })
-        Product.belongsToMany(models.availableLocation, {
-            as : "AvailableLocation",
-            through : "products_available_locations",
-            foreignKey : "id_products",
-            otherKey : "id_availableLocations"
-        })
+        // Product.belongsToMany(models.Color, {
+            // as : "Color",
+            // through : "products_colors",
+            // foreignKey : "id_products",
+            // otherKey : "id_colors"
+        // })
+        // Product.belongsToMany(models.availableLocation, {
+            // as : "AvailableLocation",
+            // through : "products_available_locations",
+            // foreignKey : "id_products",
+            // otherKey : "id_availableLocations"
+        // })
         }
 
 
