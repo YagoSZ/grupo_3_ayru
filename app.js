@@ -15,13 +15,13 @@ const cookieParser = require('cookie-parser');
 
 
 app.use(express.json());
-app.use(express.urlencoded({ extended: false}))
+app.use(express.urlencoded({ extended: false }))
 app.use(express.static("public"))
 app.use(methodOverride('_method'))
 app.use(session({
     secret: 'Ramon_Marino12!!!',
-    resave: true, 
-    saveUninitialized: true,
+    resave: false, 
+    saveUninitialized: false,
   }))
   app.use(cookieParser());
 
