@@ -12,7 +12,7 @@ module.exports = (sequelize, dataTypes) => {
         },
     }
     let config = {
-        tableName: "availablelocations", 
+        tableName: "available_locations", 
         timestamps: false
     }
     const AvailableLocation = sequelize.define(alias, cols, config)

@@ -5,9 +5,22 @@
 
 /* CSS HEADER VERSION MOBILE */
 .encabezado {
-    background-color: #1E53A5;
+    background-color: #052669a3;
     box-sizing: border-box;
+	box-shadow: 0px 14px 19px -4px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 14px 19px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 14px 19px -4px rgba(0,0,0,0.75);
 }
+
+/* box-shadow: 0px 0px 35px 0px rgba(0,0,0,0.75) inset;
+-webkit-box-shadow: 0px 0px 35px 0px rgba(0,0,0,0.75) inset;
+-moz-box-shadow: 0px 0px 35px 0px rgba(0,0,0,0.75) inset; */
+
+
+/* showcase
+box-shadow: -2px -1px 400px -118px rgb(0 0 0 / 75%) inset;
+    -webkit-box-shadow: -2px -1px 400px -118px rgb(0 0 0 / 75%) inset;
+    -moz-box-shadow: -2px -1px 400px -118px rgba(0,0,0,0.75) inset; */
 
 .contenedor-logo-iconos{
 	display: flex;
@@ -72,7 +85,7 @@
 }
 
 .listas li{
-    margin: 0 10px;
+    margin: 0 20px;
 }
 
 .listas a{
@@ -105,14 +118,18 @@
 	}
 
 	.label-buscador{
-		width: 100%;
+		width: 90%;
         display: flex;
         justify-content: flex-end;
 		margin-bottom: 20px;
 	}
 
-	.label-buscador {
+	.label-buscador2 {
 		width: 90%;
+		width: 100%;
+        display: flex;
+        justify-content: center;
+		margin-bottom: 20px;
 	}
 
 	.buscador {
@@ -153,7 +170,7 @@
 
 	.contenedor-navbar1{
 		display: flex;
-		justify-content: space-around;
+		justify-content: flex-end;
         width: 100%;
 	}
 
@@ -198,11 +215,10 @@
 
     .navbar{
         display: flex;
-		width: 85%;
-        justify-content: space-between;
+		width: -webkit-fill-available;
+        justify-content: flex-start;
 		align-items: center;
 		font-family: 'Secular One', sans-serif;
-		margin-right: 20px;
     }
 
 	.navbar2{
@@ -211,6 +227,10 @@
 	
 	.label-buscador{
 		display: none;
+	}
+
+	.label-buscador2 {
+		margin-bottom: 10px;
 	}
 
 	.buscador-boton{

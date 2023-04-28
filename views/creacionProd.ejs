@@ -5,7 +5,7 @@
     <%- include('./partials/header.ejs'); %>
     <main>
     <div class="contenedor-formu">
-        <form class="formu" action="/products" method="POST" enctype="multipart/form-data">
+        <form class="formu" action="/products" method="POST">
 
             <h1>Formulario Creacion de Productos</h1>
             <!-- <h2 class ="product-title">=</h2> -->
@@ -20,19 +20,22 @@
             </p>
             <p>
                 Color: 
-                <select name="colores">
-                    <option value="0">...</option>
-                    <option value="Lila">Lila</option>
-                    <option value="Dorado">Dorado</option>
-                    <option value="Verde">Verde</option>
-                </select>
+                <label>
+                  <input type="checkbox" name="colores" value="1">Lila
+                </label>
+                <label>
+                  <input type="checkbox" name="colores" value="2">Dorado
+                </label>
+                <label>
+                  <input type="checkbox" name="colores" value="3">Verde
+                </label>
             </p>
             <p>
                 Disponibilidad: 
                 <select name="disponibilidad">
                     <option value="0" selected>Elegi</option>
-                    <option value="en stock">en stock</option>
-                    <option value="sin stock">sin stock</option>
+                    <option value="1">en stock</option>
+                    <option value="2">sin stock</option>
               </select>
             </p>
             <p>
@@ -42,17 +45,19 @@
             <p>
                 Categoria: 
                 <select name="categoria">
-                    <option value="0" selected>Elegi</option>
-                    <option value="Celulares">Celulares</option>
-                    <option value="Televisores">Televisores</option>
+                    <option value="0" disabled selected>Elegi</option>
+                    <% allCategorys.forEach(category => { %>
+                        <option value="<%= category.id %>"><%= category.name %></option>
+                    <% }) %>
                 </select>
             </p>
             <p>
               UbicacionesDisponibles: 
               <select name="ubicacionesDisponible">
-                      <option value="todo el pais" selected>Todo el pais</option>
-                      <option value="Buenos Aires">Buenos Aires</option>
-                      <option value="Entre Rios">Entre Rios</option>
+                    <option value="0" disabled selected>Elegi</option>
+                    <% allLocations.forEach(locations => { %>
+                        <option value="<%= locations.id %>"><%= locations.location %></option>
+                    <% }) %>
               </select>
             </p>
 

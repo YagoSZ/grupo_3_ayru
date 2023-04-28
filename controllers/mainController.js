@@ -9,18 +9,39 @@ const {validationResult} = require('express-validator');
 const session = require('express-session')
 const { Op } = require('sequelize');
 const { Association } = require('sequelize');
-
-
 const db = require('../database/models');
+const sequelize = db.sequelize;
+const { json } = require('sequelize');
 
 
 module.exports = {
     
     index:  (req, res) => {
        let logged = req.session.usuario
-       console.log(logged)
-       res.render('otroPosibleHome', {productos: products, logged: logged});   
-    }, 
+       let promesaOfertas =  db.Product.findAll({
+        order: [
+            ['price', 'ASC']
+        ],
+        limit: 5
+       })
+       let promesaShowcase = db.Product.findAll({
+        where: {
+            name: {
+              [Op.or]: ['Samsung S22 ULTRA', 'Iphone 13 Pro', 'Samsung S21 FE']
+            }
+        }
+       })
+       let promesaDestacados = db.Product.findAll({
+        order: [
+            ['price', 'DESC']
+        ],
+        limit: 5
+       })
+       Promise.all([promesaShowcase, promesaDestacados, promesaOfertas])
+       .then(function([productosShowcase, productosDestacados, productosOferta]){
+        res.render('otroPosibleHome', {showcase: productosShowcase, productos: productosDestacados, ofertas: productosOferta, logged: logged});   
+       })
+    },
     
     register:  (req, res) => {
         res.render('register');
@@ -37,34 +58,97 @@ module.exports = {
                 img = req.file.filename;
             }
             else {
-                img = '/img/default1.png';
+                img = 'pngegg.png';
             }
 
-            let userToCreate = {
-                "id": users[users.length - 1].id + 1,
-                "firstName": req.body.nombre,
-                "lastName": req.body.apellido,
-                "email": req.body.email,
-                "password": bcrypt.hashSync(req.body.password, 10),
-                "admin": false,
-                "image": img
-            }
-
-            users.push(userToCreate);
-
-            fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ''));
+            db.User.create({
+                first_name: req.body.nombre,
+                last_name: req.body.apellido,
+                email: req.body.email,
+                password: bcrypt.hashSync(req.body.password, 10),
+                category_id: 1,
+                image: img
+            })
 
 
             res.redirect('/');
         }else{
-            console.log(req.body.password);
             res.render('register', {errors: errors.mapped(), old: req.body})
         }
 
 
     },
 
+    traerPerfilUsuario: (req, res) => {
+        res.render('Perfil', {usuario: req.session.usuario});
+    },
 
+    editarUsuario: (req, res) => {
+
+
+        res.render('edicionPerfil', {usuario: req.session.usuario});
+        
+    },
+
+    borrarUsuario: (req, res) => {
+
+        db.User.destroy({
+            where: {
+                id: req.session.usuario.id
+            }
+        })
+        .then(function(){
+            res.redirect('/cerrarSesion')
+        })
+    
+    },
+
+    guardarEdicionUsuario: (req, res) => {
+        let errors = validationResult(req);
+        if(errors.isEmpty()){
+
+            let img 
+
+            if (req.file != undefined){
+                img = req.file.filename;
+            }
+            else {
+                img = 'pngegg.png';
+            }
+
+            db.User.update({
+                first_name: req.body.nombre,
+                last_name: req.body.apellido,
+                email: req.body.email,
+                password: bcrypt.hashSync(req.body.password, 10),
+                category_id: 1,
+                image: img
+            }, {
+                where: {
+                    id : req.session.usuario.id
+                }
+            })
+            .then(function(){
+                db.User.findOne({
+                    include: [{association: "Category"}],
+                    where: {
+                        id: req.session.usuario.id
+                    }
+                })
+                .then(function(usuario){
+                    req.session.usuario = usuario
+                    res.redirect('/');
+                })
+    
+    
+                
+            })
+        }else{
+            console.log(errors.mapped)
+            console.log(req.body)
+            res.render('edicionPerfil', {usuario: req.session.usuario, errors: errors.mapped(), old: req.body})
+        }
+    },
 
     
     login:  (req, res) => {
@@ -72,127 +156,216 @@ module.exports = {
     },
 
     ingresar:  (req, res) => {
-        console.log(req.body)
 
         const {email, password} = req.body
-        const users = JSON.parse(fs.readFileSync(path.join(__dirname, '../data/users.json')))
 
-        const loggedUser = users.find(user => user.email == email )
-        console.log(loggedUser)
+        db.User.findOne({
+            include: [{association: "Category"}],
+            where: {
+                email: email
+            }
+        })
+        .then(function(usuario){
 
-        if (loggedUser){
-          let validPassword =  bcrypt.compareSync(password, loggedUser.password)
-          console.log(validPassword)
-          if(validPassword){
-            req.session.usuario = loggedUser;
-            return res.redirect('/')
-          }
-         else{
-            return res.redirect('/login')
-          }
-        } else {
-             return res.redirect('/login')
-        }
+            if (usuario){
+
+                 bcrypt.compare(password, usuario.password, function(err, result){
+                     if(result == true){
+                         req.session.usuario = usuario  
+                         return res.redirect('/')
+                     }
+                    else{
+                       return res.redirect('/login')
+                     }
+                 })
+
+            } else{
+                return res.redirect('/login')
+            }
+        })
     },
-    
+
+    cerrarSesion: (req, res) => {
+        req.session.usuario = undefined
+        res.redirect('/');
+    },
     
     productCart: (req, res) => {
-        res.render('productCart');
-    },
-    
-    iphoneTrece: (req, res) => {
-        res.render('iphone13');
-    },
-    
-    sUltra: (req, res) => {
-        res.render('s22Ultra');
-    },
-    
-    sFe: (req, res) => {
-       res.render('s21Fe');
+        let logged = req.session.usuario
+        res.render('productCart', {logged});
     },
 
     detail: (req, res) => {
 
         let id = req.params.id;
 
-        let product = products.find(product => product.id == id)
-
-        res.render('details', {product, logged: req.session.usuario});
+        db.Product.findOne({
+            where: {
+                id : req.params.id
+            },
+            include: [
+                {association: "CategoryProduct"},
+                {association: "Disponibility"},
+                {association: "AvailableLocation"},
+                {association: "colorsInProduct"},
+            ],
+        })
+        .then(function(product){
+            console.log(req.session.usuario)
+            res.render('details', {product, logged: req.session.usuario})
+        })
     }, 
 
     listado: (req, res) => {
-        res.render('listado', {productos: products})
+        let promesaCelulares = db.Product.findAll({
+            where: {
+                category_products_id: 1
+            }
+        })
+        let promesaTelevisores = db.Product.findAll({
+            where: {
+                category_products_id: 2
+            }
+        })
+        let promesaNotebooks = db.Product.findAll({
+            where: {
+                category_products_id: 3
+            }
+        })
+        Promise.all([promesaCelulares, promesaTelevisores, promesaNotebooks])
+        .then(function([productosCelulares, productosTelevisores, productosNotebooks]){
+            res.render('listado', {productosCelulares, productosTelevisores, productosNotebooks})
+        })
     },
 
     create: (req, res) => {
+        let promesaLocations = db.AvailableLocation.findAll({
+            order: [
+                ['location', 'ASC']
+            ],
+        })
+        let promesaCategory = db.CategoryProduct.findAll()
 
-        res.render('creacionProd');
-
+        Promise.all([promesaCategory, promesaLocations])
+        .then(function([allCategorys, allLocations]){
+            res.render('creacionProd', {allCategorys, allLocations});
+        })
     },
 
     products: (req, res) => {
-        productToCreate = {
-            id: products[products.length - 1].id + 1,
-            ...req.body,
-        }
 
-        products.push(productToCreate);
+        db.Product.create({
+            name: req.body.nombre,
+            price: req.body.precio,
+            image: '/img/default1.png',
+            description: req.body.descripcion,
+            colors: req.body.colores,
+            disponibility_id: req.body.disponibilidad,
+            category_products_id: req.body.categoria,
+            available_locations: req.body.ubicacionesDisponible
+        })
+        .then(function(product){
+            productoId = product.id
+            arrayColores = req.body.colores
+            for (let i = 0; i < arrayColores.length; i++) {
+                colorId = arrayColores[i]
+                db.products_colors.create({
+                id_products: productoId,
+                id_colors: colorId
+            })
+            }
 
-        fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ''));
-
-        res.redirect('/')
+        })
+        .then(function(){
+            res.redirect('/');
+        })
 
     },
-
-    // ediProd: (req, res) => {
-    //     res.render('edicionProd', {});
-    // },
 
     productsEdit: (req, res) => {
 
         let id = req.params.id;
+        let promesaLocations = db.AvailableLocation.findAll({
+            order: [
+                ['location', 'ASC']
+            ],
+        })
+        let promesaCategory = db.CategoryProduct.findAll()
+        let promesaProduct = db.Product.findByPk(id)
 
-        let product = products.find(product => product.id == id)
-
-        res.render('edicionProd', {product});
+        Promise.all([promesaCategory, promesaLocations, promesaProduct])
+        .then(function([allCategorys, allLocations, product]){
+            res.render('edicionProd', {allCategorys, allLocations, product});
+        })
     },
     
     update: (req, res) => {
-
-        let id = req.params.id;
-
-        let productToEdit = products.find(product => product.id == id)
-
-        productToEdit = { 
-        id: productToEdit.id,
-        ...req.body,
-        imagenPrincipal: productToEdit.imagenPrincipal,
-        imagenShowcase2: productToEdit.imagenShowcase2,
-        imagenShowcase3: productToEdit.imagenShowcase3,
-        }
-
-        let newProduct = products.map(product => {
-            if(product.id == productToEdit.id) {
-                return product = {...productToEdit}
+        productoId = req.params.id
+        arrayColores = req.body.colores
+        db.Product.update({
+            name: req.body.nombre,
+            price: req.body.precio,
+            image: '/img/default1.png',
+            description: req.body.descripcion,
+            disponibility_id: req.body.disponibilidad,
+            category_products_id: req.body.categoria,
+            available_locations: req.body.ubicacionesDisponible,
+            colorsInProduct: {id_products: req.body}
+        }, {
+            where: {
+                id: req.params.id
             }
-            
-            return product
+        })
+        .then(function(){
+            db.products_colors.destroy({
+                where: {
+                    id_products: productoId
+                }
+            })
+        })
+        .then(function(){
+            if (arrayColores) {
+                for (let i = 0; i < arrayColores.length; i++) {
+                    colorId = arrayColores[i]
+                    db.products_colors.create({
+                    id_products: productoId,
+                    id_colors: colorId
+                })
+                }
+            }
         })
 
-        fs.writeFileSync(productsFilePath, JSON.stringify(newProduct));
+        
 
         res.redirect('/')
     },
 
     destroy: (req, res) => {
-        let id = req.params.id;
 
-        let productToDelete = products.filter(product => product.id != id);
+        db.Product.destroy({
+            where: {
+                id: req.params.id
+            }
+        })
+        .then(function(){
+            res.redirect('/products');
+        })
+    },
 
-        fs.writeFileSync(productsFilePath, JSON.stringify(productToDelete));
+    find: (req, res) => {
+        let request = req.body.request
 
-        res.redirect('/products');
+        db.Product.findAll({
+            where: {
+                name: {
+                    [Op.like]: `${request}%`
+                }
+            }
+        })
+        .then(function(productos){
+            console.log(productos)
+            res.render('listadoBusqueda', {productos});
+        })
     }
 }
 

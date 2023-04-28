@@ -8,10 +8,10 @@
         <form class="formu" action="/products/<%=product.id%>/edit?_method=PUT" method="POST">
 
             <h1>Estas editando:</h1>
-            <h2 class ="product-title"><%= product.nombre %></h2>
+            <h2 class ="product-title"><%= product.name %></h2>
 
             <p>
-                Nombre del producto: <input type="text" name="nombre" value="<%= product.nombre %>">
+                Nombre del producto: <input type="text" name="nombre" value="<%= product.name %>">
             </p>
 
             <p>
@@ -20,53 +20,62 @@
             </p>
             <p>
                 Color: 
-                <select name="colores">
-                    <option value="0">...</option>
-                    <option value="Lila">Lila</option>
-                    <option value="Dorado">Dorado</option>
-                    <option value="Verde">Verde</option>
-                </select>
+                <label>
+                  <input type="checkbox" name="colores" value="1">Lila
+                </label>
+                <label>
+                  <input type="checkbox" name="colores" value="2">Dorado
+                </label>
+                <label>
+                  <input type="checkbox" name="colores" value="3">Verde
+                </label>
+                
+                <!-- <select name="menu">
+                  <option value="0">...</option>
+                  <option value="1">Lila</option>
+                  <option value="2">Dorado</option>
+                  <option value="3">Verde</option>
+                </select> -->
             </p>
             <p>
                 Disponibilidad: 
                 <select name="disponibilidad">
                     <% if (product.disponibilidad == "en stock") { %>
-                        <option value="en stock" selected>en stock</option>
-                        <option value="sin stock">sin stock</option>
+                        <option value="1" selected>en stock</option>
+                        <option value="2">sin stock</option>
                     <% } else { %>
-                      <option value="en stock">en stock</option>
-                      <option value="sin stock" selected>sin stock</option>
+                      <option value="1">en stock</option>
+                      <option value="2" selected>sin stock</option>
                     <% } %>
               </select>
             </p>
             <p>
                 Precio: 
-                <input type="number" name="precio" value="<%= product.precio %>" step="any">
+                <input type="number" name="precio" value="<%= product.price %>" step="any">
             </p>
             <p>
                 Categoria: 
                 <select name="categoria">
-                    <% if (product.categoria == "Celulares") { %>
-                        <option value="Celulares" selected>Celulares</option>
-                        <option value="Televisores">Televisores</option>
-                    <% } else { %>
-                      <option value="Celulares">Celulares</option>
-                      <option value="Televisores" selected>Televisores</option>
-                    <% } %>
+                    <option value="0" disabled selected>Elegi</option>
+                    <% allCategorys.forEach(category => { %>
+                        <% if (category.id == product.category_products_id) { %>
+                            <option value="<%= category.id %>" selected><%= category.name %></option>
+                        <% } else { %>
+                        <option value="<%= category.id %>"><%= category.name %></option>
+                        <% } %>
+                    <% }) %>
                 </select>
             </p>
             <p>
               UbicacionesDisponibles: 
               <select name="ubicacionesDisponible">
-                  <% if (product.ubicacionesDisponible == "todo el pais") { %>
-                      <option value="todo el pais" selected>Todo el pais</option>
-                      <option value="Buenos Aires">Buenos Aires</option>
-                      <option value="Entre Rios">Entre Rios</option>
-                  <% } else { %>
-                    <option value="todo el pais">Todo el pais</option>
-                    <option value="Buenos Aires" selected>Buenos Aires</option>
-                    <option value="Entre Rios">Entre Rios</option>
-                  <% } %>
+                <option value="0" disabled selected>Elegi</option>
+                <% allLocations.forEach(locations => { %>
+                    <% if (locations.id == product.available_locations) { %>
+                        <option value="<%= locations.id %>" selected><%= locations.location %></option>
+                    <% } else { %>
+                        <option value="<%= locations.id %>"><%= locations.location %></option>                    <% } %>
+                <% }) %>
               </select>
             </p>
 

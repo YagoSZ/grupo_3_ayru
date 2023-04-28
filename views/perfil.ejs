@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+
+</head>
+<!--Iconos -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+
+<!--Tipografia-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/perfil.css">
+
+</head>
+
+<body>
+    <main class="contenedor">
+        <section>
+            <div class="formulario-box">
+                <div class="div-superior-perfil">
+                    <h1>Bienvenido a tu cuenta!</h1>
+
+                    <!-- <i class="fa fa-user-circle-o" aria-hidden="true"></i> -->
+                    <img src="/img/<%= usuario.image %>" alt="Foto de Perfil" class="foto-de-perfil-pagina-perfil">
+                </div>
+                <div class="div-inferior-perfil">
+                    <div class="formulario-perfil-1">
+                        <div class="formulario-perfil-2">
+                            <div class="formulario-superior-perfil">
+                                <div class="contenedor-registro">
+                                    <i class="login-i fas fa-user"></i>
+                                    <label class="clase" for="nombre">Nombre</label>
+                                    <input class="sub-formulario" type="text" name="nombre" id="nombre"
+                                        value="<%= usuario.first_name %>" readonly>
+                                </div>
+    
+                                <div class="contenedor-registro">
+                                    <i class="login-i fas fa-user"></i>
+                                    <label class="clase" for="email">Email</label>
+                                    <input class="sub-formulario" type="email" name="email" id="email" value="<%= usuario.email%>" readonly>
+                                </div>
+                            </div>
+                            <div class="formulario-inferior-perfil">
+                                <div class="contenedor-registro">
+                                    <i class="login-i fas fa-user"></i>
+                                    <label class="clase" for="apellido">Apellido</label>
+                                    <input class="sub-formulario" type="text" name="apellido" id="apellido"
+                                        value="<%= usuario.last_name %>" readonly>
+                                </div>
+            
+                                <div class="contenedor-registro">
+                                    <i class="login-i fas fa-lock"></i>
+                                    <label class="clase">Contraseña</label>
+                                    <input class="sub-formulario" type="password" name="password" id="password" value="" readonly>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="div-cargarimagen-perfil">
+                        <i class="login-i fas fa-lock"></i>
+                        <label class="clase">Imagen de perfil:</label>
+                        <input class="sub-formulario" type="file" name="imagenUsuario" id="imagenUsuario"
+                            value="<%= usuario.image %>" readonly>
+                    </div>
+                    <p>Admin : <%= usuario.Category.name %></p>
+                </div>
+                <div class="botones-pagina-perfil">
+                    <button class="boton-perfil-administrarCuenta"><a href="/edicionPerfil">Administra cuenta</a></button>
+                    <button class="boton-perfil-eliminarCuenta"><a href="/eliminarUsuario">Borrar cuenta</a></button>  
+                </div>
+            </div>
+            </form>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <img class="logo" src="/img/logoayru.png" alt="">
+    </footer>
+    <script src="https://kit.fontawesome.com/6cd48854d2.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

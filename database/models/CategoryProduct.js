@@ -13,7 +13,7 @@ module.exports = (sequelize, dataTypes) => {
         },
     }
     let config = {
-        tableName: "categoryproducts", 
+        tableName: "category_products", 
         timestamps: false
     }
     const CategoryProduct = sequelize.define(alias, cols, config)

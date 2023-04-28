@@ -1,11 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
     <%- include('./partials/head.ejs'); %>
-<body>
+<body class="main-pagina-listado">
     <%- include('./partials/header.ejs'); %>
-<main>
+<main >
     <div class="div-listado">
-        <%- include('./partials/card.ejs'); %>
+        <h1 class="encabezado-listado">Celulares</h1>
+        <div class="tipo-de-producto-listado">
+            <% productosCelulares.forEach(producto => { %>
+                <div class="contenedor-imagen">
+                    <div class="imagen-producto-contenedor">
+                        <img src="<%= producto.image %> " alt="Imagen Producto" class="imagen-destacada">
+                    </div>
+                    <div class="descripcion-destacado">
+                        <h3><%= producto.name %> </h3>
+                        <p>$<%= producto.price %> </p>
+                        <a href="/detalle/<%= producto.id %> "><button class="boton" type="submit">Conoce más</button></a>
+                    </div>
+                </div>
+            <%  }); %> 
+        </div>
+    </div>
+    <div class="div-listado">
+        <h1 class="encabezado-listado">Televisores</h1>
+        <div class="tipo-de-producto-listado">
+            <% productosTelevisores.forEach(producto => { %>
+                <div class="contenedor-imagen">
+                    <div class="imagen-producto-contenedor">
+                        <img src="<%= producto.image %> " alt="Imagen Producto" class="imagen-destacada">
+                    </div>
+                    <div class="descripcion-destacado">
+                        <h3><%= producto.name %> </h3>
+                        <p>$<%= producto.price %> </p>
+                        <a href="/detalle/<%= producto.id %> "><button class="boton" type="submit">Conoce más</button></a>
+                    </div>
+                </div>
+            <%  }); %> 
+        </div>
+    </div>
+    <div class="div-listado">
+        <h1 class="encabezado-listado">Notebooks</h1>
+        <div class="tipo-de-producto-listado">
+            <% productosNotebooks.forEach(producto => { %>
+                <div class="contenedor-imagen">
+                    <div class="imagen-producto-contenedor">
+                        <img src="<%= producto.image %> " alt="Imagen Producto" class="imagen-destacada">
+                    </div>
+                    <div class="descripcion-destacado">
+                        <h3><%= producto.name %> </h3>
+                        <p>$<%= producto.price %> </p>
+                        <a href="/detalle/<%= producto.id %> "><button class="boton" type="submit">Conoce más</button></a>
+                    </div>
+                </div>
+            <%  }); %> 
+        </div>
     </div>
 </main>
     <%- include('./partials/footer.ejs'); %>

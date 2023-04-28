@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,700");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Raleway, sans-serif;
+}
+body{
+    background-image: url(/img/fondo3.png);
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover; ;
+}
+
+.contenedor{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    min-height: 100vh;
+    }
+    .boton {
+        box-shadow: 3px 1px 0px 0px #899599;
+        background:linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
+        background-color:#ededed;
+        border-radius:15px;
+        border:1px solid #d6bcd6;
+        display:inline-block;
+        cursor:pointer;
+        color:#07637a;
+        font-family:Arial;
+        font-size:12px;
+        font-weight:bold;
+        padding:5px 24px;
+        text-decoration:none;
+        text-shadow:0px -6px 0px #e1e2ed;
+        margin-top: 15px;
+        transition-property: all;
+        transition-duration: 400ms;
+        
+    }
+    .boton:hover{
+        background: #f1daf4;
+        text-shadow: none;
+        box-shadow: 5px 5px 17px -2px rgba(0,0,0,0.75);
+        -webkit-box-shadow: 5px 5px 17px -2px rgba(0,0,0,0.75);
+        -moz-box-shadow: 5px 5px 17px -2px rgba(0,0,0,0.75);
+    }
+    .foto-de-perfil-pagina-perfil{
+        max-width: 40%;
+        max-height: 230px;
+    }
+        .formulario-box{
+            background: #269AC6;
+            position: relative;
+            text-align: center;
+            padding: 10% 10% 6% 10%;           
+            margin-top: 50px;
+            width: 660px;
+            display: flex;
+            flex-direction: column;
+        }
+        .div-superior-perfil{
+            margin-bottom: 70px;
+        }
+        .div-inferior-perfil{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .formulario-perfil-1{
+            display: flex;
+            flex-direction: column;
+            align-items: center;        
+        }
+        .formulario-perfil-2{
+            display: flex;
+            flex-direction: row;        
+        }
+        .formulario-superior-perfil{
+            padding: 10px;
+        }
+        .formulario-inferior-perfil{
+            padding: 10px;
+        }
+        .div-cargarimagen-perfil{
+            padding: 0%;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        .botones-pagina-perfil{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            width: -webkit-fill-available;
+        }
+        .boton-perfil-administrarCuenta{
+            border-radius: 10px;
+            background-color: #65c1bed6;
+            width: 35%;
+            height: 35px;
+            font-weight: 900;
+            margin-top: 50px;
+            box-shadow: 0px 0px 29px -2px rgba(16,16,17,0.61) inset;
+            -webkit-box-shadow: 0px 0px 29px -2px rgba(16,16,17,0.61) inset;
+            -moz-box-shadow: 0px 0px 29px -2px rgba(16,16,17,0.61) inset;
+        }
+        .boton-perfil-eliminarCuenta{
+            border-radius: 10px;
+            background-color: #e43232d6;
+            width: 35%;
+            height: 35px;
+            font-weight: 900;
+            margin-top: 50px;
+            box-shadow: 0px 0px 29px -2px rgba(16,16,17,0.61) inset;
+            -webkit-box-shadow: 0px 0px 29px -2px rgba(16,16,17,0.61) inset;
+            -moz-box-shadow: 0px 0px 29px -2px rgba(16,16,17,0.61) inset;
+        }
+        .boton-guardar-cambios-perfil{
+            border-radius: 10px;
+            background-color: #8dc0cbd6;
+            width: 35%;
+            height: 35px;
+            font-weight: 900;
+            margin-top: 50px;
+            box-shadow: 0px 0px 29px -2px rgba(16,16,17,0.61) inset;
+            -webkit-box-shadow: 0px 0px 29px -2px rgba(16,16,17,0.61) inset;
+            -moz-box-shadow: 0px 0px 29px -2px rgba(16,16,17,0.61) inset;
+        }
+        .clase{
+            text-align: center;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 5px;
+            -webkit-text-stroke: medium;
+            }
+            
+            .sub-formulario{
+            width: 100%;
+            padding: 5px;
+            border-radius: 4px;
+            /* margin-bottom: 50px; */
+            } 
+
+            h1{
+                margin-bottom: 15%;            }
+
+            .logo{
+                display: flex;
+                justify-items: center;
+                align-items: center;
+                padding: 0;
+                margin: auto;
+            }
+
+             .fa-user-circle-o{
+                font-size: 60px;
+            }
+
+.contenedor-registro{
+    margin-bottom: 50px
+}
+            
+.mensaje-error{
+    color: rgb(160 34 20);
+    font-weight: bold;
+}
+
+
+/*
+.encabezado{
+    width: 100%;
+    background-color: var(--Azul);
+    padding: 5px;
+    height: 80px;
+    border-style: solid;
+    box-sizing: border-box;
+} 
+
+.tamaño{
+    width: 60px;
+    float: left;
+}
+
+.iconos{
+    text-align: right;
+} 
+
+footer{
+    background-color: var(--Blanco);
+    padding: 5px;
+    box-sizing: border-box;
+    border-style: solid;
+}
+
+.icono{
+    position:relative;
+   text-align: right;
+   float: right;
+    top: -40px;
+}
+
+
+@media (min-width: 768px) {
+    .sub-formulario{
+        margin-bottom: auto;
+        width: 20%;
+        padding: 5px;
+        box-sizing: border-box;
+    }
+} */

@@ -23,12 +23,5 @@ router.post('/register', upload.single('imagenUsuario'), validationsRegister, ma
 router.get('/login', mainController.login);
 router.post('/login', mainController.ingresar);
 
-router.get('/iphone13', mainController.iphoneTrece);
-
-router.get('/s22ultra', mainController.sUltra);
-
-router.get('/s21fe', mainController.sFe);
-
 router.get('/products', mainController.listado); // Traer listado productos
-
 module.exports = router

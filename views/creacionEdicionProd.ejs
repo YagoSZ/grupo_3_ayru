@@ -19,12 +19,23 @@
                 <textarea class="description" name="texto" rows="4" cols="20"></textarea>
                 </p>
             
-              Color: <select name="menu">
+              Color: 
+              <label>
+                <input type="checkbox" name="colores" value="lila">Lila
+              </label>
+              <label>
+                <input type="checkbox" name="colores" value="dorado">Dorado
+              </label>
+              <label>
+                <input type="checkbox" name="colores" value="verde">Verde
+              </label>
+              
+              <!-- <select name="menu">
                 <option value="0">...</option>
                 <option value="1">Lila</option>
                 <option value="2">Dorado</option>
                 <option value="3">Verde</option>
-              </select>
+              </select> -->
 <p>
               Disponibilidad: <select name="menu">
                <% if (product.disponibilidad == "en stock") { %>

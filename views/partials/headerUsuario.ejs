@@ -3,26 +3,32 @@
         <img class="logo" src="/img/logoayru.png" alt="">
         <img class="logo2" src="/img/logoayru2.png" alt=""> 
         <nav class="listas">
-            <ul class="navbar"> 
-                <li><a href="#">Ofertas</a></li>
-                <li><a href="#">Tiendas Oficiales</a></li>
-                <li><a href="#">Vender</a></li>
-                <li><a href="#">Ayuda</a></li>
-                <li><a href="productCart">Mis compras</a>
-                    <i class="fas fa-shopping-basket"></i>
-                </li>
-                <li><a href="#">Cerrar Sesion</a>
-                <i class="fa-solid fa-right-from-bracket"></i>
-                </li>
+                <ul class="navbar"> 
+                    <li><a href="#">Ofertas</a></li>
+                    <li><a href="#">Tiendas Oficiales</a></li>
+                    <li><a href="#">Ayuda</a></li>
                 </ul>
-                <div class="div-buscadores">
-                    <label for="buscador" class="label-buscador">
-                        <input type="text" id="buscador" class="buscador"placeholder="Buscar productos y mas...">
-                        <button class="buscador-lupa"><i class="fa-solid fa-magnifying-glass"></i></button>
-                    </label>
-                    <p class="buscador-boton"><i class="fa-solid fa-magnifying-glass"></i></p>
-                </div>
-            </ul>
+                <ul class="navbar2">
+                    <div class="contenedor-navbar1">
+                        <li><a href="../productCart">Mis compras</a>
+                            <i class="fas fa-shopping-basket"></i>
+                        </li>
+                        <li><a href="/perfil">Perfil</a>
+                            <i class="fas fa-id-card"></i>
+                        </li>
+                        <li><a href="/cerrarSesion">Cerrar Sesion</a>
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                        </li>
+                    </div>
+                    <div class="div-buscadores">
+                        <form action="/buscador" method="POST">
+                            <label for="buscador" class="label-buscador2">
+                                <input type="text" id="request" name="request" class="buscador"placeholder="Buscar productos y mas...">
+                                <button type="submit" class="buscador-lupa"><i class="fa-solid fa-magnifying-glass"></i></button>
+                            </label>
+                        </form>
+                    </div>
+                </ul>
         </nav>
         <div class="nav-mobile">
             <button class="buscador-mobile"><i class="fa-solid fa-magnifying-glass"></i></button>

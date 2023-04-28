@@ -18,23 +18,25 @@ module.exports = (sequelize, dataTypes) => {
         image: {
             type: dataTypes.STRING
         },
+        imagen_showcase2: {
+            type: dataTypes.STRING
+        },
+        imagen_showcase3: {
+            type: dataTypes.STRING
+        },
         description: {
             type: dataTypes.TEXT,
-            allowNull: false
-        },
-        colors: {
-            type: dataTypes.STRING,
             allowNull: false
         },
         disponibility_id: {
             type: dataTypes.INTEGER,
             allowNull: false
         },
-        categoryProducts_id: {
+        category_products_id: {
             type: dataTypes.INTEGER,
             allowNull: false
         },
-        availableLocations: {
+        available_locations: {
             type: dataTypes.TEXT,
             allowNull: false
         },
@@ -55,18 +57,17 @@ module.exports = (sequelize, dataTypes) => {
             as : "Disponibility",
             foreignKey : "disponibility_id"
         })
-        // Product.belongsToMany(models.Color, {
-            // as : "Color",
-            // through : "products_colors",
-            // foreignKey : "id_products",
-            // otherKey : "id_colors"
-        // })
-        // Product.belongsToMany(models.availableLocation, {
-            // as : "AvailableLocation",
-            // through : "products_available_locations",
-            // foreignKey : "id_products",
-            // otherKey : "id_availableLocations"
-        // })
+        Product.belongsTo(models.AvailableLocation, {
+            as : "AvailableLocation",
+            foreignKey : "available_locations"
+        })
+        Product.belongsToMany(models.Color, {
+            as : "colorsInProduct",
+            through : "products_colors",
+            foreignKey : "id_products",
+            otherKey : "id_colors",
+            timestamps: false
+        })
         }
 
 

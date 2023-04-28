@@ -21,25 +21,25 @@
         <div class = "product-imgs">
           <div class = "img-display">
             <div class = "img-showcase">
-              <img src = "<%= product.imagenPrincipal %> " alt = "celular image">
-              <img src = "<%= product.imagenShowcase2 %>" alt = "celular image">
-              <img src = "<%= product.imagenShowcase3 %>" alt = "celular image">
+              <img src = "<%= product.image%> " alt = "celular image">
+              <img src = "<%= product.imagen_showcase2 %>" alt = "celular image">
+              <img src = "<%= product.imagen_showcase3 %>" alt = "celular image">
             </div>
           </div>
           <div class = "img-select">
             <div class = "img-item">
               <a href = "#" data-id = "1">
-                <img src = "<%= product.imagenPrincipal %>" alt = "celular image">
+                <img src = "<%= product.image %>" alt = "celular image">
               </a>
             </div>
             <div class = "img-item">
               <a href = "#" data-id = "2">
-                <img src = "<%= product.imagenShowcase2 %>" alt = "celular image">
+                <img src = "<%= product.imagen_showcase2 %>" alt = "celular image">
               </a>
             </div>
             <div class = "img-item">
               <a href = "#" data-id = "3">
-                <img src = "<%= product.imagenShowcase3 %>" alt = "celular image">
+                <img src = "<%= product.imagen_showcase3 %>" alt = "celular image">
               </a>
             </div>
           </div>
@@ -47,7 +47,7 @@
         <!-- card right -->
         <div class = "product-content">
           
-            <p class = "product-title"><%= product.descripcion %> </p>
+            <p class = "product-title"><%= product.name %> </p>
           
           <a href = "/" class = "product-link">Volver a lista de productos</a>
           <div class = "product-rating">
@@ -61,18 +61,22 @@
 
           <div class = "product-price">
             <p class = "last-price">Precio original: <span>$565.000,00</span></p>
-            <p class = "new-price">Precio nuevo: <span>$<%= product.precio %>  (50% OFF)</span></p>
+            <p class = "new-price">Precio nuevo: <span>$<%= product.price %>  (50% OFF)</span></p>
           </div>
 
           <div class = "product-detail">
             <h2>Sobre este producto: </h2>
-            <p> <%= product.detalle %> </p>
+            <p> <%= product.description %> </p>
             <p></p>
             <ul>
-              <li>Color: <span><%= product.colores %> </span></li>
-              <li>disponibilidad: <span><%= product.disponibilidad %> </span></li>
-              <li>Categoria:<span><%= product.categoria %> </span></li>
-              <li>Disponible solo para: <span><%= product.ubicacionesDisponible %> </span></li>
+              <li>Color: <span>
+                <% for( let i = 0; i < product.colorsInProduct.length; i++ ) { %>
+                  <%= product.colorsInProduct[i].color %>
+                <% } %>
+              </span></li>
+              <li>disponibilidad: <span><%= product.Disponibility.stock %> </span></li>
+              <li>Categoria:<span><%= product.CategoryProduct.name %> </span></li>
+              <li>Disponible solo para: <span><%= product.AvailableLocation.location %> </span></li>
             </ul>
           </div>
 
@@ -83,7 +87,7 @@
             </button>
           </div>
 
-          <% if (logged != undefined && logged.admin == true) { %>
+          <% if (logged != undefined && logged.Category.name == 'true') { %>
             <div class = "edit-button">
               <button type = "button" class = "button-edit">
                 <a href="/products/<%= product.id %>/edit ">
