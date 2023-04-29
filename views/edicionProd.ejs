@@ -1,95 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('./partials/head.ejs'); %>
-<body>
-    <%- include('./partials/header.ejs'); %>
-    <main>
-    <div class="contenedor-formu">
-        <form class="formu" action="/products/<%=product.id%>/edit?_method=PUT" method="POST">
 
-            <h1>Estas editando:</h1>
-            <h2 class ="product-title"><%= product.name %></h2>
+  <body>
+    <% if (logged==undefined) { %>
+      <%- include('./partials/header.ejs'); %>
+        <% } else{%>
+          <%- include('./partials/headerUsuario.ejs'); %>
+            <% } %>
+              <main>
+                <div class="contenedor-formu">
+                  <form class="formu" action="/products/<%=product.id%>/edit?_method=PUT" method="POST">
 
-            <p>
-                Nombre del producto: <input type="text" name="nombre" value="<%= product.name %>">
-            </p>
+                    <h1>Estas editando:</h1>
+                    <h2 class="product-title">
+                      <%= product.name %>
+                    </h2>
 
-            <p>
-                Descripcion: 
-                <textarea class="description" name="descripcion" rows="4" cols="20"></textarea>
-            </p>
-            <p>
-                Color: 
-                <label>
-                  <input type="checkbox" name="colores" value="1">Lila
-                </label>
-                <label>
-                  <input type="checkbox" name="colores" value="2">Dorado
-                </label>
-                <label>
-                  <input type="checkbox" name="colores" value="3">Verde
-                </label>
-                
-                <!-- <select name="menu">
+                    <p>
+                      Nombre del producto: <input type="text" name="nombre" value="<%= product.name %>">
+                    </p>
+
+                    <p>
+                      Descripcion:
+                      <textarea class="description" name="descripcion" rows="4" cols="20"></textarea>
+                    </p>
+                    <p>
+                      Color:
+                      <label>
+                        <input type="checkbox" name="colores" value="1">Lila
+                      </label>
+                      <label>
+                        <input type="checkbox" name="colores" value="2">Dorado
+                      </label>
+                      <label>
+                        <input type="checkbox" name="colores" value="3">Verde
+                      </label>
+
+                      <!-- <select name="menu">
                   <option value="0">...</option>
                   <option value="1">Lila</option>
                   <option value="2">Dorado</option>
                   <option value="3">Verde</option>
                 </select> -->
-            </p>
-            <p>
-                Disponibilidad: 
-                <select name="disponibilidad">
-                    <% if (product.disponibilidad == "en stock") { %>
-                        <option value="1" selected>en stock</option>
-                        <option value="2">sin stock</option>
-                    <% } else { %>
-                      <option value="1">en stock</option>
-                      <option value="2" selected>sin stock</option>
-                    <% } %>
-              </select>
-            </p>
-            <p>
-                Precio: 
-                <input type="number" name="precio" value="<%= product.price %>" step="any">
-            </p>
-            <p>
-                Categoria: 
-                <select name="categoria">
-                    <option value="0" disabled selected>Elegi</option>
-                    <% allCategorys.forEach(category => { %>
-                        <% if (category.id == product.category_products_id) { %>
-                            <option value="<%= category.id %>" selected><%= category.name %></option>
-                        <% } else { %>
-                        <option value="<%= category.id %>"><%= category.name %></option>
-                        <% } %>
-                    <% }) %>
-                </select>
-            </p>
-            <p>
-              UbicacionesDisponibles: 
-              <select name="ubicacionesDisponible">
-                <option value="0" disabled selected>Elegi</option>
-                <% allLocations.forEach(locations => { %>
-                    <% if (locations.id == product.available_locations) { %>
-                        <option value="<%= locations.id %>" selected><%= locations.location %></option>
-                    <% } else { %>
-                        <option value="<%= locations.id %>"><%= locations.location %></option>                    <% } %>
-                <% }) %>
-              </select>
-            </p>
+                    </p>
+                    <p>
+                      Disponibilidad:
+                      <select name="disponibilidad">
+                        <% if (product.disponibilidad=="en stock" ) { %>
+                          <option value="1" selected>en stock</option>
+                          <option value="2">sin stock</option>
+                          <% } else { %>
+                            <option value="1">en stock</option>
+                            <option value="2" selected>sin stock</option>
+                            <% } %>
+                      </select>
+                    </p>
+                    <p>
+                      Precio:
+                      <input type="number" name="precio" value="<%= product.price %>" step="any">
+                    </p>
+                    <p>
+                      Categoria:
+                      <select name="categoria">
+                        <option value="0" disabled selected>Elegi</option>
+                        <% allCategorys.forEach(category=> { %>
+                          <% if (category.id==product.category_products_id) { %>
+                            <option value="<%= category.id %>" selected>
+                              <%= category.name %>
+                            </option>
+                            <% } else { %>
+                              <option value="<%= category.id %>">
+                                <%= category.name %>
+                              </option>
+                              <% } %>
+                                <% }) %>
+                      </select>
+                    </p>
+                    <p>
+                      UbicacionesDisponibles:
+                      <select name="ubicacionesDisponible">
+                        <option value="0" disabled selected>Elegi</option>
+                        <% allLocations.forEach(locations=> { %>
+                          <% if (locations.id==product.available_locations) { %>
+                            <option value="<%= locations.id %>" selected>
+                              <%= locations.location %>
+                            </option>
+                            <% } else { %>
+                              <option value="<%= locations.id %>">
+                                <%= locations.location %>
+                              </option>
+                              <% } %>
+                                <% }) %>
+                      </select>
+                    </p>
 
-            <br>
-            <button type="submit">Guardar producto</button>
-            <br>
-        </form>
+                    <br>
+                    <button type="submit">Guardar producto</button>
+                    <br>
+                  </form>
 
-          
-        </div>
 
-        </form>
+                </div>
 
-      </main>
-      <%- include('./partials/footer.ejs'); %>
-</body>
+                </form>
+
+              </main>
+              <%- include('./partials/footer.ejs'); %>
+  </body>
+
 </html>

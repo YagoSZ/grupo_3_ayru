@@ -234,7 +234,7 @@ module.exports = {
         })
         Promise.all([promesaCelulares, promesaTelevisores, promesaNotebooks])
         .then(function([productosCelulares, productosTelevisores, productosNotebooks]){
-            res.render('listado', {productosCelulares, productosTelevisores, productosNotebooks})
+            res.render('listado', {productosCelulares, productosTelevisores, productosNotebooks, logged: req.session.usuario})
         })
     },
 
@@ -248,7 +248,7 @@ module.exports = {
 
         Promise.all([promesaCategory, promesaLocations])
         .then(function([allCategorys, allLocations]){
-            res.render('creacionProd', {allCategorys, allLocations});
+            res.render('creacionProd', {allCategorys, allLocations, logged: req.session.usuario});
         })
     },
 
@@ -295,7 +295,7 @@ module.exports = {
 
         Promise.all([promesaCategory, promesaLocations, promesaProduct])
         .then(function([allCategorys, allLocations, product]){
-            res.render('edicionProd', {allCategorys, allLocations, product});
+            res.render('edicionProd', {allCategorys, allLocations, product, logged: req.session.usuario});
         })
     },
     
@@ -363,8 +363,7 @@ module.exports = {
             }
         })
         .then(function(productos){
-            console.log(productos)
-            res.render('listadoBusqueda', {productos});
+                res.render('listadoBusqueda', {productos, logged: req.session.usuario, request});
         })
     }
 }

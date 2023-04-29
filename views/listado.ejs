@@ -2,7 +2,11 @@
 <html lang="en">
     <%- include('./partials/head.ejs'); %>
 <body class="main-pagina-listado">
-    <%- include('./partials/header.ejs'); %>
+    <% if (logged==undefined) { %>
+        <%- include('./partials/header.ejs'); %>
+    <% } else{%>
+    <%- include('./partials/headerUsuario.ejs'); %>
+    <% } %>
 <main >
     <div class="div-listado">
         <h1 class="encabezado-listado">Celulares</h1>

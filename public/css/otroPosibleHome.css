@@ -408,6 +408,20 @@ a{
   align-items: center;
 }
 
+.div-busqueda-fallida{
+  margin-top: 80px;
+  background-color: #babdceeb;
+  padding: 20px;
+  border: 3px solid black;
+  box-shadow: 0px 0px 28px 11px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 0px 0px 28px 11px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 28px 11px rgba(0,0,0,0.75);
+}
+
+.mensaje-busqueda-fallida{
+  padding: 0%;
+}
+
 article{
 	display: block;
     width: 100%;

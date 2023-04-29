@@ -1,11 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('./partials/head.ejs'); %>
-<body class="main-pagina-listado">
-    <%- include('./partials/header.ejs'); %>
-<main >
-    <div class="contenedor-resultados-busqueda">
-        <%- include('./partials/card.ejs'); %>
-    </div>
-</main>
+<%- include('./partials/head.ejs'); %>
+
+    <body class="main-pagina-listado">
+        <% if (logged==undefined) { %>
+            <%- include('./partials/header.ejs'); %>
+        <% } else{%>
+        <%- include('./partials/headerUsuario.ejs'); %>
+        <% } %>
+        <main>
+            <div class="contenedor-resultados-busqueda">
+                <% if (productos.length > 0) { %>
+                    <%- include('./partials/card.ejs'); %>
+                <% } else { %>
+                    <div class="div-busqueda-fallida">
+                        <h1 class="mensaje-busqueda-fallida">No se encontraron resultados para "<%= request %>"</h1>
+                    </div>
+                <% }  %>    
+            </div>
+        </main>
 <%- include('./partials/footer.ejs'); %>

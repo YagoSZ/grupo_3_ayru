@@ -30,6 +30,7 @@ a{
 
 main{
     margin-bottom: 50px;
+    min-height: 600px;
 }
 
 .contenedor-tarjetas{
