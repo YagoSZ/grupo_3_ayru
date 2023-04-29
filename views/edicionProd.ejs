@@ -36,13 +36,6 @@
                       <label>
                         <input type="checkbox" name="colores" value="3">Verde
                       </label>
-
-                      <!-- <select name="menu">
-                  <option value="0">...</option>
-                  <option value="1">Lila</option>
-                  <option value="2">Dorado</option>
-                  <option value="3">Verde</option>
-                </select> -->
                     </p>
                     <p>
                       Disponibilidad:
@@ -82,7 +75,7 @@
                       <select name="ubicacionesDisponible">
                         <option value="0" disabled selected>Elegi</option>
                         <% allLocations.forEach(locations=> { %>
-                          <% if (locations.id==product.available_locations) { %>
+                          <% if (locations.id == product.available_locations) { %>
                             <option value="<%= locations.id %>" selected>
                               <%= locations.location %>
                             </option>
@@ -94,6 +87,8 @@
                                 <% }) %>
                       </select>
                     </p>
+                    <label class="clase">Imagen de perfil:</label>
+                    <input class="sub-formulario" type="file" name="imagenProducto" id="imagenProducto">
 
                     <br>
                     <button type="submit">Guardar producto</button>

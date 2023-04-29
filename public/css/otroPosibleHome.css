@@ -94,6 +94,12 @@ a{
   background-image: url("/img/modernRugs.jpg");
 }
 
+.mensaje-error{
+  font-size: 14px;
+  color: rgb(160 34 20);
+  font-weight: bold;
+}
+
 
 
 

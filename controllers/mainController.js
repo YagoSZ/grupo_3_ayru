@@ -144,8 +144,6 @@ module.exports = {
                 
             })
         }else{
-            console.log(errors.mapped)
-            console.log(req.body)
             res.render('edicionPerfil', {usuario: req.session.usuario, errors: errors.mapped(), old: req.body})
         }
     },
@@ -254,31 +252,47 @@ module.exports = {
 
     products: (req, res) => {
 
-        db.Product.create({
-            name: req.body.nombre,
-            price: req.body.precio,
-            image: '/img/default1.png',
-            description: req.body.descripcion,
-            colors: req.body.colores,
-            disponibility_id: req.body.disponibilidad,
-            category_products_id: req.body.categoria,
-            available_locations: req.body.ubicacionesDisponible
-        })
-        .then(function(product){
-            productoId = product.id
-            arrayColores = req.body.colores
-            for (let i = 0; i < arrayColores.length; i++) {
-                colorId = arrayColores[i]
-                db.products_colors.create({
-                id_products: productoId,
-                id_colors: colorId
+        let errors = validationResult(req);
+        if(errors.isEmpty()){
+            db.Product.create({
+                name: req.body.nombre,
+                price: req.body.precio,
+                image: '/img/default1.png',
+                description: req.body.descripcion,
+                colors: req.body.colores,
+                disponibility_id: req.body.disponibilidad,
+                category_products_id: req.body.categoria,
+                available_locations: req.body.ubicacionesDisponible
             })
-            }
-
-        })
-        .then(function(){
-            res.redirect('/');
-        })
+            .then(function(product){
+                productoId = product.id
+                arrayColores = req.body.colores
+                for (let i = 0; i < arrayColores.length; i++) {
+                    colorId = arrayColores[i]
+                    db.products_colors.create({
+                    id_products: productoId,
+                    id_colors: colorId
+                })
+                }
+    
+            })
+            .then(function(){
+                res.redirect('/');
+            })
+        } else {
+            let promesaLocations = db.AvailableLocation.findAll({
+                order: [
+                    ['location', 'ASC']
+                ],
+            })
+            let promesaCategory = db.CategoryProduct.findAll()
+    
+            Promise.all([promesaCategory, promesaLocations])
+            .then(function([allCategorys, allLocations]){
+                console.log(errors)
+                res.render('creacionProd', {allCategorys, allLocations, logged: req.session.usuario, old: req.body, errors: errors.mapped()})
+            })
+        }
 
     },
 
@@ -302,10 +316,18 @@ module.exports = {
     update: (req, res) => {
         productoId = req.params.id
         arrayColores = req.body.colores
+
+        let img 
+        if (req.file != undefined){
+            img = req.file.filename;
+        }
+        else {
+            img = '/img/default1.png';
+        }
         db.Product.update({
             name: req.body.nombre,
             price: req.body.precio,
-            image: '/img/default1.png',
+            image: img,
             description: req.body.descripcion,
             disponibility_id: req.body.disponibilidad,
             category_products_id: req.body.categoria,

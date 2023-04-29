@@ -13,6 +13,15 @@ let validationsRegister = [
     body('password').notEmpty().withMessage('la Contrasena es obligatoria')
 ]
 
+let validationsProduct = [
+    body('nombre').notEmpty().withMessage('el Nombre es obligatorio'),
+    body('colores').notEmpty().withMessage('Debe seleccionar al menos 1 color'),
+    body('disponibilidad').notEmpty().withMessage('Debe elegir una opcion'),
+    body('precio').notEmpty().withMessage('Marcar el Precio es obligatorio').bail().isDecimal().withMessage('el Numero es invalido'),
+    body('categoria').notEmpty().withMessage('Debe elegir una opcion'),
+    body('ubicacionesDisponible').notEmpty().withMessage('Debe elegir una opcion')
+]
+
 
 
 
@@ -21,11 +30,11 @@ router.get('/productCart', mainController.productCart);
 
 //routes de ADMINS
 router.get('/products/create', mainController.create); //Traer Pagina creacion productos
-router.post('/products', mainController.products) //Guardar nuevo Producto
+router.post('/products', validationsProduct, mainController.products) //Guardar nuevo Producto
 
 
 router.get('/products/:id/edit', mainController.productsEdit); //Traer pagina edicion Productos
-router.put('/products/:id/edit', mainController.update);//Editar Productos
+router.put('/products/:id/edit', upload.single('imagenProducto'), validationsProduct, mainController.update);//Editar Productos
 
 router.delete('/products/:id', mainController.destroy)
 
