@@ -105,6 +105,25 @@ background-size: cover; ;
     font-weight: bolder;
 }
 
+.mensaje-advertencia{
+    display: none;
+    color: #c3e3cc;
+}
+
+.iconoContraseña{
+    position: relative;
+    top: 24.5px;
+    left: 259px;
+    color: red;
+    width: 30px;
+    display: none;
+}
+
+.input-error{
+    background-color: rgb(242, 63, 63);
+    border: 3px solid red;
+}
+
 /*
 .encabezado{
     width: 100%;

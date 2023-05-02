@@ -8,9 +8,10 @@ const controllerApiProducts = {
 
     'productsList': (req, res) => {
         Product.findAll({
-            include :  [{ association : "CategoryProduct" }, { association : "Color" }]
-    })
+            include :  [{ association : "CategoryProduct" }, { association : "colorsInProduct" }]
+    }) 
         .then(products => {
+            console.log(products)
             const response = {
                 meta: {
                     count : products.length,

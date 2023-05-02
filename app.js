@@ -32,14 +32,16 @@ app.use(session({
 app.set('view engine', 'ejs');
 app.set('views', './views');
 
+// API
+app.use(apiProductsRouter);
+app.use(apiUsersRouter)
+
 app.use(nonUserRouter)
 app.use(authMiddleware);
 app.use(logMiddleware);
 app.use(mainRouter);
 
-// API
-app.use(apiProductsRouter);
-app.use(apiUsersRouter)
+
 
 
 

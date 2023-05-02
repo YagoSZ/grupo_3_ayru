@@ -69,8 +69,10 @@
                     <div class="contenedor-registro">
                         <i class="login-i fas fa-lock"></i>
                         <label class="clase">Contraseña</label>
+                        <div class="iconoContraseña"><i class="fa-solid fa-circle-exclamation"></i></div>
                         <input class="sub-formulario" type="password" name="password" id="password"
                             value="<%= locals.old && old.password ? old.password : '' %>">
+                            <small class="mensaje-advertencia">introduce al menos 8 caracteres</small>
                         <% if (locals.errors && errors.password) { %>
                             <p class="mensaje-error">
                                 <%= errors.password.msg %>
