@@ -99,6 +99,11 @@ background-size: cover; ;
     font-weight: bold;
 }
 
+.lista-errores-validacion-front{
+    display: none;
+    color: #b34a4a;
+    font-weight: bolder;
+}
 
 /*
 .encabezado{
