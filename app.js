@@ -14,9 +14,9 @@ const session = require('express-session')
 const cookieParser = require('cookie-parser');
 
 
-// const apiProductsRouter = require('./routes/api/products')
-// const apiUsersRouter = require('./routes/api/users')
-const apiRoutes = require('./routes/api');
+const apiProductsRouter = require('./routes/apis/apiProducts')
+const apiUsersRouter = require('./routes/apis/apiUsers')
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }))
@@ -38,9 +38,10 @@ app.use(logMiddleware);
 app.use(mainRouter);
 
 // API
-// app.use('/api/products', apiProductsRouter);
-// app.use('/api/users', apiUsersRouter)
-app.use('/api', apiRoutes);
+app.use(apiProductsRouter);
+app.use(apiUsersRouter)
+
+
 
 app.listen(3010, () => 
 console.log('Servidor funcionando')

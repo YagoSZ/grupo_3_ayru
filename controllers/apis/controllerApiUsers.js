@@ -1,14 +1,18 @@
-const db = require('../database/models');
+const path = require("path");
+const db = require("../../database/models");
 const sequelize = db.sequelize;
-const { json } = require('sequelize');
 
-module.exports = {
+const User = db.User;
+
+const controllerApiUsers = {
     listUsers : (req, res) => {
-        db.User.findAll()
+        User.findAll({
+            include :  [{ association : "Category"}]
+        })
         .then(users => {
             return res.status(200).json({
                 count: users.length,
-                url: "api/users",
+                url: "/api/users",
                 data: users,
                 status: 200
                 })
@@ -30,10 +34,10 @@ module.exports = {
         detailUsers : (req, res) => {
             let id = req.params.id;
                Promise.all([
-                    db.User.findOne({
+                    User.findOne({
                         where: { id: id }
                     }),
-                    db.User.findAll()
+                    db.Category.findAll()
                 ])
                 .then(user => {
                     let response = {
@@ -48,3 +52,5 @@ module.exports = {
                 });
         }
 }
+
+module.exports = controllerApiUsers;
