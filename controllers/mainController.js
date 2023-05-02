@@ -68,10 +68,18 @@ module.exports = {
                 password: bcrypt.hashSync(req.body.password, 10),
                 category_id: 1,
                 image: img
+            }).then (function(usuario){
+                db.User.findOne({
+                    include: [{association: "Category"}],
+                    where: {
+                        email: usuario.email
+                    }
+                }).then(function(user){
+                    console.log(user)
+                    req.session.usuario = user
+                    res.redirect('/');
+                })
             })
-
-
-            res.redirect('/');
         }else{
             res.render('register', {errors: errors.mapped(), old: req.body})
         }

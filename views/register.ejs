@@ -33,8 +33,10 @@
                     <div class="contenedor-registro">
                         <i class="login-i fas fa-user"></i>
                         <label class="clase" for="nombre">Nombre</label>
+                        <div class="iconoContraseña" id="advertencia-nombre"><i class="fa-solid fa-circle-exclamation"></i></div>
                         <input class="sub-formulario" type="text" name="nombre" id="nombre"
                             value="<%= locals.old && old.nombre ? old.nombre : '' %>">
+                            <small class="mensaje-advertencia" id="error-register-nombre"></small>
                         <% if (locals.errors && errors.nombre) { %>
                             <p class="mensaje-error">
                                 <%= errors.nombre.msg %>
@@ -45,8 +47,10 @@
                     <div class="contenedor-registro">
                         <i class="login-i fas fa-user"></i>
                         <label class="clase" for="apellido">Apellido</label>
+                        <div class="iconoContraseña" id="advertencia-apellido"><i class="fa-solid fa-circle-exclamation"></i></div>
                         <input class="sub-formulario" type="text" name="apellido" id="apellido"
                             value="<%= locals.old && old.apellido ? old.apellido : '' %>">
+                            <small class="mensaje-advertencia" id="error-register-apellido"></small>
                         <% if (locals.errors && errors.apellido) { %>
                             <p class="mensaje-error">
                                 <%= errors.apellido.msg %>
@@ -57,8 +61,10 @@
                     <div class="contenedor-registro">
                         <i class="login-i fas fa-user"></i>
                         <label class="clase" for="email">Email</label>
+                        <div class="iconoContraseña" id="advertencia-email"><i class="fa-solid fa-circle-exclamation"></i></div>
                         <input class="sub-formulario" type="email" name="email" id="email"
                             value="<%= locals.old && old.email ? old.email : '' %>">
+                            <small class="mensaje-advertencia" id="error-register-email"></small>
                         <% if (locals.errors && errors.email) { %>
                             <p class="mensaje-error">
                                 <%= errors.email.msg %>
@@ -69,10 +75,10 @@
                     <div class="contenedor-registro">
                         <i class="login-i fas fa-lock"></i>
                         <label class="clase">Contraseña</label>
-                        <div class="iconoContraseña"><i class="fa-solid fa-circle-exclamation"></i></div>
+                        <div class="iconoContraseña" id="advertencia-contraseña"><i class="fa-solid fa-circle-exclamation"></i></div>
                         <input class="sub-formulario" type="password" name="password" id="password"
                             value="<%= locals.old && old.password ? old.password : '' %>">
-                            <small class="mensaje-advertencia">introduce al menos 8 caracteres</small>
+                            <small class="mensaje-advertencia" id="error-register-contraseña"></small>
                         <% if (locals.errors && errors.password) { %>
                             <p class="mensaje-error">
                                 <%= errors.password.msg %>
