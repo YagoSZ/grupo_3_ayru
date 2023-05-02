@@ -24,7 +24,6 @@ let validationsProduct = [
 
 
 
-
 router.get('/productCart', mainController.productCart);
 
 
