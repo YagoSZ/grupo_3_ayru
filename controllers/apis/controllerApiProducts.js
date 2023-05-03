@@ -26,10 +26,14 @@ const controllerApiProducts = {
         },
 
         'detail': (req, res) => {
+            console.log(req.params.id)
             let id = req.params.id;
             
             Promise.all([
               Product.findOne({
+                
+                include :  [{ association : "CategoryProduct" }, { association : "colorsInProduct" }],
+                
                 where: { id: id }
               }),
               db.Color.findAll(),
@@ -38,6 +42,7 @@ const controllerApiProducts = {
               db.AvailableLocation.findAll()
             ])
                 .then(product => {
+                    
                     let response = {
                         meta: {
                             count: product.length,

@@ -144,6 +144,17 @@ main{
     width: 25%;
 }
 
+.div-precio-total-cart{
+    display: flex;
+}
+
+.h2-carrito-vacio{
+    padding: 20px;
+    border: inset;
+    background-color: #ab84ed00;
+    color: darkslategray;
+}
+
 @media(min-width: 768px){
 
     .destacado{
