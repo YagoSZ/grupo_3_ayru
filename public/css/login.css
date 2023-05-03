@@ -198,3 +198,8 @@ background-size: cover; ;
 
 
 }
+
+.mensaje-error-login{
+    display: none;
+    color: #c3e3cc;
+}

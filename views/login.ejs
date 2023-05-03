@@ -16,13 +16,15 @@
             <form class="login" action="../login" method="POST">
                 <div class="login-f"> 
                     <i class="login-i fas fa-user"></i>
-                    <input type="text" name="email" class="login-i2" placeholder="Usuario / email">
+                    <input type="text" name="email" class="login-i2 e" id="input-email-login" placeholder="Usuario / email">
+                    <small class="mensaje-error-login" id="advertencia-login-email"></small>
                 </div> 
                 <div class="login-f">
                 <i class="login-i fas fa-lock"></i>
-                <input type="password" name="password" class="login-i2" placeholder="Contraseña">
+                <input type="password" name="password" class="login-i2 p" id="input-password-login" placeholder="Contraseña">
+                <small class="mensaje-error-login" id="advertencia-login-password"></small>
             </div>
-            <input class="r-p" type="radio" name="recordar" value="recordarcontraseña" id="recordar"> Recuerdame </input>
+            <input class="r-p"  type="radio" name="recordar" value="recordarcontraseña" id="recordar"> Recuerdame </input>
             
             <button class="button login-s" type="submit">
             <span class="button__text">Ingresar</span>
@@ -52,7 +54,7 @@
 <footer>
     <img class="logo" src="/img/logoayru.png" alt="">
 </footer>
-   
+   <script src="/js/validation-login.js"></script>
    </body>
     </html>
 

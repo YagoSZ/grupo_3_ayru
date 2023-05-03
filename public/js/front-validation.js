@@ -127,7 +127,7 @@ window.addEventListener('load', function(){
             campoEmail.style.backgroundColor = 'rgb(245 205 205)'
             campoEmail.style.border = '2px solid #9e1717'
             mensajeErrorEmail.style.display = 'block'
-            mensajeErrorEmail.innerHTML = 'el campo Apellido no puede estar vacio'
+            mensajeErrorEmail.innerHTML = 'el campo Email no puede estar vacio'
             mensajeErrorEmail.style.color = 'red'
             iconoErrorEmail.style.display = 'block'
         } else {
