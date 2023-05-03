@@ -10,7 +10,7 @@ let validationsRegister = [
     body('nombre').notEmpty().withMessage('el Nombre es obligatorio'),
     body('apellido').notEmpty().withMessage('el Apellido es obligatorio'),
     body('email').notEmpty().withMessage('el Email es obligatorio').bail().isEmail().withMessage('el Email es invalido'),
-    body('password').notEmpty().withMessage('la Contrasena es obligatoria')
+    body('password').notEmpty().withMessage('la Contrasena es obligatoria').bail().isLength({min : 8, max: undefined}).withMessage('debes introducir al menos 8 caracteres')
 ]
 
 router.get('/', mainController.index);
