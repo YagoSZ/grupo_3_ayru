@@ -48,59 +48,11 @@
                     <div class="contenedor-tarjetas">
         
                         <!-- primer Tarjeta del carrito -->
-                        <article class="card">
-                            <img class=productos src="/img/camiseta.jpg" alt="Camiseta">
-                            <div class="descripcion-producto">
-                                <div>
-                                    <h2 class="titulo-tarjeta">Titulo del producto</h2>
-                                    <h3 class="subtitulo-tarjeta">descripcion del producto</h3>
-                                </div>
-                                <div class="etiqueta-precio">
-                                    <div>
-                                        <p>$Precio x</p>
-                                    </div>
-                                    <select name="cantidad-producto" id="cantProd">
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                    </select>
-                                    <div>
-                                        <p>= $Total</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
+        
             
                         <!-- segunda Tarjeta del carrito -->
-                        <article class="card">
-                            <img class=productos src="/img/camiseta.jpg" alt="Camiseta">
-                            <div class="descripcion-producto">
-                                <div>
-                                    <h2 class="titulo-tarjeta">Titulo del producto</h2>
-                                    <h3 class="subtitulo-tarjeta">descripcion del producto</h3>
-                                </div>
-                                <div class="etiqueta-precio">
-                                    <div>
-                                        <p>$Precio x</p>
-                                    </div>
-                                    <select name="cantidad-producto" id="cantProd">
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                    </select>
-                                    <div>
-                                        <p>= $Total</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </article>
-                        <div class="boton-escritorio">
-                            <p><i class="fa-solid fa-angle-down"></i></p>
-                        </div>
+                        
+
                     </div>
                     <div class="contenedor-dos">
                         <div class="contenedor-envio">
@@ -154,7 +106,7 @@
                             </div>
                             <div class="contenedor-boton-cotizacion">
                                 <div class="boton-cotizacion">
-                                    <button class="p-cotizacion"><strong>Obtener Cotizacion</strong></button>
+                                    <button class="p-cotizacion" id="obtener-cotizacion-carrito"><strong>Obtener Cotizacion</strong></button>
                                 </div>
                             </div>
                         </div>
@@ -172,14 +124,14 @@
                                     </div>
                                 </div>
                                 <div class="opcion-envio">
-                                    <div>
-                                        <p>Total: $</p>
+                                    <div class="div-precio-total-cart">
+                                        <p>Total: $</p><p id="total-precio-cart"></p>
                                     </div>
                                 </div>
                             </div>
                             <div class="contenedor-boton-cotizacion">
                                 <div class="boton-cotizacion">
-                                    <button class="p-cotizacion"><strong>Actualizar Carrito</strong></button>
+                                    <button class="p-cotizacion" id="borrar-carrito"><strong>Actualizar Carrito</strong></button>
                                 </div>
                                 <div class="boton-cotizacion">
                                     <button class="p-cotizacion"><strong>Finalizar Compra</strong></button>
@@ -193,6 +145,6 @@
     </main>
 
     <%- include('./partials/footer.ejs'); %>
-
+    <script src="/js/funcionalidad-cart-pagina.js"></script>
 </body>
 </html>

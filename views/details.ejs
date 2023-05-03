@@ -51,7 +51,7 @@
         <!-- card right -->
         <div class = "product-content">
           
-            <p class = "product-title"><%= product.name %> </p>
+            <p class = "product-title" id="titulo-producto-details"><%= product.name %> </p>
           
           <a href = "/" class = "product-link">Volver a lista de productos</a>
           <div class = "product-rating">
@@ -86,7 +86,7 @@
 
           <div class = "purchase-info">
             <input type = "number" min = "0" value = "1">
-            <button type = "button" class = "btn">
+            <button type = "submit" class = "btn" id="boton-añadir-carrito">
               Agregar al carrito <i class = "fas fa-shopping-cart"></i>
             </button>
           </div>
@@ -115,5 +115,6 @@
 
     
     <script src="../js/productos-script.js"></script>
+    <script src="/js/funcionalidad-cart.js"></script>
   </body>
 </html>
