@@ -32,7 +32,7 @@
                     <img src="/img/<%= usuario.image %>" alt="Foto de Perfil" class="foto-de-perfil-pagina-perfil">
                 </div>
                 <div class="div-inferior-perfil">
-                    <form action="/edicionPerfil" method="POST" enctype="multipart/form-data" class="div-inferior-perfil">
+                    <form action="/edicionPerfil" method="POST" enctype="multipart/form-data" class="div-inferior-perfil" id="form-edit-perfil">
                         <div class="formulario-perfil-1">
                             <div class="formulario-perfil-2">
                                 <div class="formulario-superior-perfil">
@@ -41,6 +41,7 @@
                                         <label class="clase" for="nombre">Nombre</label>
                                         <input class="sub-formulario" type="text" name="nombre" id="nombre"
                                             value="<%= locals.old && (old.nombre != undefined) ? old.nombre : usuario.first_name %>">
+                                            <small class="mensaje-advertencia" id="error-register-nombre"></small>
                                             <% if (locals.errors && errors.nombre) { %>
                                                 <p class="mensaje-error">
                                                     <%= errors.nombre.msg %>
@@ -53,6 +54,7 @@
                                         <label class="clase" for="email">Email</label>
                                         <input class="sub-formulario" type="email" name="email" id="email"
                                             value="<%= locals.old && (old.email != undefined) ? old.email : usuario.email %> ">
+                                            <small class="mensaje-advertencia" id="error-register-email"></small>
                                             <% if (locals.errors && errors.email) { %>
                                                 <p class="mensaje-error">
                                                     <%= errors.email.msg %>
@@ -66,6 +68,7 @@
                                         <label class="clase" for="apellido">Apellido</label>
                                         <input class="sub-formulario" type="text" name="apellido" id="apellido"
                                             value="<%= locals.old && (old.apellido != undefined) ? old.apellido : usuario.last_name %>">
+                                            <small class="mensaje-advertencia" id="error-register-apellido"></small>
                                             <% if (locals.errors && errors.apellido) { %>
                                                 <p class="mensaje-error">
                                                     <%= errors.apellido.msg %>
@@ -78,6 +81,7 @@
                                         <label class="clase">Contraseña</label>
                                         <input class="sub-formulario" type="password" name="password" id="password"
                                             value="">
+                                            <small class="mensaje-advertencia" id="error-register-contraseña"></small>
                                             <% if (locals.errors && errors.password) { %>
                                                 <p class="mensaje-error">
                                                     <%= errors.password.msg %>
@@ -108,7 +112,7 @@
         <img class="logo" src="/img/logoayru.png" alt="">
     </footer>
     <script src="https://kit.fontawesome.com/6cd48854d2.js" crossorigin="anonymous"></script>
-
+    <script src="/js/validation-edit-perfil.js"></script>
 </body>
 
 </html>
