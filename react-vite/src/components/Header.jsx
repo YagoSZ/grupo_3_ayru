@@ -9,8 +9,8 @@ function Header() {
           <Container>
             <Navbar.Brand href="#home">AYRU</Navbar.Brand>
             <Nav className="me-auto">
-              <Nav.Link href="#home">Products</Nav.Link>
-              <Nav.Link href="#features">Contact</Nav.Link>
+              <Nav.Link href="#home">Productos</Nav.Link>
+              <Nav.Link href="#features">Contacto</Nav.Link>
               <Nav.Link href="#pricing">Info</Nav.Link>
             </Nav>
           </Container>

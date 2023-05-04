@@ -1,10 +1,3 @@
-/* * {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-} */
-
-
 footer {
     display: flex;
     flex-direction: column;
@@ -25,6 +18,7 @@ footer {
 }
 
 .info-footer {
+    font-family: 'Oswald', sans-serif;
     margin: 8px;
     text-align: center;
     color: whitesmoke;
