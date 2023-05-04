@@ -1,0 +1,37 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+} */
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: black;
+    margin-top: 20px;
+    margin: auto;
+}
+
+.logo-ayru img {
+    width: 50px;
+    height: 50px;
+    flex: 10%;
+    margin: 10px;
+    text-align: center;
+}
+
+.info-footer {
+    margin: 8px;
+    text-align: center;
+    color: whitesmoke;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-between;
+    color: aquamarine;
+}
