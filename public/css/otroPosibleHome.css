@@ -11,13 +11,17 @@
 }
 
 body {
-background-image: url(/img/fondo2.png);
+background-image: url(/img/fondo4.png);
 background-repeat: no-repeat;
 background-attachment: fixed;
 background-size: cover;
 color: black;
 font-family: 'Oswald', sans-serif;
 margin: 0px;
+}
+
+.body-busqueda{
+  background-color: #ebebeb;
 }
 
 a{
@@ -27,15 +31,6 @@ a{
 
 .iconos{
 	margin-bottom: 10px;
-}
-
-.sub-header{
-  height: 400px;
-  background-color: #055269a3;
-  display: flex;
-  align-items: center;
-  color: floralwhite;
-  justify-content: center;
 }
 
 .encabezado-sub-header{
@@ -90,6 +85,7 @@ a{
 
 }
 
+
 .main-pagina-listado{
   background-image: url("/img/modernRugs.jpg");
 }
@@ -136,13 +132,13 @@ a{
 
   .prev{
 	left: -80px;
-	top: 150px;
+	top: 200px;
   }
 
   /* Position the "next button" to the right */
   .next{
 	right: -80px;
-	top: 150px;
+	top: 200px;
   }
   
 
@@ -154,11 +150,11 @@ a{
   
   /* Caption text */
   .text {
-	color: #090808;
+	  color: #090808;
     font-size: 20px;
     padding: 8px 12px;
     position: absolute;
-    top: -80px;
+    top: -50px;
     width: 100%;
     text-align: center;
     font-family: 'Secular One', sans-serif;
@@ -177,6 +173,7 @@ a{
 
   .img-carrusel{
     width: 300px;
+    display: block;
   }
   
   /* Number text (1/3 etc) */
@@ -260,6 +257,15 @@ a{
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: absolute;
+    top: 380px;
+    left: 80px;
+}
+
+.div-imagenes-carrusel{
+  height: 300px;
+  position: relative;
+  top: 60px;
 }
 
 .contenedor-descripcion-foto p{
@@ -324,6 +330,7 @@ a{
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: -webkit-fill-available;
 }
 
 /* version mobile */
@@ -335,7 +342,6 @@ a{
 }
 
 .contenedor-imagen{
-  padding: 15px;
   background-color: white;
   border-radius: 10px;
   width: 240px;
@@ -350,7 +356,9 @@ a{
 .imagen-producto-contenedor{
   height: 80%;
   display: flex;
-  align-items: center;}
+  align-items: center;
+  margin: 15px;
+}
 
 .imagen-destacada{
     margin: 0px 0px 40px 0px;
@@ -358,11 +366,13 @@ a{
 }
 
 .descripcion-destacado{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 6px;
-    border-top: solid 5px #ebebeb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6px;
+  background-color: #ebebeb;
+  border-top: solid 5px #ebebeb;
+  border-radius: 10px;
 }
 
 .descripcion-destacado h3{
@@ -375,34 +385,39 @@ a{
     margin-left: 0px;
 }
 
+.productoPrecio{
+  display: none;
+}
+
 .boton {
-	background:linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
-	background-color:#ededed;
-	border-radius:15px;
-	border:1px solid #d6bcd6;
-	display:inline-block;
-	cursor:pointer;
-	color:#07637a;
-	font-family:Arial;
-	font-size:12px;
-	font-weight:bold;
-	padding:5px 24px;
-	text-decoration:none;
-	text-shadow:0px -6px 0px #e1e2ed;
+  background: linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
+  background-color: #ededed;
+  border-radius: 15px;
+  border: 1px solid #d6bcd6;
+  display: inline-block;
+  cursor: pointer;
+  color: #07637a;
+  font-family: Arial;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 5px 24px;
+  text-decoration: none;
+  text-shadow: 0px -6px 0px #e1e2ed;
+  margin-bottom: 10px;
 }
 
 .mas-productos{
   font-size: 30px;
-  font-family: 'Prosto One', cursive;
+  font-family: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   text-decoration: underline;
-  background-color: #05d3db4d;
+  background-color: #6e8ca9c4;
   height: 60px;
   width: -webkit-fill-available;
   box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.75) inset;
-  -webkit-box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.75) inset;
+  -webkit-box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.75) inset;
   -moz-box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.75) inset;
 }
 /* FIN CSS DESTACADOS */
@@ -442,6 +457,14 @@ article{
     top: -40px;
 }
 
+.sub-header{
+  display: none;
+}
+
+.body-listado{
+  padding: 0%;
+}
+
 
 /* MEDIA QUERYS */
 @media screen and (min-width: 460px){
@@ -455,6 +478,15 @@ article{
 
 @media screen and (min-width: 768px){
 
+  .sub-header{
+    height: 400px;
+    background-color: #055269a3;
+    display: flex;
+    align-items: center;
+    color: floralwhite;
+    justify-content: center;
+  }
+
 	.boton:focus,
 	.boton:hover {
 		border-color: #269AC6;
@@ -463,7 +495,7 @@ article{
 
 	.contenedor-imagen{
     width: 240px;
-    max-height: 400px;	
+    max-height: 370px;	
   }
   .contenedor-inferior-destacados{
     display: flex;
@@ -507,28 +539,36 @@ article{
 @media screen and (min-width: 1200px){
   .encabezado-secundario{
     font-size: 40px;
-    font-family: 'Prosto One', cursive;
+    font-family: serif;
     text-align: center;
+    justify-content: center;
     margin-bottom: 30px;
     margin-top: 80px;
     display: flex;
-    margin-left: 50px;
+    /* margin-left: 50px; */
     width: -webkit-fill-available;
   }
   .destacados{
+    border: 5px solid #4b415c;
     flex-direction: row;
     justify-content: space-evenly;
+    max-height: 440px;
     margin-top: 40px;
     background-color: #041d347d;
-   background-image: url("/img/patronAzul.png");
+    box-shadow: 0px 5px 10px 5px rgba(0,0,0,0.75) inset;
+    -webkit-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.75) inset;
+    -moz-box-shadow: 0px 5px 10px 5px rgba(0,0,0,0.75) inset;
 }
 
 .destacados2{
- display: flex;
- flex-direction: row;
- justify-content: space-evenly;
- background-color: #041d347d;
- background-image: url("/img/patronTriangular.png");
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  max-height: 440px;
+  background-color: #041d347d;
+  box-shadow: 0px 5px 10px 5px rgba(0,0,0,0.75) inset;
+    -webkit-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.75) inset;
+    -moz-box-shadow: 0px 5px 10px 5px rgba(0,0,0,0.75) inset;
 
 }
 }

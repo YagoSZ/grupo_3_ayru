@@ -23,5 +23,5 @@ router.post('/register', upload.single('imagenUsuario'), validationsRegister, ma
 router.get('/login', mainController.login);
 router.post('/login', mainController.ingresar);
 
-router.get('/products', mainController.listado); // Traer listado productos
+router.get('/productos/:id', mainController.listado); // Traer listado productos
 module.exports = router

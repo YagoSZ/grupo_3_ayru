@@ -29,7 +29,9 @@
                                                     <div class="numbertext">
                                                         <%= contador %> / <%= showcase.length %>
                                                     </div>
-                                                    <img src="<%= producto.image %>" class="img-carrusel">
+                                                    <div class="div-imagenes-carrusel">
+                                                        <img src="<%= producto.image %>" class="img-carrusel">
+                                                    </div>
                                                     <div class="text">
                                                         <%= producto.name %>
                                                     </div>
@@ -60,11 +62,13 @@
                                     <h1 class="encabezado-secundario">Destacados del mes</h1>
 
                                     <div class="destacados">
-                                        <%- include('./partials/card.ejs'); %>
+                                        <% let contadorTarjeta = 0 %>
+                                        <%- include('./partials/card.ejs', {contadorTarjeta}); %>
                                     </div>
                                     <div class="contenedor-inferior-destacados">
                                         <h1 class="encabezado-secundario">Ofertas del mes</h1>
                                         <div class="destacados2">
+                                            <% let contadorTarjeta2 = 5 %>
                                             <% ofertas.forEach(producto => { %>
                                                 <div class="contenedor-imagen">
                                                     <div class="imagen-producto-contenedor">
@@ -72,16 +76,19 @@
                                                     </div>
                                                     <div class="descripcion-destacado">
                                                         <h3><%= producto.name %> </h3>
-                                                        <p>$<%= producto.price %> </p>
+                                                        <p class="productoPrecio" id="precioTarjeta<%= contadorTarjeta2 %>">$<%= producto.price %> </p>
                                                         <a href="/detalle/<%= producto.id %> "><button class="boton" type="submit">Conoce más</button></a>
                                                     </div>
                                                 </div>
+                                                <% contadorTarjeta2++ %>
+                                                <% console.log(contadorTarjeta) %>
+
                                             <%  }); %> 
                                         </div>
                                     </div>
 
                                     <div class="mas-productos">
-                                        <p><a href="/products">Mas productos</a></p>
+                                        <p class="encabezado-mas-productos"><a href="/productos/0">Mas productos</a></p>
                                     </div>
                                 </div>
                             </main>
@@ -91,6 +98,9 @@
                                 <script src="https://kit.fontawesome.com/6cd48854d2.js"
                                     crossorigin="anonymous"></script>
                                 <script src="./js/carrusel.js"></script>
+                                <script src="/js/card.js"></script>
+                                <script src="/js/header.js"></script>
+
     </body>
 
 </html>

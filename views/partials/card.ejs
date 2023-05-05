@@ -6,10 +6,11 @@
             </div>
             <div class="descripcion-destacado">
                 <h3><%= producto.name %> </h3>
-                <p>$<%= producto.price %> </p>
+                <p class="productoPrecio" id="precioTarjeta<%= contadorTarjeta %>">$<%= producto.price %> </p>
                 <a href="/detalle/<%= producto.id %> "><button class="boton" type="submit">Conoce más</button></a>
             </div>
         </div>
+        <%  contadorTarjeta++ %>
     <%  }); %> 
 
 

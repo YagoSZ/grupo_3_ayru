@@ -15,7 +15,9 @@ body{
 img{
     width: 100%;
     display: block;
+    top: 120px;
 }
+
 .img-display{
     overflow: hidden;
 }
@@ -173,31 +175,29 @@ img{
 }
 
 .button-edit{
-    height: 50px;
+    height: 40px;
     width: 150px;
-    background-color: #55e4bb;
+    background-color: #f6f8f7;
     color: #000;
     font-size: 16px;
     font-weight: 700;
     margin: 10px 5px;
-    border-radius: 20px;
+    border-radius: 10px;
     box-shadow: 0px 0px 26px 3px rgba(0,0,0,0.75) inset;
     -webkit-box-shadow: 0px 0px 26px 3px rgba(0,0,0,0.75) inset;
     -moz-box-shadow: 0px 0px 26px 3px rgba(0,0,0,0.75) inset;
 }
-/* box-shadow: 0px 0px 43px 3px rgba(0,0,0,0.75) inset;
--webkit-box-shadow: 0px 0px 43px 3px rgba(0,0,0,0.75) inset;
--moz-box-shadow: 0px 0px 43px 3px rgba(0,0,0,0.75) inset; */
+
 
 .button-delete{
-    height: 50px;
+    height: 40px;
     width: 150px;
-    background-color: #e30d0d99;
+    background-color: #f50505;
     color: #000;
     font-size: 16px;
     font-weight: 700;
     margin: 10px 5px;
-    border-radius: 20px;
+    border-radius: 10px;
     box-shadow: 0px 0px 26px 3px rgba(0,0,0,0.75) inset;
     -webkit-box-shadow: 0px 0px 26px 3px rgba(0,0,0,0.75) inset;
     -moz-box-shadow: 0px 0px 26px 3px rgba(0,0,0,0.75) inset;

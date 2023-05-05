@@ -37,7 +37,8 @@ router.put('/products/:id/edit', upload.single('imagenProducto'), validationsPro
 
 router.delete('/products/:id', mainController.destroy)
 
-router.post('/buscador', mainController.find); //traer pagina resultado buscador
+router.get('/buscador', mainController.find); //traer pagina resultado buscador
+router.post('/buscador', mainController.find); //traer pagina resultado buscador con resultados
 
 router.get('/edicionPerfil', mainController.editarUsuario); //Traer pagina edicion Usuario
 router.post('/edicionPerfil', upload.single('imagenUsuario'), validationsRegister, mainController.guardarEdicionUsuario); //Guardar edicion Usuario

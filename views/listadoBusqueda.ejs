@@ -2,7 +2,7 @@
 <html lang="en">
 <%- include('./partials/head.ejs'); %>
 
-    <body class="main-pagina-listado">
+    <body class="body-busqueda">
         <% if (logged==undefined) { %>
             <%- include('./partials/header.ejs'); %>
         <% } else{%>
@@ -12,11 +12,15 @@
             <div class="contenedor-resultados-busqueda">
                 <% if (productos.length > 0) { %>
                     <%- include('./partials/card.ejs'); %>
-                <% } else { %>
+                <% } else if(request != undefined){ %>
                     <div class="div-busqueda-fallida">
-                        <h1 class="mensaje-busqueda-fallida">No se encontraron resultados para "<%= request %>"</h1>
+                        <h1 class="mensaje-busqueda-fallida">No se encontraron resultados para " <%= request %> "</h1>
                     </div>
-                <% }  %>    
+                <% } else { %>  
+                    <div class="div-busqueda-fallida">
+                        <h1 class="mensaje-busqueda-fallida"> " Introduce tu busqueda en la barra de navegacion "</h1>
+                    </div>
+                <% }  %>     
             </div>
         </main>
 <%- include('./partials/footer.ejs'); %>

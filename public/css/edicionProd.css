@@ -10,8 +10,8 @@
     box-sizing: border-box;
 }
 
-body {
-    background-image: url(/img/fondo2.png);
+.body-edicion {
+    background-image: url(/img/fondo4.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;

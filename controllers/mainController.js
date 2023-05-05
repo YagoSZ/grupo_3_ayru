@@ -27,7 +27,7 @@ module.exports = {
        let promesaShowcase = db.Product.findAll({
         where: {
             name: {
-              [Op.or]: ['Samsung S22 ULTRA', 'Iphone 13 Pro', 'Samsung S21 FE']
+              [Op.or]: ['Realme 10', 'Iphone 13 Pro', 'Notebook Lenovo']
             }
         }
        })
@@ -223,25 +223,55 @@ module.exports = {
     }, 
 
     listado: (req, res) => {
-        let promesaCelulares = db.Product.findAll({
-            where: {
-                category_products_id: 1
-            }
-        })
-        let promesaTelevisores = db.Product.findAll({
-            where: {
-                category_products_id: 2
-            }
-        })
-        let promesaNotebooks = db.Product.findAll({
-            where: {
-                category_products_id: 3
-            }
-        })
-        Promise.all([promesaCelulares, promesaTelevisores, promesaNotebooks])
-        .then(function([productosCelulares, productosTelevisores, productosNotebooks]){
-            res.render('listado', {productosCelulares, productosTelevisores, productosNotebooks, logged: req.session.usuario})
-        })
+        let id = req.params.id
+        if(id == 1){
+            db.Product.findAll({
+                where: {
+                    category_products_id: 1
+                }
+            })
+            .then(function(productosCelulares){
+                res.render('listado', {productosCelulares, logged: req.session.usuario})
+            })
+        } else if(id == 3){
+            db.Product.findAll({
+                where: {
+                    category_products_id: 2
+                }
+            })
+            .then(function(productosTelevisores){
+                res.render('listado', {productosTelevisores, logged: req.session.usuario})
+            })
+        } else if(id == 4){
+            db.Product.findAll({
+                where: {
+                    category_products_id: 3
+                }
+            })
+            .then(function(productosNotebooks){
+                res.render('listado', {productosNotebooks, logged: req.session.usuario})
+            })
+        } else if(id == 0){
+            let promesaCelulares = db.Product.findAll({
+                where: {
+                    category_products_id: 1
+                }
+            })
+            let promesaTelevisores = db.Product.findAll({
+                where: {
+                    category_products_id: 2
+                }
+            })
+            let promesaNotebooks = db.Product.findAll({
+                where: {
+                    category_products_id: 3
+                }
+            })
+            Promise.all([promesaCelulares, promesaTelevisores, promesaNotebooks])
+            .then(function([productosCelulares, productosTelevisores, productosNotebooks]){
+                res.render('listado', {productosCelulares, productosTelevisores, productosNotebooks, logged: req.session.usuario})
+            })
+        }
     },
 
     create: (req, res) => {
@@ -384,6 +414,8 @@ module.exports = {
 
     find: (req, res) => {
         let request = req.body.request
+        console.log(request)
+        let contadorTarjeta = 0
 
         db.Product.findAll({
             where: {
@@ -393,7 +425,7 @@ module.exports = {
             }
         })
         .then(function(productos){
-                res.render('listadoBusqueda', {productos, logged: req.session.usuario, request});
+                res.render('listadoBusqueda', {productos, logged: req.session.usuario, request, contadorTarjeta});
         })
     }
 }

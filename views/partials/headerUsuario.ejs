@@ -8,9 +8,18 @@
                         <i class="fa-solid fa-house"></i>
                     </li>
                     <li><a href="#">Tiendas Oficiales</a></li>
-                    <li><a href="#">Ofertas</a></li>
                     <li><a href="/products/create">Cargar Producto</a></li>
-
+                    <li>
+                        <div class="dropdown">
+                            <div><a href="#">Productos</a></div>
+                            <div class="dropdown-content dropdown-content-toggle">
+                                <a href="/products/1" class="menu-desplegable">Celulares</a>
+                                <a href="/products/2" class="menu-desplegable">Tablets</a>
+                                <a href="/products/3" class="menu-desplegable">Televisores</a>
+                                <a href="/products/4" class="menu-desplegable">Notebooks</a>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
                 <ul class="navbar2">
                     <div class="contenedor-navbar1">
@@ -25,7 +34,8 @@
                         </li>
                     </div>
                     <div class="div-buscadores">
-                        <form action="/buscador" method="POST">
+                        <p class="buscador-boton click-buscador"><i class="fa-solid fa-magnifying-glass"></i></p>
+                        <form class="buscador-desplegable buscador-desplegable-toggle" action="/buscador" method="POST">
                             <label for="buscador" class="label-buscador2">
                                 <input type="text" id="request" name="request" class="buscador"placeholder="Buscar productos y mas...">
                                 <button type="submit" class="buscador-lupa"><i class="fa-solid fa-magnifying-glass"></i></button>
