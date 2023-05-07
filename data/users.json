@@ -1,12 +1,6 @@
 [
   {
-    "id": 1,
-    "firstName": "Yago",
-    "lastName": "Sosa",
-    "email": "yago@hotmail.com",
-    "password": "123",
-    "admin": true,
-    "image": ""
+    
   },
   {
     "id": 2,
