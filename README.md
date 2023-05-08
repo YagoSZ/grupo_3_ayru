@@ -8,7 +8,7 @@ Yago Sosa
 
 Ariadna Mazzocchi
 
-- Tengo 24 años, actualmente vivo en Buenos Aires, trabajo de Niñera y soy estudiante de Desarrollo Web Full Stack. En mi tiempo libre me gusta realizar Yoga y pasar tiempo con mis mascotas.
+- Tengo 25 años, actualmente vivo en Buenos Aires, trabajo de Niñera y soy estudiante de Desarrollo Web Full Stack. En mi tiempo libre me gusta realizar Yoga y pasar tiempo con mis mascotas.
 
 Uriel
 
