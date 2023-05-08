@@ -4,6 +4,8 @@
   "description": "Descripcion de los miembros del grupo",
   "main": "app.js",
   "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
     "test": "nodemon /app.js"
   },
   "repository": {
@@ -27,7 +29,7 @@
     "method-override": "^3.0.0",
     "multer": "^1.4.5-lts.1",
     "mysql2": "^3.2.0",
-    "nodemon": "^2.0.21",
+    "nodemon": "^2.0.22",
     "override": "^0.0.1",
     "sequelize": "^6.30.0",
     "sequelize-cli": "^6.6.0"
