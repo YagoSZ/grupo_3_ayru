@@ -4,7 +4,7 @@ import { FaTwitter } from 'react-icons/fa';
 
 function Footer() {
     return (
-        <>
+        
             <footer>
                 <div className="logo-ayru">
                     <img src="/img/logoayru2.png" />
@@ -27,7 +27,7 @@ function Footer() {
                 </div>
 
             </footer>
-        </>
+        
     )
 }
 export default Footer;

@@ -2,7 +2,7 @@ import '../assets/css/styles.css';
 import Header from './Header.jsx';
 import Footer from './Footer.jsx';
 import UsersList from './UsersList';
-import Products from './Products';
+import Products from './Products.jsx';
 import UltimoUsuario from './UltimoUsuario';
 
 

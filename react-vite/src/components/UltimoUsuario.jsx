@@ -4,9 +4,9 @@ function UltimoUsuario(){
     const [users, setUsers] = useState([]);
 
     const obtenerDatos = async () => {
-        const data = await  fetch('http://localhost:3010/api/users')
+        const data = await  fetch('/api/users')
         const users = await data.json()
-       
+        // http://localhost:3010
         
         
         

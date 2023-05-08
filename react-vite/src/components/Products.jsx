@@ -6,14 +6,16 @@ const Products = () => {
 
     const obtenerDatos = async ()=>{
         const data = await  fetch('http://localhost:3010/api/products')
-        const products = await data.json()
-       
-        setProducts(products.data);
+        const productos = await data.json()
+        let productoss = productos.data
+        setProducts(productoss);
       
     }
     useEffect(() => {
         obtenerDatos()
     }, [])
+    obtenerDatos()
+    console.log(products)
 
     return(
         <div className='contenedor'>
