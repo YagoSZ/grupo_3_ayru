@@ -55,7 +55,7 @@ module.exports = {
             let img 
 
             if (req.file != undefined){
-                img = req.file.filename;
+                img = req.file.originalname;
             }
             else {
                 img = 'pngegg.png';
@@ -118,7 +118,7 @@ module.exports = {
             let img 
 
             if (req.file != undefined){
-                img = req.file.filename;
+                img = req.file.originalname;
             }
             else {
                 img = 'pngegg.png';
@@ -293,10 +293,22 @@ module.exports = {
 
         let errors = validationResult(req);
         if(errors.isEmpty()){
+
+            let img 
+
+            if (req.file != undefined){
+                img = '/img/' + req.file.originalname;
+                console.log(img)
+            }
+            else {
+                img = '/img/imagenDefaultProducto.png';
+            }
+
+
             db.Product.create({
                 name: req.body.nombre,
                 price: req.body.precio,
-                image: '/img/default1.png',
+                image: img,
                 description: req.body.descripcion,
                 colors: req.body.colores,
                 disponibility_id: req.body.disponibilidad,
@@ -418,6 +430,11 @@ module.exports = {
     },
 
     destroy: (req, res) => {
+        db.products_colors.destroy({
+            where: {
+                id_products: req.params.id
+            }
+        })
 
         db.Product.destroy({
             where: {
@@ -425,7 +442,7 @@ module.exports = {
             }
         })
         .then(function(){
-            res.redirect('/products');
+            res.redirect('/productos/0');
         })
     },
 

@@ -13,7 +13,7 @@ let mensajeErrorContraseña = document.querySelector('#error-register-contraseñ
 
 window.addEventListener('load', function(){
     formEditPerfil.addEventListener('submit', function(e){
-        e.preventDefault()
+        
         let errors = 0
 
 

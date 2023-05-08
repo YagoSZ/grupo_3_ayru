@@ -29,7 +29,7 @@ router.get('/productCart', mainController.productCart);
 
 //routes de ADMINS
 router.get('/products/create', mainController.create); //Traer Pagina creacion productos
-router.post('/products', validationsProduct, mainController.products) //Guardar nuevo Producto
+router.post('/products', upload.single('imagenProducto'), validationsProduct, mainController.products) //Guardar nuevo Producto
 
 
 router.get('/products/:id/edit', mainController.productsEdit); //Traer pagina edicion Productos

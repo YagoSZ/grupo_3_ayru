@@ -462,7 +462,8 @@ article{
 }
 
 .body-listado{
-  padding: 0%;
+  background-color: darkgray;
+  background-image: none;
 }
 
 

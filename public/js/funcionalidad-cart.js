@@ -1,6 +1,7 @@
 
 window.addEventListener('load', function (e) {
     let botonAñadirCart = document.querySelector('#boton-añadir-carrito')
+    let mensajeCarrito = document.querySelector('#mensaje-carrito-exitoso')
     let nombreProducto = document.querySelector('#titulo-producto-details')
     botonAñadirCart.addEventListener('click', function (e) {
         localStorage.setItem('key', '4')
@@ -55,6 +56,7 @@ window.addEventListener('load', function (e) {
                     localStorage.setItem('productCart', JSON.stringify(productosGuardados))
                 })
         }
+        mensajeCarrito.innerHTML = 'El producto ha sido añadido'
     }
 )
 })

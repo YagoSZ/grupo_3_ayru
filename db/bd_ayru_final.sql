@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS `available_locations` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Volcando datos para la tabla bd_ayru.available_locations: ~24 rows (aproximadamente)
+-- Volcando datos para la tabla bd_ayru.available_locations: ~17 rows (aproximadamente)
 INSERT INTO `available_locations` (`id`, `location`) VALUES
 	(1, 'Todo el pais'),
 	(2, 'Buenos Aires'),
@@ -121,21 +121,20 @@ CREATE TABLE IF NOT EXISTS `products` (
   KEY `fk_category_products_id` (`category_products_id`),
   CONSTRAINT `fk_category_products_id` FOREIGN KEY (`category_products_id`) REFERENCES `category_products` (`id`),
   CONSTRAINT `products_disponibility` FOREIGN KEY (`disponibility_id`) REFERENCES `disponibility` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=33 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Volcando datos para la tabla bd_ayru.products: ~11 rows (aproximadamente)
+-- Volcando datos para la tabla bd_ayru.products: ~13 rows (aproximadamente)
 INSERT INTO `products` (`id`, `name`, `price`, `image`, `description`, `disponibility_id`, `category_products_id`, `available_locations`, `imagen_showcase2`, `imagen_showcase3`) VALUES
 	(5, 'Samsung S21 FE', 51000.00, '/img/s21fe-negro.jpg', 'el diseño del Samsung Galaxy S21 FE tenemos sensaciones encontradas. Lo positivo gusta mucho, aunque lo negativo tiene más peso de lo que nos gustaría. El S21 FE mantiene la línea de diseño de su hermano, el Galaxy S21. Es un diseño industrial no muy llamativo, pero con una parte trasera atractiva y un frontal bien aprovechado. Bajo el punto de vista de un servidor, es elegante, más aún en esta unidad de color negro que repele bastante bien las huellas. Detalles del producto: Triple Cámara trasera de 12 MP + 12 MP + 8 MP Cámara Frontal de 32 MP. Infinity-O Display de 6.4 FHD+ Dynamic AMOLED 2X HID 120Hz. Procesador Exynos 2100 | Octa-Core 2.9GHz,2.8GHz,2.2GHz. 4.500 mAh para mayor duración de la batería y 25W Super Fast charging', 2, 1, '1', '/img/s21fe-dorado.jpg', '/img/s21fe-lila.jpg'),
 	(6, 'Samsung S22 ULTRA', 100000.00, '../img/s22blanco.png', 'Con un diseño de vanguardia, el celular Samsung Galaxy S22 Ultra es un teléfono único que ofrece una pantalla Dynamic AMOLED 2x con una resolución Quad HD+ sin Notch ni distracciones. Además, tiene 12GB de RAM y 256GB de almacenamiento. Desempeño: Su procesador Octa-Core y la memoria RAM de 12 GB te permitirán ejecutar aplicaciones y realizar múltiples tareas al mismo tiempo. Además, su sistema operativo Android es eficiente y fácil de usar.', 1, 1, '1', '/img/s22gris.jpg', '/img/s22naranja.jpg'),
 	(7, 'Iphone 13 Pro', 100000.00, '/img/iphonePosta.png', 'Pantalla: Si la pantalla de los iPhone era buena, ahora, desde esta generación es mucho mejor. Contábamos con un panel OLED, pues en este modelo podremos disfrutar de una pantalla Super Retina XDR de 6,1 pulgadas. Y, no solo esto, sino que la tasa de refresco tiene una importante novedad, pues este smartphone de Apple llega con hasta 120 Hz con ProMotion. Dejará de contar con una tasa básica de 60 Hz, por lo que a partir de ahora se adaptará según las exigencias y lo que considere el propio sistema operativo. Además de que el brillo también se ha potenciado en esta generación. En cualquiera caso, estamos ante un iPhone 13 Pro que no solo será una gran opción para ver todo tipo de contenidos, ya sean en streaming o no, sino que será el modelo idóneo para jugar a todo tipo de videojuegos en alta resolución.', 1, 1, '1', '/img/iphone13pro-blanco.jpg', '/img/iphone13pro-negro.jpg'),
-	(8, 'Notebook Bhangho Max L5', 187000.00, '/img/notebookBhanghoMaxL5.jpg', 'Notebook Banghó Max L5 i5 , la mejor relación entre productividad y presupuesto gracias al Procesador Intel Core i5 de 10ma generación y 8GB de RAM. Podrás trabajar en tu casa, estudio u oficina con una notebook de máxima potencia.', 2, 3, '1', '/img/default1.png', '/img/default1.png'),
-	(9, 'Notebook HP OMEN', 200000.00, '/img/notebookHPomen.jpg', 'Con la pantalla WLED Full HD vas a poder disfrutar de 15,6 con una resolución de 1920 x 1080 píxeles podrás disfrutar de películas, videos y juegos o navegar en internet.', 1, 3, '1', '/img/default1.png', '/img/default1.png'),
-	(10, 'Notebook HP Pavilion', 250000.00, '/img/notebookHPomen.jpg', 'La notebook HP Pavilion 15-EH0009LA es la fusión perfecta entre el máximo desempeño y el mejor diseño para tus días más productivos. Con una pantalla de 15,6 pulgadas con micro bordes y resolución FHD (1920 x 1080 p) tendrás mayor visualización, con amplios ángulos de visión de 178°, y una excelente calidad para disfrutar de todo tu contenido. Además, cuenta con lector de huellas digitales para que puedas iniciar sesión en tu dispositivo solo con el toque de tu dedo.', 1, 3, '1', '/img/default1.png', '/img/default1.png'),
-	(11, 'Notebook Lenovo', 170000.00, '/img/notebookLenovo.jpg', 'La notebook Lenovo IP1-81VU006Q cuenta con un diseño compacto y funcional. Llevala con vos a donde quieras gracias a su liviano peso 1.4 Kg de y sus cómodas medidas de: 32.7 cm de ancho x 23.5 cm de profundidad x 1.7 cm de alto.', 1, 3, '1', '/img/default1.png', '/img/default1.png'),
-	(12, 'Smart TV Full HD', 70000.00, '/img/SmartTvFullHD.jpg', 'El Smart TV TCL L40S66E-F de 40 pulgadas cuenta con una pantalla formato widescreen (16:9) con una resolución de 1920 x 1080 píxeles. A diferencia del estándar HD, su alto nivel de detalle brinda colores más puros y nítidos.', 1, 2, '1', '/img/default1.png', '/img/default1.png'),
-	(13, 'Smart TV QLED ', 240000.00, '/img/SmartTvQLED.jpg', 'Posee un diseño elegante y ultra delgado. Con su pantalla de 55 pulgadas y resolución 4K QLED lograrás tener imágenes claras y nítidas, para disfrutar de todo tu contenido favorito sin perderte ningún detalle. Además, podrás tener una experiencia gamer diferente y mejorada, ya que las pantallas de 21:9 y 32:9 te brindarán visibilidad adicional y, con el modo Auto Low Latency (ALLM), disfrutarás tus partidas con más fluidez y enfoque. ', 1, 2, '1', '/img/default1.png', '/img/default1.png'),
-	(14, 'Smart TV UHD ', 135000.00, '/img/SmartTvUHD.jpg', 'Tiene una resolución cuatro veces superior a la de una TV Full HD (3840 x 2160 píxeles) y cuenta con Crystal Processor 4K que garantiza una expresión de colores optimizada para que puedas ver cada detalle. Su panel LED ofrece además la característica de alto rango dinámico (HDR), que aumenta la expresión brillante del televisor para que puedas disfrutar de un inmenso espectro de colores y detalles visuales, incluso en las escenas más oscuras.', 1, 2, '1', '/img/default1.png', '/img/default1.png'),
-	(22, 'Telefono Ramon', 123456.00, '/img/default1.png', 'dfghjkl', 2, 1, '2', '/img/default1.png', '/img/default1.png'),
+	(8, 'Notebook Bhangho Max L5', 187000.00, '/img/notebookBhanghoMaxL5.jpg', 'Notebook Banghó Max L5 i5 , la mejor relación entre productividad y presupuesto gracias al Procesador Intel Core i5 de 10ma generación y 8GB de RAM. Podrás trabajar en tu casa, estudio u oficina con una notebook de máxima potencia.', 2, 3, '1', '/img/lenovoCompu.png', '/img/lenovoGrande.png'),
+	(9, 'Notebook HP OMEN', 200000.00, '/img/notebookHPomen.jpg', 'Con la pantalla WLED Full HD vas a poder disfrutar de 15,6 con una resolución de 1920 x 1080 píxeles podrás disfrutar de películas, videos y juegos o navegar en internet.', 1, 3, '1', '/img/LaptopVaciaOK.png', '/img/lenovoCompu.png'),
+	(10, 'Notebook HP Pavilion', 250000.00, '/img/notebookHPomen.jpg', 'La notebook HP Pavilion 15-EH0009LA es la fusión perfecta entre el máximo desempeño y el mejor diseño para tus días más productivos. Con una pantalla de 15,6 pulgadas con micro bordes y resolución FHD (1920 x 1080 p) tendrás mayor visualización, con amplios ángulos de visión de 178°, y una excelente calidad para disfrutar de todo tu contenido. Además, cuenta con lector de huellas digitales para que puedas iniciar sesión en tu dispositivo solo con el toque de tu dedo.', 1, 3, '1', '/img/lenovoAlRevez.png', '/img/lenovoGrande.png'),
+	(11, 'Notebook Lenovo', 170000.00, '/img/notebookLenovo.jpg', 'La notebook Lenovo IP1-81VU006Q cuenta con un diseño compacto y funcional. Llevala con vos a donde quieras gracias a su liviano peso 1.4 Kg de y sus cómodas medidas de: 32.7 cm de ancho x 23.5 cm de profundidad x 1.7 cm de alto.', 1, 3, '1', '/img/realLaptopOK.png', '/img/lenovoAlRevez.png'),
+	(12, 'Smart TV Full HD', 70000.00, '/img/SmartTvFullHD.jpg', 'El Smart TV TCL L40S66E-F de 40 pulgadas cuenta con una pantalla formato widescreen (16:9) con una resolución de 1920 x 1080 píxeles. A diferencia del estándar HD, su alto nivel de detalle brinda colores más puros y nítidos.', 1, 2, '1', '/img/imagenDefaultProducto.png', '/img/imagenDefaultProducto.png'),
+	(13, 'Smart TV QLED ', 240000.00, '/img/SmartTvQLED.jpg', 'Posee un diseño elegante y ultra delgado. Con su pantalla de 55 pulgadas y resolución 4K QLED lograrás tener imágenes claras y nítidas, para disfrutar de todo tu contenido favorito sin perderte ningún detalle. Además, podrás tener una experiencia gamer diferente y mejorada, ya que las pantallas de 21:9 y 32:9 te brindarán visibilidad adicional y, con el modo Auto Low Latency (ALLM), disfrutarás tus partidas con más fluidez y enfoque. ', 1, 2, '1', '/img/imagenDefaultProducto.png', '/img/imagenDefaultProducto.png'),
+	(14, 'Smart TV UHD ', 135000.00, '/img/SmartTvUHD.jpg', 'Tiene una resolución cuatro veces superior a la de una TV Full HD (3840 x 2160 píxeles) y cuenta con Crystal Processor 4K que garantiza una expresión de colores optimizada para que puedas ver cada detalle. Su panel LED ofrece además la característica de alto rango dinámico (HDR), que aumenta la expresión brillante del televisor para que puedas disfrutar de un inmenso espectro de colores y detalles visuales, incluso en las escenas más oscuras.', 1, 2, '1', '/img/imagenDefaultProducto.png', '/img/imagenDefaultProducto.png'),
 	(23, 'Realme 10', 130000.00, '/img/Realme3OK.png', 'Es un smartphone que no pretende competir por características, tampoco por sus materiales o por ser el más barato del escaparate: el Realme 10 busca ofrecer un equilibrio de calidad sin que el coste de venta resulte exagerado. En comparación, el hardware da un pasito atrás con respecto al Realme 9 del año pasado. Aunque también es más barato: en un 2023 donde todo sube de precio, que una generación sea más barata que la precedente es ya un valor.\r\n\r\n', 1, 1, '1', '/img/realme1OK.png', '/img/realme4.png'),
 	(24, 'Realme C11', 120000.00, '/img/Realme5OK.png', 'El Oppo Realme C11 cuenta con una pantalla HD+ de 6.5 pulgadas, un procesador Helio G35 de Mediatek con 2GB de memoria RAM y 32GB de almacenamiento interno expandible, cámara posterior dual de 13 MP + 2 MP, y cámara frontal para selfies de 5 megapixels. La energía del Realme C11 es provista por una enorme batería de 5000 mAh con carga rápida de 10W, cuenta con radio FM y corre Android 10.', 1, 1, '2', '/img/realme4.png', '/img/realme2.png');
 
@@ -163,9 +162,9 @@ CREATE TABLE IF NOT EXISTS `products_colors` (
   KEY `fk_id_colors` (`id_colors`) USING BTREE,
   CONSTRAINT `fk_id_colors` FOREIGN KEY (`id_colors`) REFERENCES `colors` (`id`),
   CONSTRAINT `fk_id_products` FOREIGN KEY (`id_products`) REFERENCES `products` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=47 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Volcando datos para la tabla bd_ayru.products_colors: ~24 rows (aproximadamente)
+-- Volcando datos para la tabla bd_ayru.products_colors: ~28 rows (aproximadamente)
 INSERT INTO `products_colors` (`id`, `id_products`, `id_colors`) VALUES
 	(1, 5, 1),
 	(2, 5, 2),
@@ -208,14 +207,14 @@ CREATE TABLE IF NOT EXISTS `users` (
   PRIMARY KEY (`id`),
   KEY `fk_category_id` (`category_id`),
   CONSTRAINT `fk_category_id` FOREIGN KEY (`category_id`) REFERENCES `category` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Volcando datos para la tabla bd_ayru.users: ~1 rows (aproximadamente)
+-- Volcando datos para la tabla bd_ayru.users: ~4 rows (aproximadamente)
 INSERT INTO `users` (`id`, `first_name`, `last_name`, `email`, `password`, `image`, `category_id`) VALUES
-	(1, 'Ramon', 'Marino', 'marinoramon@hotmail.com', '$2a$10$pMd44/AeM5TkBxQC2hLkPe4uEtJTqkRSdu8bFJbW3sh2G2yCS7CJG', 'pngegg.png', 2),
-	(5, 'Ariadna', 'Mazzocchi', 'ariadna@hotmail.com', '$2a$10$PsCH1tXsoxq82p89P0ioQOd.PNPTYfUDEERepOG/Bcb4tI5YECYFu', 'pngegg.png', 1),
-	(6, 'Uriel', 'Sosa', 'urielsosa@hotmail.com', '$2a$10$Li6jIpSa8huVktKeTMKAt.NV.oE9gezhbTssHeCGqfsETtkNWSlRW', 'pngegg.png', 1),
-	(7, 'Yago', 'Sosa', 'sosayago@hotmail.com', '$2a$10$sb8enVpGjeV9bsD2dOA8y.kv/.NONZ.FT4kLyxmlJeJ.w1zFphwbS', 'pngegg.png', 1);
+	(1, 'Ramon', 'Marino', 'marinoramon@hotmail.com', '$2a$10$LAehA1JN09UuF8f0Ydp7Ne.atMNfvJUsp4WsNv6JTjnU69Laz4uue', 'pngegg.png', 2),
+	(5, 'Ariadna', 'Mazzocchi', 'ariadna@hotmail.com', '$2a$10$PsCH1tXsoxq82p89P0ioQOd.PNPTYfUDEERepOG/Bcb4tI5YECYFu', 'pngegg.png', 2),
+	(6, 'Uriel', 'Sosa', 'urielsosa@hotmail.com', '$2a$10$Li6jIpSa8huVktKeTMKAt.NV.oE9gezhbTssHeCGqfsETtkNWSlRW', 'pngegg.png', 2),
+	(7, 'Yago', 'Sosa', 'sosayago@hotmail.com', '$2a$10$sb8enVpGjeV9bsD2dOA8y.kv/.NONZ.FT4kLyxmlJeJ.w1zFphwbS', 'pngegg.png', 2);
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

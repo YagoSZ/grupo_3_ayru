@@ -9,7 +9,7 @@
     <% } %>
     <main>
     <div class="contenedor-formu">
-        <form class="formu" action="/products" method="POST">
+        <form class="formu" action="/products" method="POST" enctype="multipart/form-data">
 
             <h1>Formulario Creacion de Productos</h1>
             <!-- <h2 class ="product-title">=</h2> -->
@@ -132,6 +132,10 @@
                 </p>
                 <% } %>
             </p>
+
+            <i class="login-i fas fa-lock"></i>
+                    <label class="clase">Imagen del Producto:</label>
+                    <input class="sub-formulario" type="file" name="imagenProducto" id="imagenProducto">
 
             <br>
             <button type="submit">Guardar producto</button>
