@@ -524,7 +524,8 @@ article{
     justify-content: flex-start;
     margin: 20px 0px;
     width: -webkit-fill-available;
-  
+
+    flex-wrap: wrap;
   }
 
   .div-listado{

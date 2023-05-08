@@ -203,3 +203,7 @@ background-size: cover; ;
     display: none;
     color: #c3e3cc;
 }
+
+.mail-invalido{
+    color: red;
+}

@@ -172,7 +172,6 @@ module.exports = {
             }
         })
         .then(function(usuario){
-
             if (usuario){
 
                  bcrypt.compare(password, usuario.password, function(err, result){
@@ -181,12 +180,14 @@ module.exports = {
                          return res.redirect('/')
                      }
                     else{
-                       return res.redirect('/login')
+                        let errorPassword = 'La contraseña es incorrecta'
+                        return res.render('login', {errorPassword})
                      }
                  })
 
             } else{
-                return res.redirect('/login')
+                let errorMail = 'No existe usuario con el mail: ' + email
+                return res.render('login', {errorMail})
             }
         })
     },
@@ -335,7 +336,7 @@ module.exports = {
     },
 
     productsEdit: (req, res) => {
-
+        
         let id = req.params.id;
         let promesaLocations = db.AvailableLocation.findAll({
             order: [
@@ -352,8 +353,10 @@ module.exports = {
     },
     
     update: (req, res) => {
-        productoId = req.params.id
-        arrayColores = req.body.colores
+        let errors = validationResult(req);
+        if(errors.isEmpty()){
+            productoId = req.params.id
+            arrayColores = req.body.colores
 
         let img 
         if (req.file != undefined){
@@ -398,6 +401,20 @@ module.exports = {
         
 
         res.redirect('/')
+        } else {
+            let promesaLocations = db.AvailableLocation.findAll({
+                order: [
+                    ['location', 'ASC']
+                ],
+            })
+            let promesaCategory = db.CategoryProduct.findAll()
+    
+            Promise.all([promesaCategory, promesaLocations])
+            .then(function([allCategorys, allLocations]){
+                console.log(errors)
+                res.render('creacionProd', {allCategorys, allLocations, logged: req.session.usuario, old: req.body, errors: errors.mapped()})
+            })
+        }
     },
 
     destroy: (req, res) => {

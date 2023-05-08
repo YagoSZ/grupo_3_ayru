@@ -13,16 +13,28 @@
     <div class="container">
         <div class="s"> 
             <div class="s-c">
-            <form class="login" action="../login" method="POST">
+            <form class="login" action="../login" method="POST" id="form-login-1">
                 <div class="login-f"> 
                     <i class="login-i fas fa-user"></i>
                     <input type="text" name="email" class="login-i2 e" id="input-email-login" placeholder="Usuario / email">
                     <small class="mensaje-error-login" id="advertencia-login-email"></small>
+                    <% if (locals.errorMail) { %>
+                        <br>
+                        <small class="mail-invalido">
+                            <%= errorMail %>
+                        </small>
+                        <% } %>
                 </div> 
                 <div class="login-f">
                 <i class="login-i fas fa-lock"></i>
                 <input type="password" name="password" class="login-i2 p" id="input-password-login" placeholder="Contraseña">
                 <small class="mensaje-error-login" id="advertencia-login-password"></small>
+                <% if (locals.errorPassword) { %>
+                    <br>
+                    <small class="mail-invalido">
+                        <%= errorPassword %>
+                    </small>
+                    <% } %>
             </div>
             <input class="r-p"  type="radio" name="recordar" value="recordarcontraseña" id="recordar"> Recuerdame </input>
             

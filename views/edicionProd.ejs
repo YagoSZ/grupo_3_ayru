@@ -19,6 +19,16 @@
 
                     <p>
                       Nombre del producto: <input type="text" name="nombre" value="<%= product.name %>">
+                      <% if (locals.old && old.nombre) { %>
+                        <input type="text" name="nombre" value = "<%= old.nombre %>">
+                    <% } else { %>
+                        <input type="text" name="nombre" placeholder="Ej: Samsung Galaxy">
+                    <% } %>
+                    <% if (locals.errors && errors.nombre) { %>
+                        <p class="mensaje-error">
+                            <%= errors.nombre.msg %>
+                        </p>
+                        <% } %>
                     </p>
 
                     <p>
@@ -36,6 +46,11 @@
                       <label>
                         <input type="checkbox" name="colores" value="3">Verde
                       </label>
+                      <% if (locals.errors && errors.colores) { %>
+                        <p class="mensaje-error">
+                            <%= errors.colores.msg %>
+                        </p>
+                        <% } %>
                     </p>
                     <p>
                       Disponibilidad:
@@ -48,10 +63,24 @@
                             <option value="2" selected>sin stock</option>
                             <% } %>
                       </select>
+                      <% if (locals.errors && errors.disponibilidad) { %>
+                        <p class="mensaje-error">
+                            <%= errors.disponibilidad.msg %>
+                        </p>
+                        <% } %>
                     </p>
                     <p>
                       Precio:
-                      <input type="number" name="precio" value="<%= product.price %>" step="any">
+                      <% if (locals.old && old.precio) { %>
+                        <input type="number" name="precio" value="<%= old.precio %>" step="any">
+                    <% } else { %>
+                        <input type="number" name="precio" placeholder="Ej: 5678" step="any">
+                    <% } %>
+                    <% if (locals.errors && errors.precio) { %>
+                        <p class="mensaje-error">
+                            <%= errors.precio.msg %>
+                        </p>
+                        <% } %>
                     </p>
                     <p>
                       Categoria:
@@ -69,6 +98,11 @@
                               <% } %>
                                 <% }) %>
                       </select>
+                      <% if (locals.errors && errors.categoria) { %>
+                        <p class="mensaje-error">
+                            <%= errors.categoria.msg %>
+                        </p>
+                        <% } %>
                     </p>
                     <p>
                       UbicacionesDisponibles:
@@ -86,6 +120,11 @@
                               <% } %>
                                 <% }) %>
                       </select>
+                      <% if (locals.errors && errors.ubicacionesDisponible) { %>
+                        <p class="mensaje-error">
+                            <%= errors.ubicacionesDisponible.msg %>
+                        </p>
+                        <% } %>
                     </p>
                     <label class="clase">Imagen de perfil:</label>
                     <input class="sub-formulario" type="file" name="imagenProducto" id="imagenProducto">

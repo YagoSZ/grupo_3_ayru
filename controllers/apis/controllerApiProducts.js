@@ -53,7 +53,37 @@ const controllerApiProducts = {
                     }
                     res.json(response);
                 });
-        }
+        },
+
+        'CategoryList': (req, res) => {
+        //     Product.findAll({
+        //         attributes: [],
+        //         include :  [{ association : "CategoryProduct" }, { association : "colorsInProduct" }],
+        //         group: ["category_products_id"]            include: {
+            //   model: db.CategoryProduct,
+            //   attributes: ['name'],
+            // },
+        // }) 
+
+        Product.findAll({
+            attributes: ['category_products_id', 'CategoryProduct.name', [sequelize.fn('count', sequelize.col('*')), 'count']],
+            include :  [{ association : "CategoryProduct" }],
+            group: ['category_products_id']
+          })
+            .then(products => {
+                console.log(products)
+                const response = {
+                    meta: {
+                        count : products.length,
+                        status : 200,
+                        url : '/api/category'
+                    },
+                    data: products
+                }
+                    res.json(response);
+                })
+                .catch(error => res.send(error));
+            },
 
 }
 

@@ -5,31 +5,36 @@ window.addEventListener('load', function(e){
     let mensajeError = document.querySelectorAll('.mensaje-error-login')
     let mensajeErrorEmail = document.querySelector('#advertencia-login-email')
     let mensajeErrorPassword = document.querySelector('#advertencia-login-password')
-    let forms = this.document.querySelector('form')
+    let forms = document.querySelector('#form-login-1')
 
     forms.addEventListener('submit', function(e){
-        let errors = 0
+        let errors = []
         if(inputEmail.value == ""){
-            errors++
+            errors.push('email')
         }
         if(inputPassword.value == ""){
-            errors++
+            errors.push('password')
         }
         if(inputPassword.value.length < 8){
-            errors++
+            errors.push('passwordLength')
         }
-        if(errors > 0){
+        console.log('Esto es errors: ' + errors)
+        if(errors.length > 0){
             e.preventDefault()
-            inputEmail.style.borderBottom = '2px solid #dc1544'
-            inputEmail.style.backgroundColor = '#ebc7eb'
-            mensajeErrorEmail.style.display = 'block'
-            mensajeErrorEmail.innerHTML = 'el campo Email no puede estar vacio'
-            mensajeErrorEmail.style.color = 'red'
-            inputPassword.style.borderBottom = '2px solid #dc1544'
-            inputPassword.style.backgroundColor = '#ebc7eb'
-            mensajeErrorPassword.style.display = 'block'
-            mensajeErrorPassword.innerHTML = 'debes ingresar al menos 8 caracteres'
-            mensajeErrorPassword.style.color = 'red'
+            if(errors.includes('email')){
+                inputEmail.style.borderBottom = '2px solid #dc1544'
+                inputEmail.style.backgroundColor = '#ebc7eb'
+                mensajeErrorEmail.style.display = 'block'
+                mensajeErrorEmail.innerHTML = 'el campo Email no puede estar vacio'
+                mensajeErrorEmail.style.color = 'red'
+            }
+            if(errors.includes('password')){
+                inputPassword.style.borderBottom = '2px solid #dc1544'
+                inputPassword.style.backgroundColor = '#ebc7eb'
+                mensajeErrorPassword.style.display = 'block'
+                mensajeErrorPassword.innerHTML = 'debes ingresar al menos 8 caracteres'
+                mensajeErrorPassword.style.color = 'red'
+            }
         }
     })
 
